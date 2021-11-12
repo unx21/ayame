@@ -163,8 +163,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       //thumbnail: tnbot, 
       contextInfo: { 
         mentionedJid: [m.sender]} } )
-    await conn.reply(m.chat, 'https://chat.whatsapp.com/' + await conn.groupInviteCode('6281567956300-1636040366@g.us'))
-  } catch (e) {
+      } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
   }
