@@ -1,12 +1,12 @@
 let handler  = async (m, { conn, text }) => {
   let chats = conn.chats.all().filter(v => !v.read_only && v.message).map(v => v.jid)
-  let content = (/bc|broadcast/i.test(text) ? text : text + '\n' + readMore + '「 ' + conn.getName(conn.user.jid) + ' Broadcast 」')
-  for (let id of chats) conn.sendMessage(id, content, m.mtype, m.msg.contextInfo ? {
-    contextInfo: m.msg.contextInfo
-  } : {})
+  let cc = conn.serializeM(text ? m : m.quoted ? await m.getQuotedObj() : false || m)
+  let teks = text ? text : cc.text
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${chats.length} chat_`, m)
+  for (let id of chats) await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : teks + '\n\n' + readMore + '「 ' + conn.getName(conn.user.jid) + ' Broadcast 」')
+ )
 }
-handler.command = /^(broadcast|bc)$/i
+handler.command = /^(broadcast|bc)chat$/i
 handler.owner = true
 handler.mods = false
 handler.premium = false
