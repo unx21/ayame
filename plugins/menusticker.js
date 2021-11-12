@@ -11,6 +11,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}stickergura_  [ teks ] Ⓛ
 ┃ ❖ _${usedPrefix}getexif_  [ reply sticker ]
 ┃ ❖ _${usedPrefix}semoji_  [ type|emoji ] Ⓛ
+┃ ❖ _${usedPrefix}sgay_  [ reply media ]
 ┃ ❖ _${usedPrefix}stickermeme_  [ teks|teks ] Ⓛ
 ┃ ❖ _${usedPrefix}sticker_  [ reply media ] Ⓛ
 ┃ ❖ _${usedPrefix}sticker_  [ url ] Ⓛ
@@ -24,6 +25,8 @@ let teks = `
 ┃ ❖ _${usedPrefix}ttp_  [ teks ] Ⓛ
 ┃ ❖ _${usedPrefix}ttp2_  [ teks ] Ⓛ
 ┃ ❖ _${usedPrefix}ttpdark_  [ teks ] Ⓛ
+┃ ❖ _${usedPrefix}wanted_  [ reply media ] Ⓛ
+┃ ❖ _${usedPrefix}wasted_  [ reply media ] Ⓛ
 ┃ ❖ _${usedPrefix}wm_  [ pack|author ] Ⓟ
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 `.trim()
