@@ -1,9 +1,9 @@
 let handler  = async (m, { conn }) => {
 let name = conn.getName(m.sender)
 let teks = `
-${pickRandom([` Hii ${name}\n\nSaya disini`, `Oeetss`, `Ekhheemmm`, `Puuuiyy`, `Poom`, `Hadiirr`, `Panggil Trosss`, `Diemin aja dah`, `Mohon maaf ${name}\n\nSaya sedang sibuk saat ini, Hubungi saya lain waktu`, `Meh`, `Nyahallo`])}
+${pickRandom([` _Hii @${m.sender.split`@`[0]}_\n\n_Saya disini_`, `_Oeetss @${m.sender.split`@`[0]}_\n\n_Ada apa??_`, `_Ekhheemmm, Uhuk Ughhuk_`, `_Puuuiyy_`, `_Poom_`, `_Hadirrr_`, `_Panggil Trosss_`, `_Diemin aja dah_`, `_Mohon maaf @${m.sender.split`@`[0]}_\n\n_Saya sedang sibuk saat ini, Hubungi saya lain waktu_`, `Meh`, `Nyenyenyenye`, `Aku Diam Aku Aman`])}
 `.trim()
-conn.fakeReply(m.chat, teks, '0@s.whatsapp.net', 'Ajak Ngomong Lah Biar Gak Stress', 'status@broadcast')
+conn.reply(m.chat, teks, m, { contextInfo: { mentionedJid: [m.sender] }})
 }
 handler.customPrefix = /Bot/
 handler.command = new RegExp
