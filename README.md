@@ -4,8 +4,6 @@
 
 Simple WhatsApp Bot
 
-/* [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kokoronationz/mirai) */
-
 ## FOR TERMUX/UBUNTU/SSH USER
 
 ```bash
@@ -131,8 +129,8 @@ Accept: application/json
 POST /
 Content-Type: application/json
 
-{
- data: {}
+{ 
+  data: {}
 }
 ```
 
