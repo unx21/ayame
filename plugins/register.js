@@ -43,7 +43,7 @@ await conn.fakeReply(m.chat, caption,/* {
       "caption": */` *Registration Successful!!*`, /*
       "jpegThumbnail": tnbot} } }, { contextInfo: { mentionedJid: [m.sender] } }m*/'status@broadcast')
 global.db.data.users[m.sender].uang += 10000
-global db.data.users[m.sender].koin += 5000
+global.db.data.users[m.sender].koin += 5000
 }
 //handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
 //handler.tags = ['exp']
