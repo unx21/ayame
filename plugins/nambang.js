@@ -34,7 +34,7 @@ Resource yang berhasil di bawa pulang
             global.db.data.users[m.sender].exp += exp * 1
             global.db.data.users[m.sender].iron += iron * 1
             global.db.data.users[m.sender].gold += gold * 1
-            global.db.._data.users[m.sender].lastnambang = new Date * 1
+            global.db.data.users[m.sender].lastnambang = new Date * 1
             } else conn.reply(m.chat, `Anda kelelahan karena pergi ${pickRandom(['nambang','menambang','bertambang'])}, silahkan tunggu *${timer}* lagi`, m)
         } else conn.reply(m.chat, 'Dibutuhkan 100 nyawa untuk pergi, isi nyawamu terlebih dahulu dengan meminum potion', m)
      } catch (e) {
