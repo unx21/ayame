@@ -48,7 +48,7 @@ ${'```%npmdesc```'}
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
-    let ayame = './src/photo/Nakiri.png'
+    let ayame = './src/photo/ItssAyaamee.png'
     let tnbot = fs.readFileSync('./src/photo/NAyame.png')
     //let { exp, uang, limit, level, role } = global.db.data.users[m.sender]
     //let { min, xp, max } = levelling.xpRange(level, global.multiplier)
@@ -139,13 +139,15 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       //totalexp: exp,
       //xp4levelup: max - exp,
       github: package.homepage ? package.homepage.url || package.homepage : '[unknown github url]',
-      /*level, uang, limit,*/ name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, /*role*/,
+      //level, uang, limit, 
+      name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, 
+      //role,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //conn.reply(m.chat, text.trim(), m)
     conn.fakeReply(m.chat, `Tunggu Sebentar, Jangan Spam !!!`, '0@s.whatsapp.net', ` _${conn.user.name} Verified WhatsApp Bot_`, 'status@broadcast')
-    await conn.reply(m.chat, ayame, 'Nakiri.png', text.trim(), { 
+    await conn.sendFile(m.chat, ayame, 'ItssAyaamee.png', text.trim(), { 
       key: { 
         remoteJid: 'status@broadcast', 
         participant: '0@s.whatsapp.net', 
@@ -154,12 +156,11 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       message: { 
         "imageMessage": { 
           "mimetype": "image/jpeg", 
-          "caption": ` _${conn.user.name} Verified WhatsApp Bot_`, 
+          "caption": `_${conn.user.name} Verified WhatsApp Bot_`, 
           "jpegThumbnail": tnbot
         } 
       }
-    }, //m, 
-    { 
+    }, m, { 
       //thumbnail: tnbot, 
       contextInfo: { 
         mentionedJid: [m.sender]} } )
