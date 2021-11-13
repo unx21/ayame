@@ -204,8 +204,8 @@ module.exports = {
           if (!('sDemote' in chat)) chat.sDemote = ''
           if (!('delete' in chat)) chat.delete = false
           if (!('antiLink' in chat)) chat.antiLink = true
-          if (!('viewonce' in chat)) chat.viewonce = false
-          if (!isNumber(chat.expired)) chat.expired = 3
+          if (!('viewonce' in chat)) chat.viewonce = true
+          if (!isNumber(chat.expired)) chat.expired = 10
         } else global.db.data.chats[m.chat] = {
           isBanned: false,
           welcome: false,
@@ -216,8 +216,8 @@ module.exports = {
           sDemote: '',
           delete: false,
           antiLink: true,
-          viewonce: false,
-          expired: 3,
+          viewonce: true,
+          expired: 10,
         }
       } catch (e) {
         console.error(e)
@@ -538,7 +538,7 @@ global.dfail = (type, m, conn) => {
     private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_',
     admin: '_Perintah ini hanya untuk *Admin* grup_',
     botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_',
-    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*${usedPrefix}daftar nama|umur*\n\nContoh: *${usedPrefix}daftar ${conn.getName(m.sender)}|21*`,
+    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama|umur*\n\nContoh: *#daftar 百鬼あやめ.19*`
   }[type]
   if (msg) return m.reply(msg)
 }
