@@ -14,6 +14,8 @@ let handler = async (m, { conn, usedPrefix }) => {
     let _rubah = user.anakrubah
     let kuda = user.kuda
     let _kuda = user.anakkuda
+    let anjing = user.anjing
+    let _anjing = user.anakanjing
     let diamond = user.diamond  //adventure
     let potion = user.potion  //adventure
     let common = user.common  //adventure
