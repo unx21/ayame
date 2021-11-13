@@ -4,65 +4,91 @@ let handler  = async (m, { conn, command, args, usedPrefix, isOwner, DevMode }) 
 	let type = (args[0] || '').toLowerCase()
     let cht = (args[0] || '').toLowerCase()
     let cok = `
-Pilihan yang Siap untuk di Buang
+*[ LIST ]*
 
-Uang\nKoin\nDiamond\nPeti\Legendary\nMythic\nHealt\nStamina\nDurability
+• Uang\n• Koin\n• Diamond\n• Peti\n• Legendary\n• Mythic\n• Healt\n• Stamina\n• Durability
 `.trim()
 try {
        if (/buang/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.max(parseInt(args[1]), 1) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
             switch (type) {
             	case 'uang':
-                            let bcd = `${pickRandom(['berhasil', 'sukses'])} membuang Rp${count * 1}, database di ubah`.trim()
-                            global.DATABASE._data.users[m.sender].uang -= count * 1
+                            let syt = `${pickRandom(['Berhasil', 'Sukses'])}`.trim()
+                            let bcd = `${syt} Membuang Rp${count * 1}`.trim()
+                            global.db.data.users[m.sender].uang -= count * 1
                             conn.reply(m.chat, bcd, m)
+                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${syt} Membuang Rp${count * 1}`, 'status@broadcast')
 break
 
                 case 'koin':
-                            global.DATABASE._data.users[m.sender].koin -= count * 1
-                            let ahh = `${pickRandom(['berhasil', 'sukses', 'aktif'])} membuang ${count * 1} Koin, database di ubah`.trim()
+                            let tot = `${pickRandom(['Berhasil', 'Sukses'])}`.trim()
+                            let ahh = `${tot} Membuang ${count * 1} Koin`.trim()
+                            global.db.data.users[m.sender].koin -= count * 1
                             conn.reply(m.chat, ahh, m)
+                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${tot} Membuang ${count * 1} Koin`, 'status@broadcast')
 break
                 case 'diamond':
-                            global.DATABASE._data.users[m.sender].diamond -= count * 1
-                            let uhh = `${pickRandom(['berhasil', 'sukses', 'aktif'])} membuang ${count * 1} Diamond, database di ubah`.trim()
+                            let asw = `${pickRandom(['Berhasil', 'Sukses'])}`.trim()
+                            let uhh = `${asw} Membuang ${count * 1} Diamond`.trim()
+                            global.db.data.users[m.sender].diamond -= count * 1
                             conn.reply(m.chat, uhh, m)
+                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${asw} Membuang ${count * 1} Diamond`, 'status@broadcast')
                        
 break
                 case 'peti':
-                            global.DATABASE._data.users[m.sender].peti -= count * 1
-                            let ahoy = `${pickRandom(['berhasil', 'sukses', 'aktif'])} membuang ${count * 1} Peti, database di ubah`.trim()
+                            let tok = `${pickRandom(['Berhasil', 'Sukses'])}`.trim()
+                            let ahoy = `${tok} Membuang ${count * 1} Peti`.trim()
+                            global.db.data.users[m.sender].peti -= count * 1
                             conn.reply(m.chat, ahoy, m)
+                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${tok} Membuang ${count * 1} Peti`, 'status@broadcast')
                        
 break
                 case 'legendary':
-                            global.DATABASE._data.users[m.sender].legendary -= count * 1
-                            let aqua = `${pickRandom(['berhasil', 'sukses', 'aktif'])} membuang ${count * 1} Legendary Crate, database di ubah`.trim()
+                            let bro = `${pickRandom(['Berhasil', 'Sukses'])}`.trim()
+                            let aqua = `${bro} Membuang ${count * 1} Legendary Crate`.trim()
+                            global.db.data.users[m.sender].legendary -= count * 1
                             conn.reply(m.chat, aqua, m)
+                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${bro} Membuang ${count * 1} Legendary Crate`, 'status@broadcast')
                        
 break
                 case 'mythic':
-                            global.DATABASE._data.users[m.sender].mythic -= count * 1
-                            let wibu = `${pickRandom(['berhasil', 'sukses', 'aktif'])} membuang ${count * 1} Mythic Crate, database di ubah`.trim()
+                            let cuy = `${pickRandom(['Berhasil', 'Sukses'])}`.trim()
+                            let wibu = `${cuy} Membuang ${count * 1} Mythic Crate`.trim()
+                            global.db.data.users[m.sender].mythic -= count * 1
                             conn.reply(m.chat, wibu, m)
+                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${cuy} Membuang ${count * 1} Mythic Crate`, 'status@broadcast')
                        
 break
                 case 'healt':
-                            global.DATABASE._data.users[m.sender].healt -= count * 1
-                            let baka = `${pickRandom(['berhasil', 'sukses', 'aktif'])} membuang ${count * 1} Healt, database di ubah`.trim()
+                            let gas = `${pickRandom(['Berhasil', 'Sukses'])}`.trim()
+                            let baka = `${gas} Membuang ${count * 1} Healt`.trim()
+                            global.db.data.users[m.sender].healt -= count * 1
                             conn.reply(m.chat, baka, m)
+                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${gas} Membuang ${count * 1} Healt`, 'status@broadcast')
                        
 break
                 case 'stamina':
-                            global.DATABASE._data.users[m.sender].stamina -= count * 1
-                            let tekk = `${pickRandom(['berhasil', 'sukses', 'aktif'])} membuang ${count * 1} Stamina, database di ubah`.trim()
+                            let dog = `${pickRandom(['Berhasil', 'Sukses'])}`.trim()
+                            let tekk = `${dog} Membuang ${count * 1} Stamina`.trim()
+                            global.db.data.users[m.sender].stamina -= count * 1
                             conn.reply(m.chat, tekk, m)
+                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${dog} Membuang ${count * 1} Stamina`, 'status@broadcast')
                        
 break
                 case 'durability':
-                            global.DATABASE._data.users[m.sender].durability -= count * 1
-                            let jck = `${pickRandom(['berhasil', 'sukses', 'aktif'])} membuang ${count * 1} Durability, database di ubah`.trim()
+                            let faq = `${pickRandom(['Berhasil', 'Sukses'])}`.trim()
+                            let jck = `${faq} Membuang ${count * 1} Durability`.trim()
+                            global.db.data.users[m.sender].durability -= count * 1
                             conn.reply(m.chat, jck, m)
+                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${faq} Membuang ${count * 1} Durability`, 'status@broadcast')
+                       
+break
+                case 'magazine':
+                            let tes = `${pickRandom(['Berhasil', 'Sukses'])}`.trim()
+                            let kon = `${tes} Membuang ${count * 1} Magazine`.trim()
+                            global.db.data.users[m.sender].magazine -= count * 1
+                            conn.reply(m.chat, kon, m)
+                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${tes} Membuang ${count * 1} Magazine`, 'status@broadcast')
                        
 break
                 default:
