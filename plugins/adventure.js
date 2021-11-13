@@ -20,7 +20,6 @@ let handler = async (m, { conn, usedPrefix, DevMode }) => {
             let durability = (pickRandom(['15', '14', '13', '12', '10', '11', '9', '8', '7']))
             let uang = `${Math.floor(Math.random() * 250)}`.trim() 
             let koin = `${Math.floor(Math.random() * 250)}`.trim() 
-            let koin = `${Math.floor(Math.random() * 250)}`.trim() 
             let kayu = `${Math.floor(Math.random() * 20)}`.trim() 
             let _potion = `${Math.floor(Math.random() * 2)}`.trim()
             let potion = (_potion * 1)
