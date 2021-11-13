@@ -18,7 +18,7 @@ try {
                             global.db.data.users[m.sender].uang += count * 1
                             conn.reply(m.chat, bcd, m)
                             conn.fakeReply(m.chat, `Menambahkan Rp${count * 1} Kedalam Database`, '0@s.whatsapp.net', `Cheat Uang ${dod}`, 'status@broadcast')
-                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Di Perbarui`, '0@s.whatsapp.net', `Menambahkan Rp${count * 1} Kedalam Database`, 'status@broadcast')
+                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan Rp${count * 1} Kedalam Database`, 'status@broadcast')
 break
 
                 case 'koin':
@@ -27,7 +27,7 @@ break
                             global.db.data.users[m.sender].koin += count * 1
                             conn.reply(m.chat, ahh, m)
                             conn.fakeReply(m.chat, `Menambahkan ${count * 1} Koin Kedalam Database`, '0@s.whatsapp.net', `Cheat Koin ${did}`, 'status@broadcast')
-                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} di perbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Koin Kedalam Database`, 'status@broadcast')
+                            conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Koin Kedalam Database`, 'status@broadcast')
 break
                 case 'diamond':
                             let dud = `${pickRandom(['Berhasil', 'Sukses', 'Aktif'])}`.trim()
@@ -35,7 +35,7 @@ break
                             global.db.data.users[m.sender].diamond += count * 1
                             conn.reply(m.chat, uhh, m)
                             conn.fakeReply(m.chat, `Menambahkan ${count * 1} Diamond Kedalam Database`, '0@s.whatsapp.net', `Cheat Diamond ${dud}`, 'status@broadcast')
-                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} di perbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Diamond Kedalam Database`, 'status@broadcast')
+                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Diamond Kedalam Database`, 'status@broadcast')
                        
 break
                 case 'peti':
@@ -44,7 +44,7 @@ break
                             global.db.data.users[m.sender].peti += count * 1
                             conn.reply(m.chat, ahoy, m)
                             conn.fakeReply(m.chat, `Menambahkan ${count * 1} Peti Kedalam Database`, '0@s.whatsapp.net', `Cheat Peti ${ded}`, 'status@broadcast')
-                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} di perbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Peti Kedalam Database`, 'status@broadcast')
+                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Peti Kedalam Database`, 'status@broadcast')
                        
 break
                 case 'legendary':
@@ -53,7 +53,7 @@ break
                             global.db.data.users[m.sender].legendary += count * 1
                             conn.reply(m.chat, aqua, m)
                             conn.fakeReply(m.chat, `Menambahkan ${count * 1} Legendary Crate Kedalam Database`, '0@s.whatsapp.net', `Cheat Legendary Crate ${pup}`, 'status@broadcast')
-                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} di perbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Legendary Crate Kedalam Database`, 'status@broadcast')
+                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Legendary Crate Kedalam Database`, 'status@broadcast')
                        
 break
                 case 'mythic':
@@ -62,7 +62,7 @@ break
                             global.db.data.users[m.sender].mythic += count * 1
                             conn.reply(m.chat, wibu, m)
                             conn.fakeReply(m.chat, `Menambahkan ${count * 1} Mythic Crate Kedalam Database`, '0@s.whatsapp.net', `Cheat Mythic Crate ${bub}`, 'status@broadcast')
-                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} di perbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Mythic Crate Kedalam Database`, 'status@broadcast')
+                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Mythic Crate Kedalam Database`, 'status@broadcast')
                        
 break
                 case 'healt':
@@ -71,7 +71,7 @@ break
                             global.db.data.users[m.sender].healt += count * 1
                             conn.reply(m.chat, baka, m)
                             conn.fakeReply(m.chat, `Menambahkan ${count * 1} Healt Kedalam Database`, '0@s.whatsapp.net', `Cheat Nyawa ${bob}`, 'status@broadcast')
-                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} di perbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Healt Kedalam Database`, 'status@broadcast')
+                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Healt Kedalam Database`, 'status@broadcast')
                        
 break
                 case 'stamina':
@@ -80,7 +80,7 @@ break
                             global.db.data.users[m.sender].stamina += count * 1
                             conn.reply(m.chat, tekk, m)
                             conn.fakeReply(m.chat, `Menambahkan ${count * 1} Stamina Kedalam Database`, '0@s.whatsapp.net', `Cheat Stamina ${bib}`, 'status@broadcast')
-                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} di perbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Stamina Kedalam Database`, 'status@broadcast')
+                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Stamina Kedalam Database`, 'status@broadcast')
                        
 break
                 case 'durability':
@@ -89,16 +89,16 @@ break
                             global.db.data.users[m.sender].durability += count * 1
                             conn.reply(m.chat, jck, m)
                             conn.fakeReply(m.chat, `Menambahkan ${count * 1} Durability Kedalam Database`, '0@s.whatsapp.net', `Cheat Durability ${beb}`, 'status@broadcast')
-                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} di perbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Durability Kedalam Database`, 'status@broadcast')
+                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Durability Kedalam Database`, 'status@broadcast')
                        
 break
                 case 'magazine':
                             let asu = `${pickRandom(['Berhasil', 'Sukses', 'Aktif'])}`.trim()
                             let vavi = `Cheat Magazine ${beb}`.trim()
-                            global.db._data.users[m.sender].magazine += count * 1
+                            global.db.data.users[m.sender].magazine += count * 1
                             conn.reply(m.chat, vavi, m)
                             conn.fakeReply(m.chat, `Menambahkan ${count * 1} Magazine Kedalam Database`, '0@s.whatsapp.net', `Cheat Magazine ${beb}`, 'status@broadcast')
-                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} di perbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Magazine Kedalam Database`, 'status@broadcast')
+                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Magazine Kedalam Database`, 'status@broadcast')
                        
 break
                 default:
