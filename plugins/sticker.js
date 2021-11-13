@@ -18,13 +18,13 @@ await m.reply(global.wait)
         if (/webp/g.test(mime)) out = await webp2png(img)
         else if (/image/g.test(mime)) out = await uploadImage(img)
         else if (/video/g.test(mime)) out = await uploadFile(img)
-        stiker = await sticker(false, out, global.packname, global.author)
+        stiker = await sticker(false, out, '© 百鬼あやめ', '© 赤井はあと')
       } catch (e) {
         console.error(e)
-        stiker = await sticker(img, false, global.packname, global.author)
+        stiker = await sticker(img, false, '© 百鬼あやめ', '© 赤井はあと')
       }
     } else if (args[0]) {
-      if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
+      if (isUrl(args[0])) stiker = await sticker(false, args[0], '© 百鬼あやめ', '© 赤井はあと')
       else return m.reply('URL tidak valid!')
     }
   } catch (e) {
@@ -37,12 +37,12 @@ await m.reply(global.wait)
     else throw `Gagal${m.isGroup ? ', balas gambarnya!' : ''}`
   }
 }
-
-//handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']
+//handler.help = ['stiker ', 'stiker <url>']
 //handler.tags = ['sticker']
 handler.command = /^s(tic?ker)?(gif)?(wm)?$/i
 handler.register = true
 handler.limit = true
+
 module.exports = handler
 
 const isUrl = (text) => {
