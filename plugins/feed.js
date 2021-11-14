@@ -34,7 +34,7 @@ let handler = async (m, { conn, args, usedPrefix }) => {
             let __waktuk = (new Date - global.db.data.users[m.sender].kudalastclaim)
             let _waktuk = (600000 - __waktuk)
             let waktuk = clockString(_waktuk)
-            if (new Date - global.DATABASE._data.users[m.sender].kudalastclaim > 600000) {
+            if (new Date - global.db.data.users[m.sender].kudalastclaim > 600000) {
                 if (global.db.data.users[m.sender].makananpet > 0) {
                     global.db.data.users[m.sender].makananpet -= 1
                     global.db.data.users[m.sender].anakkuda += 20
@@ -54,7 +54,7 @@ let handler = async (m, { conn, args, usedPrefix }) => {
         case 'kucing':
             if (kucing == 0) return m.reply('*Kamu belum memiliki Pet Kucing*')
             if (kucing == 5) return m.reply('*Pet kamu dah level max*')
-            let __waktu = (new Date - global.DATABASE._data.users[m.sender].kucinglastclaim)
+            let __waktu = (new Date - global.db.data.users[m.sender].kucinglastclaim)
             let _waktu = (600000 - __waktu)
             let waktu = clockString(_waktu)
             if (new Date - global.db.data.users[m.sender].kucinglastclaim > 600000) {
@@ -77,7 +77,7 @@ let handler = async (m, { conn, args, usedPrefix }) => {
         case 'anjing':
             if (anjing == 0) return m.reply('*Kamu belum memiliki Pet Anjing*')
             if (anjing == 5) return m.reply('*Pet kamu dah level max*')
-            let __waktua = (new Date - global.DATABASE._data.users[m.sender].anjinglastclaim)
+            let __waktua = (new Date - global.db.data.users[m.sender].anjinglastclaim)
             let _waktua = (600000 - __waktua)
             let waktua = clockString(_waktua)
             if (new Date - global.db.data.users[m.sender].anjinglastclaim > 600000) {
