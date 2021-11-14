@@ -3,7 +3,7 @@ const { sticker } = require('../lib/sticker')
 const { MessageType } = require('@adiwajshing/baileys')
 
 let handler = async (m, { conn}) => {
-	awaut m.reply(global.wait)
+	await m.reply(global.wait)
   try {
   let res = await fetch('https://api.waifu.pics/sfw/awoo')
   let json = await res.json()
