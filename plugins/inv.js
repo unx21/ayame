@@ -19,7 +19,6 @@ let handler = async (m, { conn, usedPrefix }) => {
     let diamond = user.diamond  //adventure
     let potion = user.potion  //adventure
     let common = user.common  //adventure
-    let makananpet = user.makananpet
     let uncommon = user.uncommon  //adventure
     let mythic = user.mythic  //adventure
     let legendary = user.legendary  //adventure
