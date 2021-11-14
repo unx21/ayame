@@ -48,7 +48,7 @@ ${'```%npmdesc```'}
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
-    let ayame = './src/photo/ItssAyaamee.png'
+    let ayame = './src/photo/ItssAyaamee.jpg'
     let tnbot = fs.readFileSync('./src/photo/NAyame.png')
     //let { exp, uang, limit, level, role } = global.db.data.users[m.sender]
     //let { min, xp, max } = levelling.xpRange(level, global.multiplier)
@@ -147,7 +147,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //conn.reply(m.chat, text.trim(), m)
     conn.fakeReply(m.chat, `Tunggu Sebentar, Jangan Spam !!!`, '0@s.whatsapp.net', ` _${conn.user.name} Verified WhatsApp Bot_`, 'status@broadcast')
-    await conn.sendFile(m.chat, ayame, 'ItssAyaamee.png', text.trim(), { 
+    await conn.sendFile(m.chat, ayame, 'ItssAyaamee.jpg', text.trim(), { 
       key: { 
         remoteJid: 'status@broadcast', 
         participant: '0@s.whatsapp.net', 
