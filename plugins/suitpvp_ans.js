@@ -78,7 +78,7 @@ klik wa.me/${conn.user.jid.split`@`[0]}`, m.chat, {
 `.trim(), m, { contextInfo: { mentionedJid: [room.p, room.p2] } })
       if (!tie) {
         db.data.users[win == room.p ? room.p : room.p2].uang += room.poin
-        db.data.users[win == room.p ? room.p2 : room.p].uang += room.poin_lose
+        db.data.users[win == room.p ? room.p2 : room.p].uang -= room.poin_lose
 
       }
       delete this.suit[room.id]
