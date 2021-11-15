@@ -60,10 +60,10 @@ break
 break
                 case 'legendary':
                             let pup = `${pickRandom(['Berhasil', 'Sukses'])}`.trim()
-                            let aqua = `${pup} Menetapkan Data Legendary Cate Menjadi ${count * 1}`.trim()
+                            let aqua = `${pup} Menetapkan Data Legendary Crate Menjadi ${count * 1}`.trim()
                             global.db.data.users[who].legendary = count * 1
                             conn.reply(m.chat, aqua, m, false, { contextInfo: { mentionedJid }})
-                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${pup} Menetapkan Data Legendary Cate Menjadi ${count * 1}`, 'status@broadcast')
+                            conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${pup} Menetapkan Data Legendary Crate Menjadi ${count * 1}`, 'status@broadcast')
                        
 break
                 case 'mythic':
