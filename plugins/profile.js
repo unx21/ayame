@@ -10,10 +10,8 @@ let handler = async (m, { conn, usedPrefix }) => {
 
   } finally {
     let about = (await conn.getStatus(who).catch(console.error) || {}).status || ''
-    let { name, limit, uang, exp, lastclaim, registered, regTime, age, level, role } = global.db.data.users[who]
-    let { min, xp, max } = levelling.xpRange(level, global.multiplier)
+    let { name, limit, uang, koin, lastclaim, registered, regTime, age } = global.db.data.users[who]
     let username = conn.getName(who)
-    let math = max - xp
     let prem = global.prems.includes(who.split`@`[0])
     let sn = createHash('md5').update(who).digest('hex')
     let str = `
@@ -21,13 +19,13 @@ let handler = async (m, { conn, usedPrefix }) => {
 *Number:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 *Link:* https://wa.me/${who.split`@`[0]}${registered ? '\n*Age:* ' + age : ''}
 *Saldo:* Rp${uang}
-*XP:* TOTAL ${exp} (${exp - min} / ${xp}) [${math <= 0 ? `Ready to *${usedPrefix}levelup*` : `${math} XP left to levelup`}]
-*Level:* ${level}
-*Role:* ${role}
+*Koin:* ${koin}
 *Limit:* ${limit}
 *Registered:* ${registered ? 'Yes (' + new Date(regTime) + ')': 'No'}
 *Premium:* ${prem ? 'Yes' : 'No'}${lastclaim > 0 ? '\n*Last Claim:* ' + new Date(lastclaim) : ''}
 *SN:* ${sn}
+
+_*Ketik ${usedPrefix}rank untuk mengecek rank_
 `.trim()
     let mentionedJid = [who]
     conn.sendFile(m.chat, pp, 'pp.jpg', str, m, false, { contextInfo: { mentionedJid }})
