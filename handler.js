@@ -85,10 +85,13 @@ module.exports = {
           if (!isNumber(user.kudalastclaim)) user.kudalastclaim = 0
           if (!isNumber(user.rubah)) user.rubah = 0
           if (!isNumber(user.rubahlastclaim)) user.rubahlastclaim = 0
+          if (!isNumber(user.anjing)) user.anjing = 0
+          if (!isNumber(user.anjinglastclaim)) user.anjinglastclaim = 0
           
           if (!isNumber(user.anakkucing)) user.anakkucing = 0
           if (!isNumber(user.anakkuda)) user.anakkuda = 0
           if (!isNumber(user.anakrubah)) user.anakrubah = 0
+          if (!isNumber(user.anakanjing)) user.anakanjing = 0
           if (!isNumber(user.makananpet)) user.makananpet = 0
           
           if (!isNumber(user.exp)) user.exp = 0
