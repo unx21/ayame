@@ -100,7 +100,7 @@ break
 break
                 case 'magazine':
                             let asu = `${pickRandom(['Berhasil', 'Sukses'])}`.trim()
-                            let vavi = `${beb} Menetapkan Data Magazine Menjadi ${count * 1}`.trim()
+                            let vavi = `${asu} Menetapkan Data Magazine Menjadi ${count * 1}`.trim()
                             global.db.data.users[who].magazine = count * 1
                             conn.reply(m.chat, vavi, m, false, { contextInfo: { mentionedJid }})
                             conn.fakeReply(m.chat,`Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `${asu} Menetapkan Data Magazine Menjadi ${count * 1}`, 'status@broadcast')
