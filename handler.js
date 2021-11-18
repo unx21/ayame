@@ -208,7 +208,7 @@ module.exports = {
           if (!('delete' in chat)) chat.delete = false
           if (!('antiLink' in chat)) chat.antiLink = true
           if (!('viewonce' in chat)) chat.viewonce = true
-          if (!isNumber(chat.expired)) chat.expired = 10
+          if (!isNumber(chat.expired)) chat.expired = 0
         } else global.db.data.chats[m.chat] = {
           isBanned: false,
           welcome: false,
@@ -220,7 +220,7 @@ module.exports = {
           delete: false,
           antiLink: true,
           viewonce: true,
-          expired: 10,
+          expired: 0,
         }
       } catch (e) {
         console.error(e)
