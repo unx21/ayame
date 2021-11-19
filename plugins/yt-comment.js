@@ -10,7 +10,7 @@ await m.reply(global.wait)
 
 //handler.help = ['ytcomment <comment>']
 //handler.tags = ['maker']
-handler.command = /^(ytcomment)$/i
+handler.command = /^(ytc|ytcomment)$/i
 handler.register = true
 handler.limit = true
 
