@@ -12,13 +12,13 @@ let handler = async (m, { text, usedPrefix }) => {
     let user = global.db.data.users[m.sender]
     if (suitP1 === suitPC) {
         user.uang += 500
-        m.reply(`*Kita Seri*\n\n${state}\n\nPoin (±)500`)
+        m.reply(`*Kita Seri*\n\n${state}\n\nPoin ±Rp500`)
     } else if ((suitP1 + 1) % 3 === suitPC) {
         user.uang += 1000
-        m.reply(`*Kamu Menang*\n\n${state}\n\nPoin (+)1000`)
+        m.reply(`*Kamu Menang*\n\n${state}\n\nPoin +Rp1000`)
     } else if ((suitP1 - 1) % 3 === suitPC) {
         user.uang -= 750
-        m.reply(`*Kamu Kalah*\n\n${state}\n\nPoin (-)750`)
+        m.reply(`*Kamu Kalah*\n\n${state}\n\nPoin -Rp750`)
     } else throw 'Terjadi kesalahan'
 }
 //handler.help = ['suit [gunting|batu|kertas]']
