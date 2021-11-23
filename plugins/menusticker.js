@@ -8,7 +8,6 @@ let teks = `
 ┃ ❖ _${usedPrefix}attp2_  [ teks ] Ⓛ
 ┃ ❖ _${usedPrefix}colong_  [ reply sticker ] Ⓛ
 ┃ ❖ _${usedPrefix}steal_  [ reply sticker ] Ⓛ
-┃ ❖ _${usedPrefix}stickergura_  [ teks ] Ⓛ
 ┃ ❖ _${usedPrefix}getexif_  [ reply sticker ]
 ┃ ❖ _${usedPrefix}semoji_  [ type|emoji ] Ⓛ
 ┃ ❖ _${usedPrefix}sgay_  [ reply media ]
