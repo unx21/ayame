@@ -1,8 +1,13 @@
+/*   Jangan di hapus yak om :)
+      Github.com/unx21
+*/
+
+
 let { MessageType } = require('@adiwajshing/baileys')
 let num = /([0-9])$/i
 let handler = async (m, { conn, args, usedPrefix }) => {
 let type = (args[0] || '').toLowerCase()
-let count = args[1] && args[1].length > 0 ? Math.min(9999999, Math.max(parseInt(args[1]), 1)) : Math.min(1)
+let count = args[1] && args[1].length > 0 ? Math.max(parseInt(args[1]), 1) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
 switch (type) {
             case 'uang':
     if (!args) throw 'Masukkan Jumlah Uang Yang Akan Anda Slot'
