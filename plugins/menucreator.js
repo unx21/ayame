@@ -12,7 +12,6 @@ let teks = `
 ┃ ❖ _${usedPrefix}enhance_ <reply media> Ⓛ
 ┃ ❖ _${usedPrefix}enphoto360_ <effect> <teks>|<teks2>|<teks3> Ⓛ
 ┃ ❖ _${usedPrefix}gay_ <reply media> Ⓛ
-┃ ❖ _${usedPrefix}gura_ <teks> Ⓛ
 ┃ ❖ _${usedPrefix}glowing_ <teks> Ⓛ
 ┃ ❖ _${usedPrefix}horny_ <reply media> Ⓛ
 ┃ ❖ _${usedPrefix}hornycard_ <reply media> Ⓛ
