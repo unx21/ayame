@@ -6,7 +6,6 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-
 ┏ ┅ ━━ *〘 %me 〙*
 ┇
 ┇ _Source_ : https://github.com/Kokoronationz/mirai
@@ -15,7 +14,7 @@ const defaultMenu = {
 ┃ ⌬ Hai %name!
 ┃
 ┃ ⌬ *Hari:* %week %weton
-┃ ❖ *Tanggal:* %date
+┃ ⌬ *Tanggal:* %date
 ┃ ⌬ *Tanggal Islam:* %dateIslamic
 ┃ ⌬ *Waktu:* %time WITA
 ┃
@@ -37,7 +36,7 @@ const defaultMenu = {
 ┃ ⍚ Dan Kawan-kawan
 ┗ ┅ ━━━━━━━━━━━━━━
 `.trimStart(),
-  header: '┏ ┅ ━━ *〘 %category 〙*\n',
+  header: '┏ ┅ ━━ *〘 %category 〙*\n┇',
   body: '┃ ⍚  %cmd %islimit %isPremium',
   footer: '┗ ┅ ━━━━━━━━━━━━━━\n',
   after: `
@@ -169,15 +168,14 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     throw e
   }
 }
-
 handler.command = /^(menu|help|\?)$/i
+
 handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
 handler.register = true
-
 
 handler.admin = false
 handler.botAdmin = false
