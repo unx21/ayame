@@ -1,14 +1,16 @@
 let handler = async (m, { conn, text }) => {
-  if (!text) throw 'Tidak ada teks'
+  if (!text) throw 'Masukan teks yang akan ditirui oleh Bot!'
   m.reply(text, false, {
     contextInfo: {
       mentionedJid: conn.parseMention(text)
     }
   })
 }
-//handler.help = ['mention <teks>']
-//handler.tags = ['tools']
+//handler.help = ['mention','say'].map(v => v + ' <text>')
+//handler.tags = ['fun']
+handler.group = true
 handler.register = true
-handler.command = /^mention$/i
+
+handler.command = /^mention|say$/i
 
 module.exports = handler
