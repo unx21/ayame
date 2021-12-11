@@ -11,7 +11,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) =>  {
                  let msgsucces = (pickRandom(['Berhasil mengisi']) + ' *' + (count * 1) + '* Peluru')
                  if (args[0] === 'peluru') {
                     if (global.db.data.users[m.sender].magazine < 12) {
-                        if (global.db._data.users[m.sender].peluru >= count * 1) {
+                        if (global.db.data.users[m.sender].peluru >= count * 1) {
                             global.db.data.users[m.sender].peluru -= count * 1
                             global.db.data.users[m.sender].magazine += magazine * count
                             conn.reply(m.chat, msgsucces, m)
