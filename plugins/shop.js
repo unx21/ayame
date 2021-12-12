@@ -1,6 +1,8 @@
 let { MessageType } = require('@adiwajshing/baileys')
-const potion = 500
-const Spotion = 150 
+const spotion = 250
+const Sspotion = 65
+const Smpotion = 100
+const Shpotion = 175
 const Bdiamond = 900
 const Sdiamond = 750
 const Smgstone = 500
@@ -39,7 +41,7 @@ Uncommon:     ${Buncommon}
 Mythic:     ${Bmythic}
 Legendary:   ${Blegendary}\n
 *_Lainnya_*
-Potion:   ${potion}
+Spotion:   ${spotion}
 Diamond:     ${Bdiamond}
 Makanan:   ${Bmakanan}
 
@@ -61,7 +63,9 @@ Kelincibakar:  ${Sklncbkr}
 Bisonbakar:  ${Sbsnbkr}
 Makanan:   ${Smakanan}\n
 *_Lainnya_*
-Potion:       ${Spotion}
+Spotion:       ${Sspotion}
+Smpotion:     ${Smpotion}
+Shpotion:   ${Shpotion}
 Diamond:     ${Sdiamond}
 Mgstone:   ${Smgstone}
 Kayu:     ${Skayu}
@@ -77,12 +81,12 @@ Sampah:     ${Ssampah}
             switch (jualbeli) {
             case 'buy':
                 switch (_type) {
-                	case 'potion':
-                            if (global.db.data.users[m.sender].koin >= potion * count) {
-                                global.db.data.users[m.sender].koin -= potion * count
-                                global.db.data.users[m.sender].potion += count * 1
-                                conn.reply(m.chat, `Succes membeli ${count} Potion dengan harga ${potion * count} koin\n\nGunakan potion dengan ketik: *${usedPrefix}use potion <jumlah>*`, m)
-                            } else conn.reply(m.chat, `Koin anda tidak cukup untuk membeli ${count} Potion dengan harga ${potion * count} koin`,)
+                	case 'spotion':
+                            if (global.db.data.users[m.sender].koin >= spotion * count) {
+                                global.db.data.users[m.sender].koin -= spotion * count
+                                global.db.data.users[m.sender].spotion += count * 1
+                                conn.reply(m.chat, `Succes membeli ${count} Small Potion dengan harga ${spotion * count} koin\n\nGunakan potion dengan ketik: *${usedPrefix}use spotion <jumlah>*`, m)
+                            } else conn.reply(m.chat, `Koin anda tidak cukup untuk membeli ${count} Small Potion dengan harga ${spotion * count} koin`,)
                         break
                     case 'diamond':
                             if (global.db.data.users[m.sender].koin >= Bdiamond * count) {
@@ -138,12 +142,26 @@ Sampah:     ${Ssampah}
                 break
             case 'sell': 
                 switch (_type) {
-                    case 'potion':
-                        if (global.db.data.users[m.sender].potion >= count * 1) {
-                            global.db.data.users[m.sender].koin += Spotion * count
-                            global.db.data.users[m.sender].potion -= count * 1
-                            conn.reply(m.chat, `Succes menjual ${count} Potion dengan harga ${Spotion * count} koin`.trim(), m)
-                        } else conn.reply(m.chat, `Potion kamu tidak cukup`.trim(), m)
+                    case 'spotion':
+                        if (global.db.data.users[m.sender].spotion >= count * 1) {
+                            global.db.data.users[m.sender].koin += Sspotion * count
+                            global.db.data.users[m.sender].spotion -= count * 1
+                            conn.reply(m.chat, `Succes menjual ${count} Small Potion dengan harga ${Sspotion * count} koin`.trim(), m)
+                        } else conn.reply(m.chat, `Small Potion kamu tidak cukup`.trim(), m)
+                        break
+                    case 'mpotion':
+                        if (global.db.data.users[m.sender].mpotion >= count * 1) {
+                            global.db.data.users[m.sender].koin += Smpotion * count
+                            global.db.data.users[m.sender].mpotion -= count * 1
+                            conn.reply(m.chat, `Succes menjual ${count} Medium Potion dengan harga ${Smpotion * count} koin`.trim(), m)
+                        } else conn.reply(m.chat, `Medium Potion kamu tidak cukup`.trim(), m)
+                        break
+                    case 'hpotion':
+                        if (global.db.data.users[m.sender].hpotion >= count * 1) {
+                            global.db.data.users[m.sender].koin += Shpotion * count
+                            global.db.data.users[m.sender].hpotion -= count * 1
+                            conn.reply(m.chat, `Succes menjual ${count} High Potion dengan harga ${Shpotion * count} koin`.trim(), m)
+                        } else conn.reply(m.chat, `High Potion kamu tidak cukup`.trim(), m)
                         break
                     case 'common':
                         if (global.db.data.users[m.sender].common >= count * 1) {
@@ -274,12 +292,12 @@ Sampah:     ${Ssampah}
         } else if (/beli|buy/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
             switch (type) {
-            	case 'potion':
-                            if (global.db.data.users[m.sender].koin >= potion * count) {
-                                global.db.data.users[m.sender].koin -= potion * count
-                                global.db.data.users[m.sender].potion += count * 1
-                                conn.reply(m.chat, `Succes membeli ${count} Potion dengan harga ${potion * count} koin\n\nGunakan potion dengan ketik: *${usedPrefix}use potion <jumlah>*`, m)
-                            } else conn.reply(m.chat, `Koin anda tidak cukup untuk membeli ${count} Potion dengan harga ${potion * count} koin`,)
+            	case 'spotion':
+                            if (global.db.data.users[m.sender].koin >= spotion * count) {
+                                global.db.data.users[m.sender].koin -= spotion * count
+                                global.db.data.users[m.sender].spotion += count * 1
+                                conn.reply(m.chat, `Succes membeli ${count} Small Potion dengan harga ${spotion * count} koin\n\nGunakan potion dengan ketik: *${usedPrefix}use spotion <jumlah>*`, m)
+                            } else conn.reply(m.chat, `Koin anda tidak cukup untuk membeli ${count} Small Potion dengan harga ${spotion * count} koin`,)
                         break
                 case 'diamond':
                         if (global.db.data.users[m.sender].koin >= Bdiamond * count) {
@@ -335,12 +353,26 @@ Sampah:     ${Ssampah}
         } else if (/sell|jual|/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
             switch (type) {
-                case 'potion':
-                    if (global.db.data.users[m.sender].potion >= count * 1) {
-                        global.db.data.users[m.sender].koin += Spotion * count
-                        global.db.data.users[m.sender].potion -= count * 1
-                        conn.reply(m.chat, `Succes menjual ${count} Potion dengan harga ${Spotion * count} koin`.trim(), m)
-                    } else conn.reply(m.chat, `Potion kamu tidak cukup`.trim(), m)
+                case 'spotion':
+                    if (global.db.data.users[m.sender].spotion >= count * 1) {
+                        global.db.data.users[m.sender].koin += Sspotion * count
+                        global.db.data.users[m.sender].spotion -= count * 1
+                        conn.reply(m.chat, `Succes menjual ${count} Small Potion dengan harga ${Sspotion * count} koin`.trim(), m)
+                    } else conn.reply(m.chat, `Small Potion kamu tidak cukup`.trim(), m)
+                    break
+                case 'mpotion':
+                    if (global.db.data.users[m.sender].mpotion >= count * 1) {
+                        global.db.data.users[m.sender].koin += Smpotion * count
+                        global.db.data.users[m.sender].mpotion -= count * 1
+                        conn.reply(m.chat, `Succes menjual ${count} Medium Potion dengan harga ${Smpotion * count} koin`.trim(), m)
+                    } else conn.reply(m.chat, `Medium Potion kamu tidak cukup`.trim(), m)
+                    break
+                case 'hpotion':
+                    if (global.db.data.users[m.sender].hpotion >= count * 1) {
+                        global.db.data.users[m.sender].koin += Shpotion * count
+                        global.db.data.users[m.sender].hpotion -= count * 1
+                        conn.reply(m.chat, `Succes menjual ${count} High Potion dengan harga ${Shpotion * count} koin`.trim(), m)
+                    } else conn.reply(m.chat, `High Potion kamu tidak cukup`.trim(), m)
                     break
                 case 'common':
                     if (global.db.data.users[m.sender].common >= count * 1) {
