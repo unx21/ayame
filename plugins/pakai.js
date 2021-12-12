@@ -31,7 +31,7 @@ try {
                         if (global.db.data.users[m.sender].ironarmor >= count * 1) {
                             global.db.data.users[m.sender].ironarmor -= count * 1
                             global.db.data.users[m.sender].durability += count * 25
-                            conn.reply(m.chat, `${count} Iron Armor dipakai +${count * 25} Durability`, m)
+                            conn.reply(m.chat, `${count} Iron Armor dipakai\n+${count * 25} Durability`, m)
                        } else conn.reply(m.chat, `Tidak memiliki iron armor lagi`, m)
                        } else conn.reply(m.chat, `Durability penuh`, m)
 break
@@ -41,7 +41,7 @@ break
                         if (global.db.data.users[m.sender].goldarmor >= count * 1) {
                             global.db.data.users[m.sender].goldarmor -= count * 1
                             global.db.data.users[m.sender].durability += count * 60
-                            conn.reply(m.chat, `${count} Gold Armor digunakan +${count * 60} Durability`, m)
+                            conn.reply(m.chat, `${count} Gold Armor digunakan\n+${count * 60} Durability`, m)
                        } else conn.reply(m.chat, `Kehabisan stok gold armor`, m)
                        } else conn.reply(m.chat, `Durability penuh`, m)
 break
@@ -50,7 +50,7 @@ break
                         if (global.db.data.users[m.sender].magicarmor >= count * 1) {
                             global.db.data.users[m.sender].magicarmor -= count * 1
                             global.db.data.users[m.sender].durability += count * 150
-                            conn.reply(m.chat, `${count} Magic Armor terpakai +${count * 150} Durability`, m)
+                            conn.reply(m.chat, `${count} Magic Armor terpakai\n+${count * 150} Durability`, m)
                        } else conn.reply(m.chat, `Belum membuat magic armor`, m)
                        } else conn.reply(m.chat, `Durability penuh`, m)
                        
