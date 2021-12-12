@@ -16,61 +16,63 @@ let teks = `
 │
 │╭─[ *Profile* ]
 ││
-││ • *.profile*
+││ • *${usedPrefix}profile*
 ││    Untuk mengetahui Informasi saldo, dll
 ││
-││ • *.rank*
-││ • *.rankcard*
+││ • *${usedPrefix}rank*
+││ • *${usedPrefix}rankcard*
 ││    Untuk mengecek level, ranking, dll
 ││
-││ • *.inv*
-││ • *.inventory*
-││ • *.perlengkapan*
+││ • *${usedPrefix}inv*
+││ • *${usedPrefix}inventory*
+││ • *${usedPrefix}perlengkapan*
 ││    Untuk mengecek nyawa, item, dll.
 │╰────────────────
 │
 │
 │╭─[ *Berpetualang* ]
 ││
-││ • *.mulung*
-││ • *.adventure*
-││ • *.work*
+││ • *${usedPrefix}mulung*
+││ • *${usedPrefix}adventure*
+││ • *${usedPrefix}work*
 ││   Untuk mencari resource seperti 
 ││   Uang, Koin, Exp, dll.., dibutuhkan  
-││   minimal 80 nyawa untuk bisa 
-││   melakukannya dan, kamu tidak 
-││   dapat spam karena ada delay 5 menit
+││   minimal 80 nyawa dan 20 durability
+││   untuk bisa melakukannya dan
+││   kamu tidak dapat spam karena
+││   ada delay 5 menit
 ││
-││ • *.heal*
-││ • *.use potion <jumlah>*
+││ • *${usedPrefix}use <type> <jumlah>*
 ││    Untuk memakai potion dan untuk 
-││    mengisi nyawa/health
+││    mengisi nyawa/health, selengkapnya
+││    ketik ${usedPrefix}use untuk melihat
+││    list potion
 ││
-││ • *.open <crate> <jumlah>*
+││ • *${usedPrefix}open <crate> <jumlah>*
 ││    Untuk membuka crate mu
 │╰────────────────
 │
 │
 │╭─[ *Dungeon* ]
 ││
-││ • *.gasdungeon*
-││ • *.dungeon*
+││ • *${usedPrefix}dungeon*
 ││    Untuk menangkap monster dan
 ││    mencari tanaman herbal.., dibutuhkan
-││    minimal 90 nyawa untuk bisa 
+││    minimal 90 nyawa, 20 durability dan
+││    50 swordpower untuk bisa 
 ││    melakukannya dan, kamu tidak 
 ││    dapat spam karena ada delay 5 menit
 ││ 
-││ • *.racik*
-││ • *.meracik*
-││    Untuk meracik Small Potion dan
-││    dapat di tukarkan dengan Potion
+││ • *${usedPrefix}racik*
+││ • *${usedPrefix}meracik*
+││    Untuk meracik beragam jenis potion
+││    seperti, spotion, mpotion atau hpotion
 ││
-││ • *.bedah <monster> <jumlah>*
+││ • *${usedPrefix}bedah <monster> <jumlah>*
 ││    Untuk mendapatkan Magic Stone agar
 ││    dapat di tempa menjadi peluru
 ││
-││ • *.barter*
+││ • *${usedPrefix}barter*
 ││    Untuk menukarkan Small Potion
 ││    menjadi Potion
 │╰────────────────
@@ -78,30 +80,30 @@ let teks = `
 │
 │╭─[ *Berburu* ]
 ││
-││ • *.berburu*
-││ • *.hunt*
+││ • *${usedPrefix}berburu*
+││ • *${usedPrefix}hunt*
 ││    Untuk berburu hewan untuk dimasak
 ││    kemudian dimakan.., dibutuhkan
 ││    minimal 80 stamina dan 12 magazine
 ││    untuk bisa melakukannya dan, kamu
 ││    tidak dapat spam karena ada delay 5 menit
 ││
-││ • *.reload*
-││ • *.isi peluru <jumlah>*
+││ • *${usedPrefix}reload*
+││ • *${usedPrefix}isi peluru <jumlah>*
 ││    Untuk mereload atau mengisi magazine
 ││
-││ • *.menempa*
-││ • *.tempa <item>*
+││ • *${usedPrefix}menempa*
+││ • *${usedPrefix}tempa <item>*
 ││    Untuk membuat perlengkapan seperti
 ││    peluru dan armor
 ││
-││ • *.makan*
-││ • *.eat <makanan> <jumlah>*
+││ • *${usedPrefix}makan*
+││ • *${usedPrefix}eat <makanan> <jumlah>*
 ││    Untuk mengisi stamina kamu
 ││    yang habis ketika berburu
 ││
-││ • *.cook*
-││ • *.masak <hewan buruan> <jumlah>*
+││ • *${usedPrefix}cook*
+││ • *${usedPrefix}masak <hewan buruan> <jumlah>*
 ││    Untuk memasak hewan buruan yang
 ││    kamu tangkap, jangan lupa sesuaikan
 ││    dengan kayu bakar mu
@@ -110,23 +112,23 @@ let teks = `
 │
 │╭─[ *Menambang* ]
 ││
-││ • *.menambang*
-││ • *.nambang*
-││ • *.tambang*
+││ • *${usedPrefix}menambang*
+││ • *${usedPrefix}nambang*
+││ • *${usedPrefix}tambang*
 ││    Untuk mencari resource atau item
 ││    seperti iron dan gold agar dapat
 ││    di tempa menjadi armor yang akan
 ││    digunakan untuk berpetualang atau
 ││    memasuki dungeon
 ││
-││ • *.pakai <armor> <jumlah>*
-││ • *.gunakan <armor> <jumlah>*
+││ • *${usedPrefix}pakai <armor> <jumlah>*
+││ • *${usedPrefix}gunakan <armor> <jumlah>*
 ││    Untuk menggunakan armor yang telah
 ││    ditempa agar mendapatkan
 ││    durability atau ketahanan
 ││
-││ • *.menempa <item> <jumlah>*
-││ • *.tempa <item> <jumlah>*
+││ • *${usedPrefix}menempa <item> <jumlah>*
+││ • *${usedPrefix}tempa <item> <jumlah>*
 ││    Untuk membuat perlengkapan seperti
 ││    peluru dan armor
 │╰────────────────
@@ -134,23 +136,23 @@ let teks = `
 │
 │╭─[ *Toko* ]
 ││ 
-││ • *.shop*
+││ • *${usedPrefix}shop*
 ││    Untuk melihat item dan harganya
 ││
-││ • *.shop buy <item> <jumlah>*
+││ • *${usedPrefix}shop buy <item> <jumlah>*
 ││    Untuk membeli item
 ││
-││ • *.shop sell <item> < jumlah>*
+││ • *${usedPrefix}shop sell <item> < jumlah>*
 ││    Untuk menjual item
 │╰────────────────
 │
 │
 │╭─[ *Pet* ]
 ││
-││ • *.open <pet>*
+││ • *${usedPrefix}open <pet>*
 ││    Untuk mendapatkan pet
 ││
-││ • *.feed <pet>*
+││ • *${usedPrefix}feed <pet>*
 ││    Untuk memberi makan pet
 │╰────────────────
 │
