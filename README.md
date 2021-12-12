@@ -15,7 +15,6 @@ apt install imagemagick -y
 git clone https://github.com/unx21/ayame
 cd ayame
 npm install
-npm update
 ```
 
 ## INSTALL ON TERMUX WITH UBUNTU
