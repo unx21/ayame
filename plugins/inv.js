@@ -5,6 +5,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let stamina = user.stamina  //berburu
     let durability = user.durability
     let magazine = user.magazine  //berburu
+    let swordpower = user.swordpower 
     let warn = user.warn
     let pet = user.pet
     let makananpet = user.makananpet
@@ -17,7 +18,6 @@ let handler = async (m, { conn, usedPrefix }) => {
     let anjing = user.anjing
     let _anjing = user.anakanjing
     let diamond = user.diamond  //adventure
-    let potion = user.potion  //adventure
     let common = user.common  //adventure
     let uncommon = user.uncommon  //adventure
     let mythic = user.mythic  //adventure
@@ -26,10 +26,12 @@ let handler = async (m, { conn, usedPrefix }) => {
     let goblin = user.goblin  //dungeon
     let skeleton = user.skeleton  //dungeon
     let wolf = user.wolf  //dungeon
-    let sprtgrass = user.sprtgrass  //dungeon
-    let mdgrleaf = user.mdgrleaf  //dungeon
-    let hpktplant = user.hpktplant  //dungeon
+    let sprtgrass = user.spiritgrass  //dungeon
+    let mdgrleaf = user.mandragoraleaf  //dungeon
+    let hpktplant = user.hipokuteplant  //dungeon
     let spotion = user.spotion  //racik herbal
+    let mpotion = user.mpotion  //racik herbal
+    let hpotion = user.hpotion  //racik herbal
     let rusa = user.rusa  //berburu
     let babi = user.babi  //berburu
     let kalkun = user.kalkun  //berburu
@@ -46,6 +48,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let peti = user.peti  //nambang
     let mgstone = user.mgstone  //bedah monster
     let peluru = user.peluru  //tempa
+    let sword = user.sword  //tempa
     let ironarmor = user.ironarmor  //tempa
     let goldarmor = user.goldarmor  //tempa
     let magicarmor = user.magicarmor  //tempa
@@ -76,7 +79,6 @@ let handler = async (m, { conn, usedPrefix }) => {
     let userslegendary = sortedlegendary.map(v => v[0])
     let str = `
 Inventory *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}*\n
-
 Koin: *${koin}*
 Uang: *${uang}*
 Health: *${healt}*
@@ -87,8 +89,8 @@ Durability: *${durability}*
 *「 Inventori 」*\n
 Magazine: *${magazine}*
 Peluru: *${peluru}*
+Sword Power : *${swordpower}*
 Diamond: *${diamond}*
-Potion: *${potion}*
 Makanan Pet: *${makananpet}*
 Kayu Bakar: *${kayu}*
 Sampah: *${sampah}*
@@ -122,6 +124,8 @@ Spirit Grass: *${sprtgrass}*
 Mandragora Leaf: *${mdgrleaf}*
 Hipokute Plant: *${hpktplant}*
 Small Potion: *${spotion}*
+Medium Potion: *${mpotion}*
+High Potion: *${hpotion}*
 
 
 *「 Resource 」*\n
@@ -129,6 +133,7 @@ Iron: *${iron}*
 Gold: *${gold}*
 Magic Stone: *${mgstone}*
 Peti: *${peti}*
+Sword: *${sword}*
 Ironarmor: *${ironarmor}*
 Goldarmor: *${goldarmor}*
 Magicarmor: *${magicarmor}*
