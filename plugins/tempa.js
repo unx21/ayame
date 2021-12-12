@@ -12,6 +12,7 @@ Resource yang bisa di tempa
 *~ goldarmor*
 *~ magicarmor*
 *~ peluru*
+*~ sword*
 
 
 contoh:
@@ -24,6 +25,7 @@ _Biaya Penempaan_
 - _goldarmor = 75 gold_
 - _magicarmor = 170 mgstone_
 - _peluru = 1 mgstone_
+- _sword = 5 iron + 2 gold_
 
 
 *[ Stok Item Kamu ]*
@@ -32,8 +34,8 @@ _Biaya Penempaan_
 - Gold  ${gold} buah
 - Magic Stone  ${mgstone} buah
 `.trim()
-
 try {
+
        if (/tempa/i.test(command)) {
        	const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
             switch (type) {
@@ -61,6 +63,19 @@ break
                             conn.reply(m.chat, `${count * 170} Magic Stone ditempa menjadi ${count} Magic Armor`, m)
                        } else conn.reply(m.chat, `Kamu tidak memiliki stok magic stone yang cukup`, m)
 break
+                case 'sword':
+            if (global.db.data.users[m.sender].gold >= count * 2) {
+            if (global.db.data.users[m.sender].iron >= count * 5) {
+                            global.db.data.users[m.sender].gold >= count * 2
+                            global.db.data.users[m.sender].iron >= count * 5
+                            global.db.data.users[m.sender].gold -= count * 2
+                            global.db.data.users[m.sender].iron -= count * 5
+                            global.db.data.users[m.sender].sword += count * 1
+                            global.db.data.users[m.sender].swordpower += count * 100
+                            conn.reply(m.chat, `${count * 2} Gold dan ${count * 5} Iron di tempa menjadi ${count} Sword dan mendapatkan ${count * 100} Sword Power`, m)
+                       } else conn.reply(m.chat, `Kamu tidak memiliki stok iron yang cukup`, m)
+                     } else conn.reply(m.chat, `Kamu tidam memiliki stok gold yang cukup`, m)
+break
                 case 'peluru':
             if (global.db.data.users[m.sender].mgstone >= count * 1) {
                            global.db.data.users[m.sender].mgstone >= count * 1
@@ -83,9 +98,7 @@ break
         }
     }
 }
-
-
 handler.register = true
-handler.command = /^(tempa|menempa)$/i
+handler.command = /^(tempa|menempa)$/
 
 module.exports = handler
