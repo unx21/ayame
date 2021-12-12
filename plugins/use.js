@@ -1,75 +1,74 @@
 let { MessageType } = require('@adiwajshing/baileys')
-let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) =>  {
-    let msgerror = (pickRandom(['Error', 'astagfirullah error', 'Nice Error', 'Salah format keknya :v', 'error bro', 'Kocak error :v', 'wtf error :v', 'Ciaaa error', 'error cuyy', 'dahlah (emot batu) error']))
-    try {
-        let msgkurang = (pickRandom(['potionmu tidak cukup', 'ciaa gk cukup potionyya :v', 'wtf gk cukup :v', 'beli potion dulu, potionmu gk cukup', 'Duaarr potionmu gk cukup', 'eyyyy potionmu kurang', 'beli dulu lah, masak mau pakai potion tapi gk ada potionnnya :v', 'minta ke orang lain suruh transfer potion, biar potionmu gk kurang :v', 'Beli potion dulu KK']))
-        let msgpenuh = (pickRandom(['Nyawamu sudah penuh', 'coba deh liat inv mu, nyawamu kan dah 100 ngapain gunain potion lagi?', 'health mu dah penuh woyy', 'nyawamu dah penuh :v', 'udh weh, udh penuh']))
-        let kucing = global.db.data.users[m.sender].kucing
-        let usepotion = (kucing == 0 ? 40 : '' || kucing == 1 ? 45 : '' || kucing == 2 ? 50 : '' || kucing == 3 ? 55 : '' || kucing == 4 ? 60 : '' || kucing == 5 ? 65 : '' || kucing == 6 ? 70 : '' || kucing == 7 ? 75 : '' || kucing == 8 ? 80 : '' || kucing == 9 ? 85 : '' || kucing == 10 ? 90 : '')
-        let healt = global.db.data.users[m.sender].healt
-        if (/use|pakai/i.test(command)) {
-            try {
-                let count = (/[0-9]/g.test(args[1])) ? !args[1] || args.length < 2 ? Math.max((Math.ceil((100 - global.db.data.users[m.sender].healt) / usepotion)), 1) : Math.max(args[1], 1) : Math.max((Math.ceil((100 - global.db.data.users[m.sender].healt) / usepotion)), 1)
-                 let msgsucces = (pickRandom(['success memakai', 'Nice succes menggunakan', 'berhasil meminum ', 'primitif anda menggunakan', 'anda memakai', 'Anda menggunakan']) + ' *' + (count * 1) + '* Potion')
-                 if (args[0] === 'potion') {
-                    if (global.db.data.users[m.sender].healt < 100) {
-                        if (global.db.data.users[m.sender].potion >= count * 1) {
-                            global.db.data.users[m.sender].potion -= count * 1
-                            global.db.data.users[m.sender].healt += usepotion * count
-                            conn.reply(m.chat, msgsucces, m)
-                        } else conn.reply(m.chat, msgkurang, m)
-                    } else conn.reply(m.chat, msgpenuh, m)
-                } else if (args.length > 2 && args[0] === !'potion') m.reply(pickRandom(['Hanya bisa menggunakan potion', 'Mau ngunain apa? Cuma bisa gunain potion :v', 'Wih mau gunain apa kamu, kan hanya bisa potion', 'Waduheck, hanya bisa potion', 'lah, mau gunain apa?, kan hanya bisa potion']) + '\nContoh penggunaan: *' + usedPrefix + 'potion 1*')
-            } catch (e) {
-                console.log(e)
-                m.reply(msgerror)
-                if (DevMode) {
-                    let file = require.resolve(__filename)
-                    for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
-                        conn.sendMessage(jid, file + ' error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', MessageType.text)
-                    }
-                }
-            }
-        } else if (/heal/i.test(command)) {
-            try {
-                let count = (/[0-9]/g.test(args[0])) ? !args[0] || args.length < 1 ? Math.max((Math.ceil((100 - global.db.data.users[m.sender].healt) / usepotion)), 1) : Math.max(args[0], 1) : Math.max((Math.ceil((100 - global.db.data.users[m.sender].healt) / usepotion)), 1)
-                let msgsucces = (pickRandom(['success memakai', 'Nice succes menggunakan', 'berhasil meminum ', 'primitif anda menggunakan', 'anda memakai', 'Anda menggunakan']) + ' *' + (count * 1) + '* Potion')
-                if (global.db.data.users[m.sender].healt < 100) {
-                    if (global.db.data.users[m.sender].potion >= count * 1) {
-                        global.db.data.users[m.sender].potion -= count * 1
-                        global.db.data.users[m.sender].healt += usepotion * count
-                        conn.reply(m.chat, msgsucces, m)
-                    } else conn.reply(m.chat, msgkurang, m)
-                } else conn.reply(m.chat, msgpenuh, m)
-            } catch (e) {
-                console.log(e)
-                m.reply(msgerror)
-                if (DevMode) {
-                    let file = require.resolve(__filename)
-                    for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
-                        conn.sendMessage(jid, file + ' error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', MessageType.text)
-                    }
-                }
+let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
+	let type = (args[0] || '').toLowerCase()
+    let use = (args[0] || '').toLowerCase()
+    let spotion = global.db.data.users[m.sender].spotion
+    let mpotion = global.db.data.users[m.sender].mpotion
+    let hpotion = global.db.data.users[m.sender].hpotion
+let cok = `
+Jumlah Healt per Potion
+
+*• spotion   25 healt*
+*• mpotion   60 healt*
+*• hpotion   150 healt*
+
+
+*[ Stok Potion Kamu ]*
+
+• spotion  ${spotion} buah
+• mpotion  ${mpotion} buah
+• hpotion  ${hpotion} buah
+
+contoh:
+*${usedPrefix + command} spotion 2*
+`.trim()
+try {
+       if (/use/i.test(command)) {
+            const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
+            switch (type) {
+            	case 'spotion':
+            if (global.db.data.users[m.sender].healt < 100) {
+                        if (global.db.data.users[m.sender].spotion >= count * 1) {
+                            global.db.data.users[m.sender].spotion -= count * 1
+                            global.db.data.users[m.sender].healt += count * 25
+                            conn.reply(m.chat, `Sukses menggunakan ${count} spotion\n+${count * 25} Healt`, m)
+                       } else conn.reply(m.chat, `Tidak memiliki spotion lagi`, m)
+                       } else conn.reply(m.chat, `Nyawa dah penuh`, m)
+break
+                  case 'mpotion':
+            if (global.db.data.users[m.sender].healt < 100) {
+                        if (global.db.data.users[m.sender].mpotion >= count * 1) {
+                            global.db.data.users[m.sender].mpotion -= count * 1
+                            global.db.data.users[m.sender].healt += count * 60
+                            conn.reply(m.chat, `Berhasil menggunakan ${count} mpotion\n+${count * 60} Healt`, m)
+                       } else conn.reply(m.chat, `Kehabisan stok mpotion`, m)
+                       } else conn.reply(m.chat, `Healt mu penuh oyy`, m)
+break
+                   case 'hpotion':
+            if (global.db.data.users[m.sender].healt < 100) {
+                        if (global.db.data.users[m.sender].hpotion >= count * 1) {
+                            global.db.data.users[m.sender].hpotion -= count * 1
+                            global.db.data.users[m.sender].durability += count * 150
+                            conn.reply(m.chat, `Primitif, menggunakan ${count} hpotion\n+${count * 150} Healt`, m)
+                       } else conn.reply(m.chat, `Belum meracik hpotion`, m)
+                       } else conn.reply(m.chat, `Udah weh, dah penuh`, m)
+                       
+break
+                default:
+                    return conn.reply( m.chat, cok, m)
             }
         }
     } catch (e) {
+        conn.reply(m.chat, `Error`, m)
         console.log(e)
-        conn.reply(m.chat, msgerror, m)
         if (DevMode) {
-            let file = require.resolve(__filename)
             for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
-                conn.sendMessage(jid, file + ' error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', MessageType.text)
+                conn.sendMessage(jid, 'use.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', MessageType.text)
             }
         }
     }
 }
 
-// handler.help = ['use <item> <jumlah>', 'heal']
-// handler.tags = ['rpg']
-handler.command = /^(use|heal)$/i
 handler.register = true
+handler.command = /^(use)$/i
 module.exports = handler
-
-function pickRandom(list) {
-    return list[Math.floor(Math.random() * list.length)]
-}
