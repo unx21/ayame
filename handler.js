@@ -31,6 +31,7 @@ module.exports = {
           if (!isNumber(user.stamina)) user.stamina = 100
           if (!isNumber(user.durability)) user.durability = 20
           if (!isNumber(user.magazine)) user.magazine = 12
+          if (!isNumber(user.swordpower)) user.swordpower = 0
           
           if (!isNumber(user.lastadventure)) user.lastadventure = 0
           if (!isNumber(user.lastmulung)) user.lastmulung = 0
@@ -38,6 +39,7 @@ module.exports = {
           if (!isNumber(user.lastdungeon)) user.lastdungeon = 0
           if (!isNumber(user.lastberburu)) user.lastberburu = 0
           if (!isNumber(user.lasthunt)) user.lasthunt = 0
+          if(!isNumber(user.lastuh)) user.lastuh = 0
           
           if (!isNumber(user.common)) user.common = 0
           if (!isNumber(user.uncommon)) user.uncommon = 0
@@ -45,26 +47,31 @@ module.exports = {
           if (!isNumber(user.legendary)) user.legendary = 0
           
           if (!isNumber(user.diamond)) user.diamond = 0
-          if (!isNumber(user.potion)) user.potion = 0
+          if (!isNumber(user.spotion)) user.spotion = 0
+          if (!isNumber(user.mpotion)) user.mpotion = 0 
+          if (!isNumber(user.hpotion)) user.hpotion = 0
           if (!isNumber(user.sampah)) user.sampah = 0
 
           if (!isNumber(user.ironarmor)) user.ironarmor = 0
           if (!isNumber(user.goldarmor)) user.goldarmor = 0
           if (!isNumber(user.magicarmor)) user.magicarmor = 0
+          if (!isNumber(user.sword)) user.sword = 0
           if (!isNumber(user.peluru)) user.peluru = 0
           if (!isNumber(user.iron)) user.iron = 0
           if (!isNumber(user.gold)) user.gold = 0
           if (!isNumber(user.mgstone)) user.mgstone = 0
           if (!isNumber(user.peti)) user.peti = 0
           
+          if (!isNumber(user.antispam)) user.antispam = 0 
+          if (!isNumber(user.antispamlastclaim)) user.antispamlastclaim = 0
+
           if (!isNumber(user.slime)) user.slime = 0
           if (!isNumber(user.skeleton)) user.skeleton = 0
           if (!isNumber(user.goblin)) user.goblin = 0
           if (!isNumber(user.wolf)) user.wolf = 0
-          if (!isNumber(user.sprtgrass)) user.sprtgrass = 0
-          if (!isNumber(user.mdgrleaf)) user.mdgrleaf = 0
-          if (!isNumber(user.hpktplant)) user.hpktplant = 0
-          if (!isNumber(user.spotion)) user.spotion = 0
+          if (!isNumber(user.spiritgrass)) user.spiritgrass = 0
+          if (!isNumber(user.mandragoraleaf)) user.mandragoraleaf = 0
+          if (!isNumber(user.hipokuteplant)) user.hipokuteplant = 0
           
           if (!isNumber(user.kayu)) user.kayu = 0
           if (!isNumber(user.rusa)) user.rusa = 0
@@ -121,6 +128,7 @@ module.exports = {
           stamina: 100,
           durability: 20,
           magazine: 12,
+          swordpower: 0,
           diamond: 0,
           iron: 0,
           common: 0,
@@ -128,7 +136,9 @@ module.exports = {
           mythic: 0,
           legendary: 0,
           pet: 0,
-          potion: 0,
+          spotion: 0,
+          mpotion: 0,
+          hpotion: 0,
           sampah: 0,
           iron: 0,
           gold: 0,
@@ -137,15 +147,15 @@ module.exports = {
           ironarmor: 0,
           goldarmor: 0,
           magicarmor: 0,
+          sword: 0,
           peluru: 0,
           slime: 0,
           goblin: 0,
           skeleton: 0,
           wolf: 0,
-          sprtgrass: 0,
-          mdgrleaf: 0,
-          hpktplant: 0,
-          spotion: 0,
+          spiritgrass: 0,
+          mandragoraleaf: 0,
+          hipokuteplant: 0,
           kayu: 0,
           rusa: 0,
           rusabakar: 0,
@@ -182,6 +192,7 @@ module.exports = {
           lastmulung: 0,
           lastdungeon: 0,
           lastnambang: 0,
+          lastuh: 0,
           premdate: 0,
           registered: false,
           name: this.getName(m.sender),
