@@ -16,13 +16,10 @@ let teks = `
 │ ⌬ _${usedPrefix}open_  [ pet ]
 │ ⌬ _${usedPrefix}shop_  [ buy/sell  item ]
 │ ⌬ _${usedPrefix}toko_  [ buy/sell  item ]
-│ ⌬ _${usedPrefix}use_  [ potion  jumlah ]
-│ ⌬ _${usedPrefix}heal_
+│ ⌬ _${usedPrefix}use_  [ type  jumlah ]
 │ ⌬ _${usedPrefix}dungeon_
 │ ⌬ _${usedPrefix}meracik_  [ herbal  jumlah ]
 │ ⌬ _${usedPrefix}racik_  [ herbal  jumlah ]
-│ ⌬ _${usedPrefix}barter_  [ jumlah ]
-│ ⌬ _${usedPrefix}barterall_
 │ ⌬ _${usedPrefix}bedah_  [ monster  jumlah ]
 │ ⌬ _${usedPrefix}berburu_
 │ ⌬ _${usedPrefix}hunt_
