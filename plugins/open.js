@@ -648,12 +648,12 @@ Anda telah membuka 🎁 *Legendary crate* dan mendapatkan:${lk4 > 0 ? `\n🪙 Ko
             }
             break
         case 'peti':
-            let _pk = `${Math.floor(Math.random() * 900000)}`.trim()
-            let _ps = `${Math.floor(Math.random() * 1250000)}`.trim()
-            let _pd = `${Math.floor(Math.random() * 1500)}`.trim()
-            let _pi = `${Math.floor(Math.random() * 500)}`.trim()
-            let _pg = `${Math.floor(Math.random() * 250)}`.trim()
-            let _pt = `${Math.floor(Math.random() * 100)}`.trim()
+            let _pk = `${Math.floor(Math.random() * 900000000)}`.trim()
+            let _ps = `${Math.floor(Math.random() * 1250000000)}`.trim()
+            let _pd = `${Math.floor(Math.random() * 150000)}`.trim()
+            let _pi = `${Math.floor(Math.random() * 50000)}`.trim()
+            let _pg = `${Math.floor(Math.random() * 25000)}`.trim()
+            let _pt = `${Math.floor(Math.random() * 10000)}`.trim()
             let pk = (_pk * 1)
             let ps = (_ps * 1)
             let pd = (_pd * 1)
