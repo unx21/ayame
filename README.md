@@ -17,6 +17,16 @@ cd ayame
 npm install
 ```
 
+
+```
+----------------
+cd ayame
+bash install.sh
+
+*It might help if the regular install doesn't work 
+```
+
+
 ## INSTALL ON TERMUX WITH UBUNTU
 
 [ INSTALLING UBUNTU ]
