@@ -9,7 +9,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, isOwner, DevMode }) 
 • Uang\n• Koin\n• Diamond\n• Peti\n• Legendary\n• Mythic\n• Healt\n• Stamina\n• Durability\n• Magazine
 `.trim()
 try {
-       if (/cheat|cit|gacha/i.test(command)) {
+       if (/cheat|cit/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.max(parseInt(args[1]), 1) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
             switch (type) {
             	case 'uang':
@@ -117,7 +117,7 @@ break
 }
 
 handler.register = true
-handler.command = /^(gacha|cheat|cit)$/i
+handler.command = /^(cheat|cit)$/i
 handler.fail = null
 
 module.exports = handler
