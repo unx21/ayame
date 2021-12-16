@@ -64,8 +64,8 @@ Bisonbakar:  ${Sbsnbkr}
 Makanan:   ${Smakanan}\n
 *_Lainnya_*
 Spotion:       ${Sspotion}
-Smpotion:     ${Smpotion}
-Shpotion:   ${Shpotion}
+Mpotion:     ${Smpotion}
+Hpotion:   ${Shpotion}
 Diamond:     ${Sdiamond}
 Mgstone:   ${Smgstone}
 Kayu:     ${Skayu}
