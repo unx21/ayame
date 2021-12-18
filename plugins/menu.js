@@ -7,8 +7,7 @@ let tags = {
 const defaultMenu = {
   before: `
 ┏ ┅ ━━ *〘 %me 〙*
-┇
-┇ _Source_ : https://github.com/Kokoronationz/mirai
+┇ _Source : https://github.com/Kokoronationz/mirai_
 ┣ ┅ ━━━━━━━━
 ┃
 ┃ ⌬ Hai %name!
@@ -48,10 +47,11 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
     let ayame = './src/photo/ItssAyaamee.jpg'
-    let tnbot = fs.readFileSync('./src/photo/NAyame.png')
-    //let { exp, uang, limit, level, role } = global.db.data.users[m.sender]
-    //let { min, xp, max } = levelling.xpRange(level, global.multiplier)
-    let name = conn.getName(m.sender)
+    let unx = 'https://bit.ly/unxzx'
+    //let premium = global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    let tnbot = (await conn.getFile(await conn.getProfilePicture(m.fromMe))).data.toString('base64')
+    let { name } = global.db.data.users[m.sender]
+    //let name = conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
     let locale = 'id'
     // d.getTimeZoneOffset()
@@ -94,7 +94,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
         tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
         prefix: 'customPrefix' in plugin,
         limit: plugin.limit,
-        premium: plugin.premium,
         enabled: !plugin.disabled,
       }
     })
@@ -133,20 +132,14 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       npmname: package.name,
       npmdesc: package.description,
       version: package.version,
-      //exp: exp - min,
-      //maxexp: xp,
-      //totalexp: exp,
-      //xp4levelup: max - exp,
       github: package.homepage ? package.homepage.url || package.homepage : '[unknown github url]',
-      //level, uang, limit, 
-      name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, 
-      //role,
+      name, weton, week, date, dateIslamic, time, totalreg, rtotalreg,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //conn.reply(m.chat, text.trim(), m)
     conn.fakeReply(m.chat, `Tunggu Sebentar, Jangan Spam !!!`, '0@s.whatsapp.net', ` _${conn.user.name} Verified WhatsApp Bot_`, 'status@broadcast')
-    await conn.sendFile(m.chat, ayame, 'ItssAyaamee.jpg', text.trim(), { 
+    await conn.sendFile(m.chat, ayame, 'ItsAyaamee.jpg', text.trim(), { 
       key: { 
         remoteJid: 'status@broadcast', 
         participant: '0@s.whatsapp.net', 
@@ -155,7 +148,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       message: { 
         "imageMessage": { 
           "mimetype": "image/jpeg", 
-          "caption": `_${conn.user.name} Verified WhatsApp Bot_`, 
+          "caption": `${conn.user.name} Verified WhatsApp Bot`, 
           "jpegThumbnail": tnbot
         } 
       }
@@ -163,13 +156,14 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       //thumbnail: tnbot, 
       contextInfo: { 
         mentionedJid: [m.sender]} } )
-      } catch (e) {
+  } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
   }
 }
-handler.command = /^(menu|help|\?)$/i
-
+//handler.help = ['menu', 'help']
+//handler.tags = ['main']
+handler.command = /^(menu|help)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
