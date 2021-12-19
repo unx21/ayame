@@ -5,12 +5,13 @@ let handler = async(m, { conn, command }) => {
   if (!res.ok) throw await res.text()
   let json = await res.json()
   if (!json.url) throw 'Error!'
-  conn.sendFile(m.chat, json.url, '', '© 栗山未来', m)
+  //conn.sendFile(m.chat, json.url, '', '© アルトリア', m)
+  await conn.sendButtonImg(m.chat, await(await fetch(json.url)).buffer(), 'Random '+command, '© アルトリア', 'Next', m.text, m)
 }
 //handler.help = ['waifu']
 //handler.tags = ['internet']
 handler.command = /^(waifu|neko|megumin|shinobu|kitsune)$/i
 handler.register = true
-handler.limit = 5
+handler.limit = 9
 
 module.exports = handler
