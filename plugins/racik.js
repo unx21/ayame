@@ -1,5 +1,4 @@
 let { MessageType } = require('@adiwajshing/baileys')
-//FaQ FaQ FaQ
 let handler = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   let type = (args[0] || '').toLowerCase()
   let rck = (args[0] || '').toLowerCase()
@@ -37,9 +36,9 @@ try {
                        } else conn.reply(m.chat, `Tanaman herbal kamu tidak cukup`, m)
 break
                   case 'mandragoraleaf':
-            if (global.db.data.users[m.sender].mandragora >= count * 1) {
-                            global.db.data.users[m.sender].mandragora >= count * 1
-                            global.db.data.users[m.sender].mandragora -= count * 1
+            if (global.db.data.users[m.sender].mandragoraleaf >= count * 1) {
+                            global.db.data.users[m.sender].mandragoraleaf >= count * 1
+                            global.db.data.users[m.sender].mandragoraleaf -= count * 1
                             global.db.data.users[m.sender].mpotion += count * 1
                             conn.reply(m.chat, `${count} Mandragora Leaf diracik menjadi ${count} Medium Potion`, m)
                        } else conn.reply(m.chat, `Tanaman herbal kamu tidak cukup`, m)
