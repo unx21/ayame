@@ -1,8 +1,13 @@
-### Ayame Nakiri
+##### Penggunaan bot ini ribet karena saya gak suka sesuatu yang simpel, jika anda bingung cukup ketik #tutorial atau
+
+
+<a href="https://wa.me/62887436568613?text=Hii+bisa+tolong+jelaskan+fitur+bot+kamu"><img src="https://img.shields.io/badge/WassapMe-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+
+
 
 ![Nakiri Whoahh](https://user-images.githubusercontent.com/84166927/141454421-45b120a7-6ab6-4fde-9339-c22fa8c531e3.jpg)
 
-Simple WhatsApp Bot
+Ribet WhatsApp Bot
 
 ## FOR TERMUX/UBUNTU/SSH USER
 
