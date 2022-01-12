@@ -71,10 +71,6 @@ let teks = `
 ││ • *${usedPrefix}bedah <monster> <jumlah>*
 ││    Untuk mendapatkan Magic Stone agar
 ││    dapat di tempa menjadi peluru
-││
-││ • *${usedPrefix}barter*
-││    Untuk menukarkan Small Potion
-││    menjadi Potion
 │╰────────────────
 │
 │
