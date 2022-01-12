@@ -125,7 +125,7 @@ Anda telah membuka 🎁 *Common crate* dan mendapatkan:${ck3 > 0 ? `\n🪙 Koin:
                     let uu = (_uu * 1)
                     let uc = (_uc * 1)
                     let Hun = `
-Anda telah membuka 🎁 *Uncommon crate* dan mendapatkan:${uk > 0 ? `\n🪙 Koin: ${uk}` : ''}${ue > 0 ? `\n🔗 Exp: ${ue} *Exp*` : ''}${up > 0 ? `\n🧃 Small Potion: ${up} *Potion*` : ''}${uc > 0 ? `\n🎁 Common crate: ${uc} *Crate*` : ''}${uu > 0 ? `\n🎁 Uncommon crate: ${uu} *Crate*` : ''}
+Anda telah membuka 🎁 *Uncommon crate* dan mendapatkan:${uk > 0 ? `\n🪙 Koin: ${uk}` : ''}${ue > 0 ? `\n🔗 Exp: ${ue} *Exp*` : ''}${usp > 0 ? `\n🧃 Small Potion: ${usp} *Potion*` : ''}${uc > 0 ? `\n🎁 Common crate: ${uc} *Crate*` : ''}${uu > 0 ? `\n🎁 Uncommon crate: ${uu} *Crate*` : ''}
 `.trim()
                     if (global.db.data.users[m.sender].uncommon >= 1) {
                         global.db.data.users[m.sender].uncommon -= 1
@@ -149,7 +149,7 @@ Anda telah membuka 🎁 *Uncommon crate* dan mendapatkan:${uk > 0 ? `\n🪙 Koin
                     let uu1 = (_uu1 * 1)
                     let uc1 = (_uc1 * 1)
                     let Hun1 = `
-Anda telah membuka 🎁 *Uncommon crate* dan mendapatkan:${uk1 > 0 ? `\n🪙 Koin: ${uk1}` : ''}${ue1 > 0 ? `\n🔗 Exp: ${ue1} *Exp*` : ''}${up1 > 0 ? `\n🧃 Small Potion: ${up1} *Potion*` : ''}${uc1 > 0 ? `\n🎁 Common crate: ${uc1} *Crate*` : ''}${uu1 > 0 ? `\n🎁 Uncommon crate: ${uu1} *Crate*` : ''}
+Anda telah membuka 🎁 *Uncommon crate* dan mendapatkan:${uk1 > 0 ? `\n🪙 Koin: ${uk1}` : ''}${ue1 > 0 ? `\n🔗 Exp: ${ue1} *Exp*` : ''}${usp1 > 0 ? `\n🧃 Small Potion: ${usp1} *Potion*` : ''}${uc1 > 0 ? `\n🎁 Common crate: ${uc1} *Crate*` : ''}${uu1 > 0 ? `\n🎁 Uncommon crate: ${uu1} *Crate*` : ''}
 `.trim()
                     if (global.db.data.users[m.sender].uncommon >= 10) {
                         global.db.data.users[m.sender].uncommon -= 10
@@ -173,7 +173,7 @@ Anda telah membuka 🎁 *Uncommon crate* dan mendapatkan:${uk1 > 0 ? `\n🪙 Koi
                     let uu2 = (_uu2 * 1)
                     let uc2 = (_uc2 * 1)
                     let Hun2 = `
-Anda telah membuka 🎁 *Uncommon crate* dan mendapatkan:${uk2 > 0 ? `\n🪙 Koin: ${uk2}` : ''}${ue2 > 0 ? `\n🔗 Exp: ${ue2} *Exp*` : ''}${up2 > 0 ? `\n🧃 Small Potion: ${up2} *Potion*` : ''}${uc2 > 0 ? `\n🎁 Common crate: ${uc2} *Crate*` : ''}${uu2 > 0 ? `\n🎁 Uncommon crate: ${uu2} *Crate*` : ''}
+Anda telah membuka 🎁 *Uncommon crate* dan mendapatkan:${uk2 > 0 ? `\n🪙 Koin: ${uk2}` : ''}${ue2 > 0 ? `\n🔗 Exp: ${ue2} *Exp*` : ''}${usp2 > 0 ? `\n🧃 Small Potion: ${usp2} *Potion*` : ''}${uc2 > 0 ? `\n🎁 Common crate: ${uc2} *Crate*` : ''}${uu2 > 0 ? `\n🎁 Uncommon crate: ${uu2} *Crate*` : ''}
 `.trim()
                     if (global.db.data.users[m.sender].uncommon >= 100) {
                         global.db.data.users[m.sender].uncommon -= 100
@@ -197,7 +197,7 @@ Anda telah membuka 🎁 *Uncommon crate* dan mendapatkan:${uk2 > 0 ? `\n🪙 Koi
                     let uu3 = (_uu3 * 1)
                     let uc3 = (_uc3 * 1)
                     let Hun3 = `
-Anda telah membuka 🎁 *Uncommon crate* dan mendapatkan:${uk3 > 0 ? `\n🪙 Koin: ${uk3}` : ''}${ue3 > 0 ? `\n🔗 Exp: ${ue3} *Exp*` : ''}${up3 > 0 ? `\n🧃 Small Potion: ${up3} *Potion*` : ''}${uc3 > 0 ? `\n🎁 Common crate: ${uc3} *Crate*` : ''}${uu3 > 0 ? `\n🎁 Uncommon crate: ${uu3} *Crate*` : ''}
+Anda telah membuka 🎁 *Uncommon crate* dan mendapatkan:${uk3 > 0 ? `\n🪙 Koin: ${uk3}` : ''}${ue3 > 0 ? `\n🔗 Exp: ${ue3} *Exp*` : ''}${usp3 > 0 ? `\n🧃 Small Potion: ${usp3} *Potion*` : ''}${uc3 > 0 ? `\n🎁 Common crate: ${uc3} *Crate*` : ''}${uu3 > 0 ? `\n🎁 Uncommon crate: ${uu3} *Crate*` : ''}
 `.trim()
                     if (global.db.data.users[m.sender].uncommon >= 1000) {
                         global.db.data.users[m.sender].uncommon -= 1000
