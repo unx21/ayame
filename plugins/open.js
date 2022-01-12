@@ -169,7 +169,7 @@ Anda telah membuka 🎁 *Uncommon crate* dan mendapatkan:${uk1 > 0 ? `\n🪙 Koi
                     let _uc2 = `${Math.floor(Math.random() * 50)}`.trim()
                     let ue2 = (_ue2 * 1)
                     let uk2 = (_uk2 * 1)
-                    let usp2 = (_up2 * 1)
+                    let usp2 = (_usp2 * 1)
                     let uu2 = (_uu2 * 1)
                     let uc2 = (_uc2 * 1)
                     let Hun2 = `
