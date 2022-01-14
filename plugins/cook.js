@@ -44,9 +44,8 @@ try {
                             global.db.data.users[m.sender].rusabakar += count * 1
                             conn.reply(m.chat, `Succes memasak ${count} rusa bakar dengan ${count} kayu`, m)
                          } else conn.reply(m.chat, `Kamu tidak mempunyai kayu bakar yang cukup`, m)
-                       } else conn.reply(m.chat, `Stok buruan mu tidak cukup untuk dimasak`, m)
+                       } else conn.reply(m.chat, `Stok buruan tidak cukup untuk dimasak`, m)
 break
-
                   case 'babi':
             if (global.db.data.users[m.sender].babi >= count * 1) {
             if (global.db.data.users[m.sender].kayu >= count * 1) {
