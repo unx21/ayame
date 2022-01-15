@@ -27,8 +27,8 @@ klik wa.me/${conn.user.jid.split`@`[0]}`, m.chat, {
         }
       })
 
-      if (!room.pilih) this.send3Button(room.p, ' *「 SUIT PVP 」*', `Hadiah Menang   +${room.poin}\nKalah   -${room.poin_lose}`, 'Batu ✊🏻', 'Batu', 'Kertas 🖐🏻', 'Kertas', 'Gunting ✌🏻', 'Gunting', m)
-      if (!room.pilih2) this.send3Button(room.p2, ' *「 SUIT PVP 」*', `Hadiah Menang   +${room.poin}\nKalah   -${room.poin_lose}`, 'Batu ✊🏻', 'Batu', 'Kertas 🖐🏻', 'Kertas', 'Gunting ✌🏻', 'Gunting', m)
+      if (!room.pilih) this.send3Button(room.p, ' *「 SUIT PVP 」*', `Hadiah:\nMenang   +${room.poin}\nKalah   -${room.poin_lose}`, 'Batu ✊🏻', 'Batu', 'Kertas 🖐🏻', 'Kertas', 'Gunting ✌🏻', 'Gunting', m)
+      if (!room.pilih2) this.send3Button(room.p2, ' *「 SUIT PVP 」*', `Hadiah:\nMenang   +${room.poin}\nKalah   -${room.poin_lose}`, 'Batu ✊🏻', 'Batu', 'Kertas 🖐🏻', 'Kertas', 'Gunting ✌🏻', 'Gunting', m)
       room.waktu_milih = setTimeout(() => {
         if (!room.pilih && !room.pilih2) this.reply(m.chat, `Kedua pemain tidak niat main,\nSuit dibatalkan`)
         else if (!room.pilih || !room.pilih2) {
