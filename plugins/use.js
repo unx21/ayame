@@ -48,7 +48,7 @@ break
             if (global.db.data.users[m.sender].healt < 100) {
                         if (global.db.data.users[m.sender].hpotion >= count * 1) {
                             global.db.data.users[m.sender].hpotion -= count * 1
-                            global.db.data.users[m.sender].durability += count * 150
+                            global.db.data.users[m.sender].healt += count * 150
                             conn.reply(m.chat, `Primitif, menggunakan ${count} hpotion\n+${count * 150} Healt`, m)
                        } else conn.reply(m.chat, `Belum meracik hpotion`, m)
                        } else conn.reply(m.chat, `Udah weh, dah penuh`, m)
