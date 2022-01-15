@@ -11,7 +11,7 @@ let handler = async (m, { conn, text }) => {
   if (!res.ok) throw await res.text()
   let json = await res.json()
   let img = json.wallpapers[Math.floor(Math.random() * json.wallpapers.length)]
-  await conn.sendButtonImg(m.chat, await(await fetch(img)).buffer(), 'Random Wallpaper', '© 百鬼あやめ', 'Next', m.text, m)
+  await conn.sendButtonImg(m.chat, await(await fetch(img.url_image)).buffer(), `Hasil Pencarian\n${text}`, '© ヴァイオレット', 'Next', m.text, m)
 }
 //handler.help = ['wallpaperq <query>']
 //handler.tags = ['internet']
