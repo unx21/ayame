@@ -29,6 +29,9 @@ let teks = `
 ┃ ❖ _${usedPrefix}delprem_  [ @user ]
 ┃ ❖ _${usedPrefix}debounce_
 ┃ ❖ _${usedPrefix}enable_  [ options ]
+┃ ❖ _${usedPrefix}holo_  
+┃ ❖ _${usedPrefix}vtuber_  
+┃ ❖ _${usedPrefix}wvtuber_  
 ┃ ❖ _${usedPrefix}update_
 ┃ ❖ _${usedPrefix}update2_
 ┃ ❖ _${usedPrefix}jadibot_
