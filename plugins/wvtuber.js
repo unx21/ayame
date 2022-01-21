@@ -6,7 +6,7 @@ let txt = await res.text()
 
 let arr = txt.split('\n')
 let cita = arr[Math.floor(Math.random() * arr.length)]
-await conn.sendButtonImg(m.chat, await(await fetch(cita)).buffer(), `Random Images of Hololive Girls`, '© 赤井はあと', 'Next', m.text, m)
+await conn.sendButtonImg(m.chat, await(await fetch(cita)).buffer(), `Random Images of Hololive Girls`, '© 赤井はあと', 'NEXT', m.text, m)
 }
 
 //handler.help = ['holo', 'vtuber', 'wvtuber']
