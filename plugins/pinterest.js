@@ -12,7 +12,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
   /*conn.sendFile(m.chat, pint, '', `
 *Hasil pencarian*
 ${text}*/
-await conn.sendButtonImg(m.chat, await(await fetch(pint)).buffer(), `Hasil pencarian\n${text}`, '© ヴァイオレット', 'Next', m.text, m)
+await conn.sendButtonImg(m.chat, await(await fetch(pint)).buffer(), `Hasil pencarian\n${text}`, '© ヴァイオレット', 'NEXT', m.text, m)
 //`.trim(), m)
 }
 //handler.help = ['pinterest <keyword>']
