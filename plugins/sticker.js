@@ -4,8 +4,8 @@ const uploadFile = require('../lib/uploadFile')
 const uploadImage = require('../lib/uploadImage')
 let { webp2png } = require('../lib/webp2mp4')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-await m.reply(global.wait)
   let stiker = false
+  await m.reply(global.wait)
   try {
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
@@ -18,13 +18,13 @@ await m.reply(global.wait)
         if (/webp/g.test(mime)) out = await webp2png(img)
         else if (/image/g.test(mime)) out = await uploadImage(img)
         else if (/video/g.test(mime)) out = await uploadFile(img)
-        stiker = await sticker(false, out, '© 百鬼あやめ', '© 赤井はあと')
+        stiker = await sticker(false, out, global.packname, global.author)
       } catch (e) {
         console.error(e)
-        stiker = await sticker(img, false, '© 百鬼あやめ', '© 赤井はあと')
+        stiker = await sticker(img, false, global.packname, global.author)
       }
     } else if (args[0]) {
-      if (isUrl(args[0])) stiker = await sticker(false, args[0], '© 百鬼あやめ', '© 赤井はあと')
+      if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
       else return m.reply('URL tidak valid!')
     }
   } catch (e) {
