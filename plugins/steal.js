@@ -3,9 +3,8 @@ const { sticker } = require('../lib/sticker')
 const uploadFile = require('../lib/uploadFile')
 const uploadImage = require('../lib/uploadImage')
 let { webp2png } = require('../lib/webp2mp4')
-let handler = async (m, { conn, isOwner, text }) => {
+let handler = async (m, { conn, text }) => {
 await m.reply(global.wait)
-  if (!isOwner) throw 'Mau Ngapain Hahh!1!1!'
   let namalu = await conn.getName(m.sender)
   let stiker = false
   try {
