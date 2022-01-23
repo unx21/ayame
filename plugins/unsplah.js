@@ -4,9 +4,9 @@ const fetch = require('node-fetch')
 
 let handler = async (m, { conn, text }) => {
   if (!text) throw 'Nyari apa?'
-  let res = await fetch(global.API('zeks','/api/unsplash', {
+  let res = await fetch('https://api.zeks.me/api/unsplash', {
     q : encodeURI(text)
-  }, 'apikey'))
+  }, 'apikey')
   await m.reply(global.wait)
   if (!res.ok) throw await res.text()
   let json = await res.json()
@@ -18,6 +18,6 @@ let handler = async (m, { conn, text }) => {
 //handler.tags = ['internet']
 handler.command = /^(unsplash)$/i
 handler.register = true
-handler.limit = true
+handler.limit = 3
 //
 module.exports = handler
