@@ -9,7 +9,7 @@
 
 ---------------------------
 
-![Nakiri Whoahh](https://user-images.githubusercontent.com/84166927/141454421-45b120a7-6ab6-4fde-9339-c22fa8c531e3.jpg)
+![Ayameverse](https://user-images.githubusercontent.com/84166927/150901343-6c08ad60-fd86-46f5-98b6-36f07edec7b3.jpg)
 
 Ribet WhatsApp Bot
 
@@ -175,4 +175,4 @@ conn.logger.level = 'debug'
 [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo) | [![BochilGaming](https://github.com/BochilGaming.png?size=100)](https://github.com/BochilGaming) | [![Kokoronationz](https://github.com/Kokoronationz.png?size=100)](https://github.com/Kokoronationz) | [![unx](https://github.com/unx21.png?size=100)](https://github.com/unx21) |
 ----|----|----|----|
 [Nurutomo](https://github.com/Nurutomo) | [BochilGaming](https://github.com/BochilGaming) | [Kokoronationz](https://github.com/Kokoronationz) | [U n x](https://github.com/unx21) |
-Original Creator | RPG Creator | Original Repository | Ayame SIMP |
+Original Creator | RPG Creator | Source Repository | Ayame SIMP |
