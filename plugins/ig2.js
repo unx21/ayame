@@ -2,6 +2,7 @@
 
 let handler = async (m, { usedPrefix, command, conn, args }) => {
   if (!args[0]) throw `Gunakan format: ${usedPrefix}${command} https://www.instagram.com/xxx/xxxx/`
+  await m.reply(global.wait)
   let res = await igdl(args[0])
   if (!res.length) throw 'Not found!'
   for (let ress of res) {
