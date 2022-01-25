@@ -32,7 +32,7 @@ let teks = `
 │       kegunaannya adalah untuk mengakses
 │       sebagian besar fitur, namun ada beberapa
 │       fitur yang hanya bisa di akses oleh
-│  _*User Premium.*_
+│     _*User Premium.*_
 │
 │   5. Uang
 │        kegunaannya adalah untuk membeli
