@@ -4,14 +4,17 @@ let teks = `
 ┏ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┇       *「 PREMIUM MENU 」*
 ┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
-┃ ❖ _${usedPrefix}fb_  [ url ]
+┃ ❖ _${usedPrefix}fb_  *E R R O R ! !*
 ┃ ❖ _${usedPrefix}image_  [ query ]
 ┃ ❖ _${usedPrefix}google_  [ pencarian ]
 ┃ ❖ _${usedPrefix}googlef_  [ pencarian ]
 ┃ ❖ _${usedPrefix}ig_  [ url ]
+┃ ❖ _${usedPrefix}ig2_  [ url ]
 ┃ ❖ _${usedPrefix}ighighlight_  [ username ]
 ┃ ❖ _${usedPrefix}igstalk_  [ username ]
+┃ ❖ _${usedPrefix}igstalk2_  [ username ]
 ┃ ❖ _${usedPrefix}igstory_  [ username ]
+┃ ❖ _${usedPrefix}igstory2_  [ username ]
 ┃ ❖ _${usedPrefix}jadibot_
 ┃ ❖ _${usedPrefix}join_  [ link grup ]
 ┃ ❖ _${usedPrefix}joox_  [ judul ]
