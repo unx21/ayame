@@ -2,6 +2,7 @@
 
 let handler = async (m, { usedPrefix, command, conn, args }) => {
   if (!args[0]) throw `Gunakan format: ${usedPrefix}${command} instagram`
+  await m.reply(global.wait)
   let res = await igstory(args[0])
   if (!res.length) throw 'User no have story!'
   for (let { url, type } of res)
