@@ -1,7 +1,7 @@
 let limit = 30
 const { servers, yta } = require('../lib/y2mate')
 let handler = async (m, { conn, args, isPrems, isOwner }) => {
-  if (!args || !args[0]) throw 'Uhm... urlnya mana?'
+  if (!args || !args[0]) return m.reply('Uhm... urlnya mana?')
   await m.reply(global.wait)
   let chat = global.db.data.chats[m.chat]
   let server = (args[1] || servers[0]).toLowerCase()
@@ -10,7 +10,7 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
   conn.sendFile(m.chat, thumb, 'thumbnail.jpg', `
 *Title:* ${title}
 *Filesize:* ${filesizeF}
-*${isLimit ? 'Pakai ': ''}Link:* ${await shortlink(dl_link)}
+*${isLimit ? 'Pakai ': ''}Link:* ${dl_link}
 `.trim(), m)
   if (!isLimit) conn.sendFile(m.chat, dl_link, title + '.mp3', `
 *Title:* ${title}
@@ -22,10 +22,10 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
 //handler.help = ['mp3','a'].map(v => 'yt' + v + ` <url> [server: ${servers.join(', ')}]`)
 //handler.tags = ['downloader']
 handler.command = /^yt(a|mp3)$/i
-handler.register = true
 handler.owner = false
 handler.mods = false
 handler.premium = true
+handler.register = true
 handler.group = false
 handler.private = false
 
@@ -34,11 +34,6 @@ handler.botAdmin = false
 
 handler.fail = null
 handler.exp = 0
-handler.limit = false
 
 module.exports = handler
 
-async function shortlink(url) {
-isurl = /https?:\/\//.test(url)
-return isurl ? (await require('axios').get('https://tinyurl.com/api-create.php?url='+encodeURIComponent(url))).data : ''
-}
