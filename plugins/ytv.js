@@ -2,7 +2,7 @@ let limit = 30
 let fetch = require('node-fetch')
 const { servers, ytv } = require('../lib/y2mate')
 let handler = async (m, { conn, args, isPrems, isOwner }) => {
-  if (!args || !args[0]) throw 'Uhm... urlnya mana?'
+  if (!args || !args[0]) return m.reply('Uhm... urlnya mana?')
   await m.reply(global.wait)
   let chat = global.db.data.chats[m.chat]
   let server = (args[1] || servers[0]).toLowerCase()
@@ -27,11 +27,10 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
 //handler.help = ['mp4','v',''].map(v => 'yt' + v + ` <url> [server: ${servers.join(', ')}]`)
 //handler.tags = ['downloader']
 handler.command = /^yt(v|mp4)?$/i
-handler.register = true
-
 handler.owner = false
 handler.mods = false
 handler.premium = true
+handler.register = true
 handler.group = false
 handler.private = false
 
@@ -40,7 +39,6 @@ handler.botAdmin = false
 
 handler.fail = null
 handler.exp = 0
-handler.limit = false
 
 module.exports = handler
 
