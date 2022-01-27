@@ -32,7 +32,7 @@ let handler = async function (m, { text, usedPrefix }) {
   let foot = `_Simpan serial number anda!_\n_Jika sn kamu hilang silahkan ketik ${usedPrefix}ceksn_`
   global.db.data.users[m.sender].uang += 10000
   global.db.data.users[m.sender].koin += 5000
-  conn.sendButton(m.chat, caption, foot, 'P r o f i l e',  m.text, m)
+  conn.sendButton(m.chat, caption, foot, 'P r o f i l e', '.profile', m.text, m)
 }
 //handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
 //handler.tags = ['exp']
