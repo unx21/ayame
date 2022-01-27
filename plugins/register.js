@@ -16,8 +16,7 @@ let handler = async function (m, { text, usedPrefix }) {
   user.regTime = + new Date
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
-  let caption = `
-┏ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━
+  let teks = `┏ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┇       *「 INFORMATION 」*
 ┣ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┃
@@ -27,10 +26,9 @@ let handler = async function (m, { text, usedPrefix }) {
 ┃ *Gift:* Rp10000 and 5000 Coins
 ┃ *Serial Number:* 
 ┃ ${sn}
-┗ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━
-`
+┗ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━`
 let foot = `_Simpan serial number anda!_\n_Jika sn kamu hilang, ketik ${usedPrefix}ceksn_`
-conn.sendButton(m.chat, caption, foot, 'P r o f i l e', '.profile', m.text, m)
+conn.sendButton(m.chat, teks, foot, 'P r o f i l e', '.profile', m.text, m)
 global.db.data.users[m.sender].uang += 10000
 global.db.data.users[m.sender].koin += 5000
 }
