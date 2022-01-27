@@ -9,11 +9,11 @@ let cita = arr[Math.floor(Math.random() * arr.length)]
 await conn.sendButtonImg(m.chat, await(await fetch(cita)).buffer(), `Enjoy These High Quality Wallpapers`, '© 赤井はあと', 'NEXT', m.text, m)
 }
 
-handler.help = ['random', 'wpo', 'wpp', 'wphd']
+handler.help = ['wpp', 'wphd']
 handler.tags = ['OWNER ONLY']
-handler.command = /^random|wpo|wpp|wphd$/i
+handler.command = /^wp(p|hd)$/i
 handler.limit = false
-handler.owner = true
+handler.rowner = true
 handler.register = true
 
 module.exports = handler
