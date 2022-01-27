@@ -15,12 +15,9 @@ let handler = async function (m, { text, usedPrefix }) {
   user.age = age
   user.regTime = + new Date
   user.registered = true
-  let pp = 'https://telegra.ph/file/debfea980ae47bed361fb.jpg'
-  let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-  try {
-    pp = await conn.getProfilePicture(who)
   let sn = createHash('md5').update(m.sender).digest('hex')
-  let teks = `┏ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━
+  let caption = `
+┏ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┇       *「 INFORMATION 」*
 ┣ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┃
@@ -30,11 +27,12 @@ let handler = async function (m, { text, usedPrefix }) {
 ┃ *Gift:* Rp10000 and 5000 Coins
 ┃ *Serial Number:* 
 ┃ ${sn}
-┗ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━`,
-let foot = `_Simpan serial number anda!_\n_Jika sn kamu hilang, ketik ${usedPrefix}ceksn_`,
-await conn.sendButtonImg(m.chat, await(await fetch(pp)).buffer(), teks, foot, 'P r o f i l e', '.profile', m.text, m)
-global.db.data.users[m.sender].uang += 10000
-global.db.data.users[m.sender].koin += 5000
+┗ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━
+`.trim()
+  let foot = `_Simpan serial number anda!_\n_Jika sn kamu hilang silahkan ketik ${usedPrefix}ceksn_`
+  global.db.data.users[m.sender].uang += 10000
+  global.db.data.users[m.sender].koin += 5000
+  conn.sendButton(m.chat, caption, foot, 'P r o f i l e', `.profile`, m.text, m)
 }
 //handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
 //handler.tags = ['exp']
