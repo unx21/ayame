@@ -16,7 +16,7 @@ let handler = async function (m, { text, usedPrefix }) {
   user.regTime = + new Date
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
-  let pp = await fetch('https://telegra.ph/file/debfea980ae47bed361fb.jpg')
+  let res = await fetch('https://telegra.ph/file/debfea980ae47bed361fb.jpg')
   pp = await conn.getProfilePicture(m.sender)
   let caption = `
 ┏ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━
