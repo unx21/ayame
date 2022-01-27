@@ -12,7 +12,8 @@ let handler = async (m, { conn, usedPrefix }) => {
 
   } finally {
     let about = (await conn.getStatus(who).catch(console.error) || {}).status || ''
-    let { name, limit, uang, koin, lastclaim, registered, regTime, age } = global.db.data.users[who]    let username = conn.getName(who)
+    let { name, limit, uang, koin, lastclaim, registered, regTime, age } = global.db.data.users[who]
+    let username = conn.getName(who)
     let prem = global.prems.includes(who.split`@`[0])
     let sn = createHash('md5').update(who).digest('hex')
     let str = `
