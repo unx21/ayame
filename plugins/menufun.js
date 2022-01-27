@@ -31,6 +31,8 @@ let teks = `
 ┃ ❖ _${usedPrefix}wibucek_
 ┃ ❖ _${usedPrefix}jadian_
 ┃ ❖ _${usedPrefix}math_
+┃ ❖ _${usedPrefix}quote_
+┃ ❖ _${usedPrefix}quotes_
 ┃ ❖ _${usedPrefix}simi_  [ teks ]
 ┃ ❖ _${usedPrefix}simsimi_  [ teks ]
 ┃ ❖ _${usedPrefix}simih_  [ teks ]
