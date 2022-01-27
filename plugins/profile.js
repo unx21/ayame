@@ -12,9 +12,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
   } finally {
     let about = (await conn.getStatus(who).catch(console.error) || {}).status || ''
-    let { name, role, level, exp, limit, uang, koin, lastclaim, registered, regTime, age } = global.db.data.users[who]
-    let { min, xp, max } = levelling.xpRange(level, global.multiplier)
-    let username = conn.getName(who)
+    let { name, limit, uang, koin, lastclaim, registered, regTime, age } = global.db.data.users[who]    let username = conn.getName(who)
     let prem = global.prems.includes(who.split`@`[0])
     let sn = createHash('md5').update(who).digest('hex')
     let str = `
@@ -24,9 +22,6 @@ let handler = async (m, { conn, usedPrefix }) => {
 *Saldo:* Rp${uang}
 *Koin:* ${koin}
 *Limit:* ${limit}
-*Rank:* ${role}
-*Level:* ${level}
-*Exp :* ${exp} --> ${max}
 *Registered:* ${registered ? 'Yes (' + new Date(regTime) + ')': 'No'}
 *Premium:* ${prem ? 'Yes' : 'No'}${lastclaim > 0 ? '\n*Last Claim:* ' + new Date(lastclaim) : ''}
 *SN:* ${sn}
