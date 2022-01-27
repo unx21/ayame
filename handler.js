@@ -543,6 +543,7 @@ Untuk mematikan fitur ini, ketik
 }
 
 global.dfail = (type, m, conn) => {
+  let nama = conn.getName(m.sender)
   let msg = {
     rowner: '_Perintah ini hanya dapat digunakan oleh Master_',
     owner: '_Perintah ini hanya dapat digunakan oleh Owner Bot_',
@@ -552,7 +553,7 @@ global.dfail = (type, m, conn) => {
     private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_',
     admin: '_Perintah ini hanya untuk *Admin* grup_',
     botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_',
-    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama|umur*\n\nContoh: *#daftar 百鬼あやめ.19*`
+    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar ${nama}.19*`
   }[type]
   if (msg) return m.reply(msg)
 }
