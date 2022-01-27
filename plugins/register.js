@@ -4,7 +4,7 @@ let handler = async function (m, { text, usedPrefix }) {
   let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
   let user = global.db.data.users[m.sender]
   if (user.registered === true) throw `Anda sudah terdaftar\n\nMau daftar ulang? ${usedPrefix}unreg <SN|SERIAL NUMBER>`
-  if (!Reg.test(text)) throw `Format salah\n\n*${usedPrefix}daftar nama.umur*`
+  if (!Reg.test(text)) throw `Format salah\n\n*${usedPrefix}daftar nama|umur*`
   let [_, name, splitter, age] = text.match(Reg)
   if (!name) throw 'Nama tidak boleh kosong (Alphanumeric)'
   if (!age) throw 'Umur tidak boleh kosong (Angka)'
@@ -16,8 +16,6 @@ let handler = async function (m, { text, usedPrefix }) {
   user.regTime = + new Date
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
-  let res = await fetch('https://telegra.ph/file/debfea980ae47bed361fb.jpg')
-  pp = await conn.getProfilePicture(m.sender)
   let caption = `
 ┏ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┇       *「 INFORMATION 」*
@@ -30,11 +28,22 @@ let handler = async function (m, { text, usedPrefix }) {
 ┃ *Serial Number:* 
 ┃ ${sn}
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━
-`
-  let foot = `_Simpan serial number anda!_\n_Jika sn kamu hilang silahkan ketik ${usedPrefix}ceksn_`
-  global.db.data.users[m.sender].uang += 10000
-  global.db.data.users[m.sender].koin += 5000
-  await conn.sendButtonImg(m.chat, await(await fetch(pp)).buffer(), caption, foot, 'P r o f i l e', `.profile`, m.text, m)
+
+ _Simpan Serial Number anda!_
+ _*jika sn kamu hilang, ketik ${usedPrefix}ceksn_
+`.trim()
+await conn.fakeReply(m.chat, caption,/* { 
+  key: { 
+    remoteJid: 'status@broadcast',
+    participant:*/ '0@s.whatsapp.net', 
+    /*fromMe: false 
+  }, message: { 
+    "imageMessage": { 
+      "mimetype": "image/jpeg", 
+      "caption": */` *Registration Successful!!*`, /*
+      "jpegThumbnail": tnbot} } }, { contextInfo: { mentionedJid: [m.sender] } }m*/'status@broadcast')
+global.db.data.users[m.sender].uang += 10000
+global.db.data.users[m.sender].koin += 5000
 }
 //handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
 //handler.tags = ['exp']
