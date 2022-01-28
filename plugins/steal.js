@@ -34,7 +34,7 @@ await m.reply(global.wait)
     else throw 'Balas stikernya!'
   }
 }
-handler.command = /^steal|colong|curi$/i
+handler.command = /^(colong|curi|st(eal)?)$/i
 
 handler.limit = 177013
 handler.register = true
