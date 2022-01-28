@@ -1,13 +1,10 @@
 const { createHash } = require('crypto')
-let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 let handler = async function (m, { text, usedPrefix }) {
   let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
   let user = global.db.data.users[m.sender]
   if (user.registered === true) throw `Anda sudah terdaftar\n\nMau daftar ulang? ${usedPrefix}unreg <SN|SERIAL NUMBER>`
-  if (!Reg.test(text)) throw `Format salah\n\n*${usedPrefix}daftar nama|umur*`
-  let [_, name, splitter, age] = text.match(Reg)
-  if (!name) throw 'Nama tidak boleh kosong (Alphanumeric)'
-  if (!age) throw 'Umur tidak boleh kosong (Angka)'
+  let name = conn.getName(m.sender)
+  let age = Math.floor(Math.random() * 41)
   age = parseInt(age)
   if (age > 40) throw 'Maaf umur Anda terlalu tua'
   if (age < 17) throw 'Maaf Anda belum bisa mendaftar'
@@ -48,7 +45,6 @@ global.db.data.users[m.sender].koin += 5000
 //handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
 //handler.tags = ['exp']
 
-handler.command = /^(daftar|reg(ister)?)$/i
+handler.command = /^(verify)?)$/i
 
 module.exports = handler
-
