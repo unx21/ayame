@@ -6,7 +6,7 @@ let txt = await res.text()
 
 let arr = txt.split('\n')
 let cita = arr[Math.floor(Math.random() * arr.length)]
-await conn.sendButtonImg(m.chat, await(await fetch(cita)).buffer(), `Enjoy These High Quality Wallpapers`, '© 赤井はあと', 'NEXT', m.text, m)
+await conn.sendButtonImg(m.chat, await(await fetch(cita)).buffer(), `Enjoy These High Quality Wallpapers`, '© 赤井はあと', 'N e x t', m.text, m)
 }
 
 handler.help = ['wpp', 'wphd']
