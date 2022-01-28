@@ -546,8 +546,6 @@ global.dfail = (type, m, conn) => {
   let nama = conn.getName(m.sender)
   let teks = `Anda perlu mendaftar terlebih dahulu dengan cara mengetik:\n\n*#daftar nama.umur*\n_Contoh: #daftar ${nama}.19_`
   let foot = `Tekan tombol verifikasi di bawah jika anda malas untuk mengetik`
-  let _umur = `${pickRandom(['17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'])}`
-  let umur = (_umur * 1)
   let msg = {
     rowner: '_Perintah ini hanya dapat digunakan oleh Master_',
     owner: '_Perintah ini hanya dapat digunakan oleh Owner Bot_',
@@ -557,7 +555,7 @@ global.dfail = (type, m, conn) => {
     private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_',
     admin: '_Perintah ini hanya untuk *Admin* grup_',
     botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_',
-    unreg: conn.sendButton(m.chat, teks, foot, 'V e r i f y', `.reg ${nama}.${umur}`, m.text, m)
+    unreg: conn.sendButton(m.chat, teks, foot, 'V e r i f y', `.verify`, m.text, m)
   }[type]
   if (msg) return m.reply(msg)
 }
