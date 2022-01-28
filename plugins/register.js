@@ -10,7 +10,7 @@ let handler = async function (m, { text, usedPrefix }) {
   if (!age) throw 'Umur tidak boleh kosong (Angka)'
   age = parseInt(age)
   if (age > 40) throw 'Maaf umur Anda terlalu tua'
-  if (age < 18) throw 'Maaf Anda belum bisa mendaftar'
+  if (age < 17) throw 'Maaf Anda belum bisa mendaftar'
   user.name = name.trim()
   user.age = age
   user.regTime = + new Date
