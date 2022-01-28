@@ -35,7 +35,7 @@ let handler = async (m, { conn, usedPrefix, DevMode }) => {
             let sampah = `${Math.floor(Math.random() * 300)}`.trim()
             let legendary = (_legendary * 1)
             let str = `
-Nyawa mu berkurang -${healt * 1} durability berukurang -${durability * 1} karena Kamu telah berpetualang sampai ${pickRandom(['Jepang 🇯🇵', 'Korea 🇰🇷', 'Bali 🇮🇩', 'Amerika 🇺🇸', 'Iraq 🇮🇶', 'Arab 🇸🇦', 'Pakistan 🇵🇰', 'German 🇩🇪', 'Finlandia 🇫🇮', 'Ke bawa dunia mimpi 🏴‍☠️', 'Ujung dunia 🌏', 'Mars 🚩', 'Bulan 🌙', 'Pluto 🏴', 'Matahari ☀️', 'Hatinya dia ❤️‍🔥', '...'])} dan mendapatkan
+Nyawa mu berkurang -${healt * 1} durability berkurang -${durability * 1} karena Kamu telah berpetualang sampai ${pickRandom(['Jepang 🇯🇵', 'Korea 🇰🇷', 'Bali 🇮🇩', 'Amerika 🇺🇸', 'Iraq 🇮🇶', 'Arab 🇸🇦', 'Pakistan 🇵🇰', 'German 🇩🇪', 'Finlandia 🇫🇮', 'Ke bawa dunia mimpi 🏴‍☠️', 'Ujung dunia 🌏', 'Mars 🚩', 'Bulan 🌙', 'Pluto 🏴', 'Matahari ☀️', 'Hatinya dia ❤️‍🔥', '...'])} dan mendapatkan
 
 *「 PRIZE 」*
 
