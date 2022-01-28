@@ -544,7 +544,7 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
   let nama = conn.getName(m.sender)
-  let teks = `Anda perlu mendaftar terlebih dahulu cukup dengan mengetik # verify`
+  let teks = `Anda perlu mendaftar terlebih dahulu dengan mengetik #verify`
   let foot = `Tekan tombol verifikasi di bawah jika anda malas untuk mengetik`
   let msg = {
     rowner: '_Perintah ini hanya dapat digunakan oleh Master_',
