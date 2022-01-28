@@ -217,7 +217,8 @@ module.exports = {
           if (!('sPromote' in chat)) chat.sPromote = ''
           if (!('sDemote' in chat)) chat.sDemote = ''
           if (!('delete' in chat)) chat.delete = false
-          if (!('antiLink' in chat)) chat.antiLink = true          if (!('viewonce' in chat)) chat.viewonce = true
+          if (!('antiLink' in chat)) chat.antiLink = true          
+          if (!('viewonce' in chat)) chat.viewonce = true
           if (!isNumber(chat.expired)) chat.expired = 0
         } else global.db.data.chats[m.chat] = {
           isBanned: false,
