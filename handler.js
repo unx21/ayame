@@ -558,11 +558,12 @@ global.dfail = (type, m, conn) => {
     admin: '_Perintah ini hanya untuk *Admin* grup_',
     botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_',
     unreg: conn.sendButton(m.chat, teks, foot, 'V e r i f y', `.reg ${nama}.${umur}`, m.text, m)
-    function pickRandom(list) {
-    return list[Math.floor(Math.random() * list.length)]
-    }
   }[type]
   if (msg) return m.reply(msg)
+}
+
+function pickRandom(list) {
+return list[Math.floor(Math.random() * list.length)]
 }
 
 let fs = require('fs')
