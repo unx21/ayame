@@ -218,6 +218,7 @@ module.exports = {
           if (!('sDemote' in chat)) chat.sDemote = ''
           if (!('delete' in chat)) chat.delete = false
           if (!('antiLink' in chat)) chat.antiLink = true
+          if (!('stiker' in chat)) chat.stiker = false
           if (!('viewonce' in chat)) chat.viewonce = true
           if (!isNumber(chat.expired)) chat.expired = 0
         } else global.db.data.chats[m.chat] = {
@@ -230,6 +231,7 @@ module.exports = {
           sDemote: '',
           delete: false,
           antiLink: true,
+          stiker: false,
           viewonce: true,
           expired: 0,
         }
@@ -256,15 +258,18 @@ module.exports = {
         }
       }
       if (m.isBaileys) return
+      if (m.chat.endsWith('broadcast')) return // Not respond if in status 
+      let blockList = conn.blocklist.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)
+      if (blockList.includes(m.sender)) return // If user get block so they can't use the bot
       m.exp += Math.ceil(Math.random() * 10)
 
       let usedPrefix
       let _user = global.db.data && global.db.data.users && global.db.data.users[m.sender]
 
-      let isROwner = [global.conn.user.jid, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-      let isOwner = isROwner || m.fromMe
-      let isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+      let isROwner = [global.conn.user.jid, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
+      let isOwner = isROwner || m.fromMe if (!isOwner && db.data.settings[this.user.jid].self) return // If self mode online just owner can use it
       let isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+      let isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
       let groupMetadata = m.isGroup ? this.chats.get(m.chat).metadata || await this.groupMetadata(m.chat) : {} || {}
       let participants = m.isGroup ? groupMetadata.participants : [] || []
       let user = m.isGroup ? participants.find(u => u.jid == m.sender) : {} // User Data
