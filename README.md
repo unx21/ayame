@@ -1,8 +1,12 @@
+##### This is a fuckin' useless repository, I stole someone else's code, and then put it in here,You better visit the original repository 
+
+---------------------------
+
 ##### Jangan lupa untuk memasukkan apikey kamu di src/apikey.json, jika kamu tidak memiliki apikey, silahkan daftar terlebih dahulu [disini](https://api.xteam.xyz)
 
 ---------------------------
 
-##### Penggunaan bot ini ribet karena saya tidak suka sesuatu yang simpel, jika anda bingung silahkan ketik #tutorial atau
+### [Need Something To Say??](https://wa.me/62887436568613)
 
 
 <a href="https://wa.me/62887436568613?text=Hii+bisa+tolong+jelaskan+fitur+bot+kamu"><img src="https://img.shields.io/badge/WassapMe-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
