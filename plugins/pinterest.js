@@ -12,7 +12,8 @@ let pint = json.data[Math.floor(Math.random() * json.data.length)];
  ` *Hasil pencarian* 
 ${text}*/ 
 await conn.sendButtonImg(m.chat, await(await fetch(pint)).buffer(), `Hasil pencarian\n${text}`, '© ヴァイオレット', 'N e x t', m.text, m)
-//`.trim(), m) }
+//`.trim(), m) 
+}
 
  //handler.help = ['pinterest <keyword>']
  //handler.tags = ['internet'] 
