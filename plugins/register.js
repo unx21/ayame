@@ -6,8 +6,6 @@ let handler = async function (m, { text, usedPrefix }) {
   let name = conn.getName(m.sender)
   let age = Math.floor(Math.random() * 41)
   age = parseInt(age)
-  if (age > 40) throw 'Maaf umur Anda terlalu tua'
-  if (age < 1) throw 'Maaf Anda belum bisa mendaftar'
   user.name = name.trim()
   user.age = age
   user.regTime = + new Date
