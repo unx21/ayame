@@ -549,7 +549,7 @@ Untuk mematikan fitur ini, ketik
 global.dfail = (type, m, conn) => {
     let teks = 'Anda perlu mendaftar terlebih dahulu dengan cara mengetik #verify'
     let foot = 'Tekan tombol di bawah ini jika anda malas untuk mengetik'
-    let pp = 'https://telegra.ph/file/ca9ee903d5b4d5e35a490.jpg'
+    let foto = 'https://telegra.ph/file/ca9ee903d5b4d5e35a490.jpg'
     let msg = {
     rowner: '_Perintah ini hanya dapat digunakan oleh Master_',
     owner: '_Perintah ini hanya dapat digunakan oleh Owner Bot_',
@@ -559,7 +559,7 @@ global.dfail = (type, m, conn) => {
     private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_',
     admin: '_Perintah ini hanya untuk *Admin* grup_',
     botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_',
-    unreg: conn.sendButtonImg(m.chat, await(await fetch(pp)).buffer(), teks, foot, 'V e r i f y', '.verify', m.text, m)
+    unreg: await conn.sendButtonImg(m.chat, await(await fetch(foto)).buffer(), teks, foot, 'V e r i f y', '.verify', m.text, m)
   }[type]
   if (msg) return m.reply(msg)
 }
