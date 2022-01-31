@@ -6,7 +6,6 @@ const { servers, ytv } = require('../lib/y2mate')
 
 let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) => {
   if (!args || !args[0]) throw `Pengunaan:\n${usedPrefix + command} <url>\n\nContoh:\n${usedPrefix + command} https://youtu.be/ouyC28ffPjQ`
-  await m.reply(global.wait)
   let chat = db.data.chats[m.chat]
   let server = (args[1] || servers[0]).toLowerCase()
   try {
