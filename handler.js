@@ -1,5 +1,6 @@
 let util = require('util')
 let simple = require('./lib/simple')
+let fetch = require('node-fetch')
 let { MessageType } = require('@adiwajshing/baileys')
 
 const isNumber = x => typeof x === 'number' && !isNaN(x)
@@ -546,6 +547,8 @@ Untuk mematikan fitur ini, ketik
 }
 
 global.dfail = (type, m, conn) => {
+    let teks = 'Anda perlu mendaftar terlebih dahulu dengan cara mengetik #verify'
+    let foot = 'Tekan tombol di bawah ini jika anda malas untuk mengetik'
     let msg = {
     rowner: '_Perintah ini hanya dapat digunakan oleh Master_',
     owner: '_Perintah ini hanya dapat digunakan oleh Owner Bot_',
@@ -555,7 +558,7 @@ global.dfail = (type, m, conn) => {
     private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_',
     admin: '_Perintah ini hanya untuk *Admin* grup_',
     botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_',
-    unreg: conn.sendButton(m.chat, 'Anda perlu mendaftar terlebih dahulu dengan cara mengetik #verify', 'Tekan tombol verifikasi di bawah jika anda malas untuk mengetik', 'V e r i f y', '.verify', m.text, m)
+    unreg: conn.sendButtonImg(m.chat, await(await fetch(pint)).buffer(), teks, foot, 'V e r i f y', '.verify', m.text, m)
   }[type]
   if (msg) return m.reply(msg)
 }
