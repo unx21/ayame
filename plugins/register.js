@@ -30,6 +30,6 @@ global.db.data.users[m.sender].koin += 5000
 //handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
 //handler.tags = ['exp']
 
-handler.command = /^verify$/i
+handler.command = /^(verify)$/i
 
 module.exports = handler
