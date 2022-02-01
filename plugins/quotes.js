@@ -80,5 +80,10 @@ global.quotes = [
 "Mungkin kesedihanmu kali ini, itu dibuat untuk cerita yang lebih indah.",
 "Tinggal dibuang ke pinggir, dan yang tersisa hanya membusuk oleh hujan dan angin yang menerpa nya.",
 "Dan tanpa sadar, Kau akhirnya berhenti mengejar mimpimu. Dan kemudian kamu, yang dulunya adalah seorang pemimpi, sekarang menjadi orang yang hanya menertawakan mimpi orang lain. Kau hanya ingin tertawa dan membohongi diri sendiri.",
-"In solitude where we are least alone."
+"In solitude where we are least alone.",
+"The best time to confess,\nIs not when you've just meet,\nNot in anger, not in waiting,\nNo through secret, no through pain,\nThe best time is not in doubt, nor life and death\nNot when bound by duty, and not in parting\nThe best time is ...when you're finally free\nAnd even without words, you can tell them \nOver and over and over again.",
+"Hatinya remuk, tak lagi terbentuk.\nPerasaannya telah habis terkuras\nIa depresi berat, berkepanjangan.",
+"Tak semua yang ditinggalkan akan kecewa\nTak semua yang meninggalkan akan baik-baik saja\nPada akhirnya Tuhan sama adilnya.",
+"Titik terlemah mencintai adalah ketika\nSeseorang memohon kepada Tuhan\nBukan tentang ingin memiliki melainkan\nAgar Tuhan melapangkan hatinya untuk mengikhlaskan.",
+"Wins and loses that make you more mature, cry and get up"
 ]
