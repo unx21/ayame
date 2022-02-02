@@ -548,7 +548,7 @@ Untuk mematikan fitur ini, ketik
 global.dfail = (type, m, conn) => {
     let teks = 'Anda perlu mendaftar terlebih dahulu dengan cara mengetik #verify'
     let foot = 'Tekan tombol di bawah ini jika anda malas untuk mengetik'
-    let tes = conn.sendButton(m.chat, teks, foot, 'V e r i f y', '.verify', m)
+    let tes = await conn.sendButton(m.chat, teks, foot, 'V e r i f y', '.verify', m)
     let msg = {
     rowner: '_Perintah ini hanya dapat digunakan oleh Master_',
     owner: '_Perintah ini hanya dapat digunakan oleh Owner Bot_',
