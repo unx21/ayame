@@ -557,7 +557,7 @@ global.dfail = (type, m, conn) => {
     private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_',
     admin: '_Perintah ini hanya untuk *Admin* grup_',
     botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_',
-    unreg: conn.sendButton(m.chat, tegs, foot, 'V e r i f y', '.verify', m)
+    unreg: conn.sendButton(m.chat, tegs, foot, 'V e r i f y', '.verify', m.text, m)
   }[type]
   if (msg) return m.reply(msg)
 }
