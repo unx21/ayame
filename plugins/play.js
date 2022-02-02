@@ -33,6 +33,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 *Judul:* ${title}
 *Ukuran File Audio:* ${filesizeF}
 *Ukuran File Video:* ${yt2.filesizeF}
+*Link:* ${dl_link}
 *Server y2mate:* ${usedServer}
 `.trim(), '© 百鬼あやめ', 'Audio', `.yta ${vid.url}`, 'Video', `.yt ${vid.url}`)
 }
