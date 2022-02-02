@@ -13,6 +13,7 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
   if (!isLimit) conn.sendFile(m.chat, dl_link, title + '.mp3', `
 *Title:* ${ title }
 *File Size:* ${ filesizeF }
+*Link:* ${dl_link}
 `.trim(), m, null, {
     asDocument: chat.useDocument, mimetype: 'audio/mp4'
   } )
