@@ -559,8 +559,8 @@ global.dfail = (type, m, conn) => {
     admin: '_Perintah ini hanya untuk *Admin* grup_',
     botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_',
   }[type]
-  if (unreg) return m.reply(tes)
   if (msg) return m.reply(msg)
+  if (unreg) throw m.reply(tes)
 }
 
 function pickRandom(list) {
