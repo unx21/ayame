@@ -16,7 +16,7 @@ await m.reply(global.wait)
 }
 //handler.help = ['twitter'].map(v => v + ' <url>')
 //handler.tags = ['downloader']
-handler.command = /^twitter$/i
+handler.command = /^twit(ter)?$/i
 handler.limit = false
 handler.premium = true
 handler.register = true
