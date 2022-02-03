@@ -1,3 +1,5 @@
+// Thanks to Qisyana > ~ <
+
 const fetch = require('node-fetch')
 let handler = async (m, { usedPrefix, command, conn, args }) => {
   if (!args[0]) throw `Gunakan format: ${usedPrefix}${command} https://twitter.com/xxx/xxx/xxx`
