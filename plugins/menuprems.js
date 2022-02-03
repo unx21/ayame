@@ -25,6 +25,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}tiktok_  [ url ]
 ┃ ❖ _${usedPrefix}trendingtwitter_
 ┃ ❖ _${usedPrefix}twitter_  [ url ]
+┃ ❖ _${usedPrefix}twitter2_  [ url ]
 ┃ ❖ _${usedPrefix}upload_  [ caption|reply media ]
 ┃ ❖ _${usedPrefix}wallpaperq_ [ query ]
 ┃ ❖ _${usedPrefix}yta_  [ url ]
