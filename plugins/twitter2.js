@@ -3,6 +3,7 @@
 const fetch = require('node-fetch')
 let handler = async (m, { usedPrefix, command, conn, args }) => {
   if (!args[0]) throw `Gunakan format: ${usedPrefix}${command} https://twitter.com/xxx/xxx/xxx`
+  await m.reply(global.wait)
   let res = await twitter(args[0])
   let result = res.result.reverse().filter(({ mime }) => /video/i.test(mime)), video, index
   for (let vid of result) {
