@@ -4,7 +4,7 @@ ${pickRandom([`_Terimakasih kembali @${m.sender.split`@`[0]}_`, `_Sama-sama_`, `
 `.trim()
 conn.reply(m.chat, teks, m, { contextInfo: { mentionedJid: [m.sender] }})
 }
-handler.customPrefix = /(M|m)akasih/
+handler.customPrefix = /(M|m)akasih|Thanks/
 handler.command = new RegExp
 
 module.exports = handler
