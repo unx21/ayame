@@ -23,7 +23,7 @@ let handler = async (m, { conn }) => {
 //handler.help = ['tovideo (reply)']
 //handler.tags = ['sticker']
 
-handler.command = ['tovideo']
+handler.command = /^tovid(eo)?$/i
 handler.register = true
 handler.limit = true
 module.exports = handler
