@@ -85,7 +85,7 @@ global.quotes = [
 "Hatinya remuk, tak lagi terbentuk.\nPerasaannya telah habis terkuras\nIa depresi berat, berkepanjangan.",
 "Tak semua yang ditinggalkan akan kecewa\nTak semua yang meninggalkan akan baik-baik saja\nPada akhirnya Tuhan sama adilnya.",
 "Titik terlemah mencintai adalah ketika\nSeseorang memohon kepada Tuhan\nBukan tentang ingin memiliki melainkan\nAgar Tuhan melapangkan hatinya untuk mengikhlaskan.",
-"Wins and loses that make you more mature, cry and get up"
+"Wins and loses that make you more mature, cry and get up",
 "Tidak semua cerita harus dipercaya\nTidak semua kata-kata harus diikuti\nKadang, kita hanya perlu merenung\nMeminta keyakinan dari Tuhan\nLalu, hadapi saja tanpa perlu banyak bicara.",
 "Bukan siapa yang kita kenal paling lama\nYang datang pertama atau yang paling tau\nTetapi tentang yang datang dan tidak pergi.",
 "Tidak ada gunanya bertahan pada perasaan yang telah pergi, jika saat ini dia telah menjadi milik orang lain maka lepaskanlah. Jangan habiskan waktumu untuk menunggu seseorang yang tak peduli tentang perasaanmu.",
