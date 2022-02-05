@@ -546,15 +546,15 @@ Untuk mematikan fitur ini, ketik
 }
 
 global.dfail = (type, m, conn) => {
-   let rowner: '_Perintah ini hanya dapat digunakan oleh Master_'
-   let owner: '_Perintah ini hanya dapat digunakan oleh Owner Bot_'
-   let mods: '_Perintah ini hanya dapat digunakan oleh Moderator_'
-   let premium: '_Perintah ini hanya untuk member Premium_'
-   let group: '_Perintah ini hanya dapat digunakan di grup_'
-   let private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_'
-   let admin: '_Perintah ini hanya untuk *Admin* grup_'
-   let botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_'
-   let unreg: conn.sendButton(m.chat, 'Anda perlu mendaftar terlebih dahulu dengan cara mengetik #verify', 'Tekan tombol dibawah jika anda malas untuk mengetik', 'V e r i f y', '#verify', m)
+   let rowner = '_Perintah ini hanya dapat digunakan oleh Master_'
+   let owner = '_Perintah ini hanya dapat digunakan oleh Owner Bot_'
+   let mods = '_Perintah ini hanya dapat digunakan oleh Moderator_'
+   let premium = '_Perintah ini hanya untuk member Premium_'
+   let group = '_Perintah ini hanya dapat digunakan di grup_'
+   let private = '_Perintah ini hanya dapat digunakan di Chat Pribadi_'
+   let admin = '_Perintah ini hanya untuk *Admin* grup_'
+   let botAdmin = '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_'
+   let unreg = conn.sendButton(m.chat, 'Anda perlu mendaftar terlebih dahulu dengan cara mengetik #verify', 'Tekan tombol dibawah jika anda malas untuk mengetik', 'V e r i f y', '#verify', m)
    if (rowner) return m.reply(rowner)
    if (owner) return m.reply(owner)
    if (mods) return m.reply(mods)
