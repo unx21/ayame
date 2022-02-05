@@ -2,6 +2,7 @@
 
 const { createHash } = require('crypto')
 let PhoneNumber = require('awesome-phonenumber')
+let fetch = require('node-fetch')
 let levelling = require('../lib/levelling')
 let handler = async (m, { conn, usedPrefix }) => {
   let pp = 'https://telegra.ph/file/debfea980ae47bed361fb.jpg'
@@ -24,11 +25,12 @@ let handler = async (m, { conn, usedPrefix }) => {
 *Koin:* ${koin}
 *Limit:* ${limit}
 *Registered:* ${registered ? 'Yes (' + new Date(regTime) + ')': 'No'}
-*Premium:* ${prem ? 'Yes' : 'No'}${lastclaim > 0 ? '\n*Last Claim:* ' + new Date(lastclaim) : ''}
+*Premium:* ${prem ? 'Yes' : 'No'}
 *SN:* ${sn}
-`.trim()
+`
+    let foot = '© シエル'
     let mentionedJid = [who]
-    conn.sendFile(m.chat, pp, 'pp.jpg', str, m, false, { contextInfo: { mentionedJid }})
+    conn.send3ButtonImg(m.chat, await(await fetch(pp)).buffer(), str, foot, 'C l a i m', '.claim', 'D a i l y', '.daily', 'M i n i n g', '.mining', m, { contextInfo: { mentionedJid }})
   }
 }
 //handler.help = ['profile [@user]']
