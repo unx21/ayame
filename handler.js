@@ -559,7 +559,7 @@ global.dfail = (type, m, conn) => {
    botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_', 
    unreg: conn.sendButton(m.chat, teks, foot, 'V e r i f y', '#verify', m)
    }[type] 
-   if (msg) return m.reply(msg)}
+   if (msg) return m.reply(msg)
  }
 
 let fs = require('fs')
