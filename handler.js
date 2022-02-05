@@ -546,25 +546,21 @@ Untuk mematikan fitur ini, ketik
 }
 
 global.dfail = (type, m, conn) => {
-   let rowner = '_Perintah ini hanya dapat digunakan oleh Master_'
-   let owner = '_Perintah ini hanya dapat digunakan oleh Owner Bot_'
-   let mods = '_Perintah ini hanya dapat digunakan oleh Moderator_'
-   let premium = '_Perintah ini hanya untuk member Premium_'
-   let group = '_Perintah ini hanya dapat digunakan di grup_'
-   let private = '_Perintah ini hanya dapat digunakan di Chat Pribadi_'
-   let admin = '_Perintah ini hanya untuk *Admin* grup_'
-   let botAdmin = '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_'
-   let unreg = conn.sendButton(m.chat, 'Anda perlu mendaftar terlebih dahulu dengan cara mengetik #verify', 'Tekan tombol dibawah jika anda malas untuk mengetik', 'V e r i f y', '#verify', m)
-   if (rowner) return m.reply(rowner)
-   if (owner) return m.reply(owner)
-   if (mods) return m.reply(mods)
-   if (premium) return m.reply(premium)
-   if (group) return m.reply(group)
-   if (private) return m.reply(private)
-   if (admin) return m.reply(admin)
-   if (botAdmin) return m.reply(botAdmin)
-   if (unreg) return m.reply(unreg)
-}
+  let teks = 'Anda perlu mendaftar dengan cara mengetik #verify'
+  let foot = 'Tekan tombol dibawah jika anda malas untuk mengetik'
+  let msg = { 
+   rowner: '_Perintah ini hanya dapat digunakan oleh Master_', 
+   owner: '_Perintah ini hanya dapat digunakan oleh Owner Bot_', 
+   mods: '_Perintah ini hanya dapat digunakan oleh Moderator_', 
+   premium: '_Perintah ini hanya untuk member Premium_', 
+   group: '_Perintah ini hanya dapat digunakan di grup_', 
+   private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_', 
+   admin: '_Perintah ini hanya untuk *Admin* grup_', 
+   botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_', 
+   unreg: conn.sendButton(m.chat, teks, foot, 'V e r i f y', '#verify', m)
+   }[type] 
+   if (msg) return m.reply(msg)}
+ }
 
 let fs = require('fs')
 let chalk = require('chalk')
