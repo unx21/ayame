@@ -552,12 +552,12 @@ global.dfail = (type, m, conn) => {
    rowner: '_Perintah ini hanya dapat digunakan oleh Master_', 
    owner: '_Perintah ini hanya dapat digunakan oleh Owner Bot_', 
    mods: '_Perintah ini hanya dapat digunakan oleh Moderator_', 
-   premium: '_Perintah ini hanya untuk member Premium_', 
+   premium: '_Perintah ini hanya untuk member Premium_',
    group: '_Perintah ini hanya dapat digunakan di grup_', 
    private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_', 
    admin: '_Perintah ini hanya untuk *Admin* grup_', 
    botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_', 
-   unreg: conn.sendButton(m.chat, teks, foot, 'V e r i f y', '#verify', m)
+   unreg: conn.sendButton(m.chat, teks, foot, 'V e r i f y', `#verify`, m.text, m)
    }[type] 
    if (msg) return m.reply(msg)
  }
