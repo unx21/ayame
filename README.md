@@ -15,6 +15,9 @@
 
 ![Ayameverse](https://user-images.githubusercontent.com/84166927/150901343-6c08ad60-fd86-46f5-98b6-36f07edec7b3.jpg)
 
+<p align="center">
+<a href="https://www.codefactor.io/repository/github/unx21/ayame/overview/main"><img title="Rating" src="https://www.codefactor.io/repository/github/unx21/ayame/badge/main"></a>
+
 Ribet WhatsApp Bot
 
 ## FOR TERMUX/UBUNTU/SSH USER
