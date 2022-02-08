@@ -546,6 +546,7 @@ Untuk mematikan fitur ini, ketik
 }
 
 global.dfail = (type, m, conn) => {
+   let nama = conn.getName(m.sender)
    let teks = `Anda perlu mendaftar terlebih dahulu dengan cara mengetik:\n\n*#daftar nama.umur*\n_Contoh: #daftar ${nama}.19_`
    let foot = `Tekan tombol verifikasi di bawah jika anda malas untuk mengetik` 
    let _umur = `${pickRandom(['17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'])}` 
