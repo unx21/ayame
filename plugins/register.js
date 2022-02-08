@@ -1,12 +1,16 @@
 const { createHash } = require('crypto')
+let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 let handler = async function (m, { text, usedPrefix }) {
   let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
   let user = global.db.data.users[m.sender]
   if (user.registered === true) throw `Anda sudah terdaftar\n\nMau daftar ulang? ${usedPrefix}unreg <SN|SERIAL NUMBER>`
-  let name = conn.getName(m.sender)
-  let _ages = `${pickRandom(['17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'])}`
-  let age = (_ages * 1)
+  if (!Reg.test(text)) throw `Format salah\n\n*${usedPrefix}daftar nama|umur*`
+  let [_, name, splitter, age] = text.match(Reg)
+  if (!name) throw 'Nama tidak boleh kosong (Alphanumeric)'
+  if (!age) throw 'Umur tidak boleh kosong (Angka)'
   age = parseInt(age)
+  if (age > 40) throw 'Maaf umur Anda terlalu tua'
+  if (age < 17) throw 'Maaf Anda belum bisa mendaftar'
   user.name = name.trim()
   user.age = age
   user.regTime = + new Date
@@ -31,10 +35,6 @@ global.db.data.users[m.sender].koin += 5000
 //handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
 //handler.tags = ['exp']
 
-handler.command = /^(verify)$/i
+handler.command = /^daftar|reg(ister)?$/i
 
 module.exports = handler
-
-function pickRandom(list) {
-return list[Math.floor(Math.random() * list.length)]
-}
