@@ -57,6 +57,6 @@ Demote: ${sDemote}
 //handler.tags = ['group']
 handler.command = /^(gro?upinfo|info(gro?up|gc))$/i
 handler.group = true
-handler.register = true
+handler.register = false
 
 module.exports = handler
