@@ -27,7 +27,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
 //handler.help = ['ctrigger <text>']
 //handler.tags = ['sticker']
 handler.command = /^(custom|c)trigger$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 //MADEbyAnshul
 module.exports = handler
