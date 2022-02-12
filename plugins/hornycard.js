@@ -9,7 +9,7 @@ let handler = async (m, { conn }) => {
 //handler.help = ['hornycard', 'hornylicense']
 //handler.tags = ['maker']
 handler.command = /^(horny(card|license))$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 module.exports = handler
