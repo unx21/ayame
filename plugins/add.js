@@ -34,7 +34,7 @@ let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
 //handler.help = ['add', '+'].map(v => v + ' nomor,nomor')
 //handler.tags = ['admin']
 handler.command = /^(add|\+)$/i
-handler.register = true
+handler.register = false
 handler.owner = false
 handler.mods = false
 handler.premium = false
