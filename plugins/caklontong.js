@@ -30,7 +30,7 @@ Bonus: ${poin}
     ]
   }
   handler.command = /^caklontong/i
-  handler.register = true
+  handler.register = false
   handler.limit = true
   
   module.exports = handler
