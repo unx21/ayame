@@ -5,6 +5,7 @@ async function handler(m, { usedPrefix }) {
 //handler.help = ['listjadibot']
 handler.command = ['listjadibot']
 //handler.tags = ['jadibot']
-handler.register = true
+handler.register = false
+handler.owner = true
 
 module.exports = handler
