@@ -11,7 +11,7 @@ let handler = async (m, { text }) => {
 //handler.help = ['dare']
 //handler.tags = ['fun']
 handler.command = /^(dare|berani|tantangan)$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 //ftwr
 module.exports = handler
