@@ -13,8 +13,8 @@ let handler = async (m, { conn, args: [effect], text: txt }) => {
 //handler.help = ['enphoto'].map(v => v + ' <effect> <text>|[text2]|[text3]')
 //handler.tags = ['tools']
 handler.command = /^(en?photo(360)?)$/i
-handler.register = true
-handler.limit = true
+handler.register = false
+handler.limit = 3
 
 module.exports = handler
 
