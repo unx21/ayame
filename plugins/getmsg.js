@@ -21,7 +21,7 @@ let handler = async (m, { conn, command, usedPrefix, text }) => {
 //handler.help = ['vn', 'msg', 'video', 'gif', 'audio', 'img', 'sticker'].map(v => 'get' + v + ' <teks>')
 //handler.tags = ['database']
 handler.command = /^get(vn|msg|video|audio|img|stic?ker|gif)$/
-handler.register = true
+handler.register = false
 
 
 module.exports = handler
