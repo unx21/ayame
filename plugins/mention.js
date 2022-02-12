@@ -9,7 +9,8 @@ let handler = async (m, { conn, text }) => {
 //handler.help = ['mention','say'].map(v => v + ' <text>')
 //handler.tags = ['fun']
 handler.group = true
-handler.register = true
+handler.register = false
+handler.premium = true
 
 handler.command = /^mention|say$/i
 
