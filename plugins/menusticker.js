@@ -20,7 +20,6 @@ let teks = `
 ┃ ❖ _${usedPrefix}stickerly_  [ url ] Ⓛ
 ┃ ❖ _${usedPrefix}stickertelegram_  [ url ] Ⓛ
 ┃ ❖ _${usedPrefix}stickfilter_  [ filter ] Ⓛ
-┃ ❖ _${usedPrefix}stickerrip_  [ reply media ] Ⓛ
 ┃ ❖ _${usedPrefix}ttp_  [ teks ] Ⓛ
 ┃ ❖ _${usedPrefix}ttp2_  [ teks ] Ⓛ
 ┃ ❖ _${usedPrefix}ttpdark_  [ teks ] Ⓛ
