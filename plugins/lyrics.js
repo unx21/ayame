@@ -9,7 +9,7 @@ let handler = async (m, { text }) => {
   if (!res.ok) throw await res.text()
   let json = await res.json()
   if (!json.thumbnail.genius) throw json
-  conn.sendFile(m.chat, json.thumbnail.genius, '', `
+  conn.sendButtonImg(m.chat, await(await fetch(json.thumbnail.genius)).buffer(), '', `
 *${json.title}*
 _${json.author}_
 
@@ -17,12 +17,12 @@ ${json.lyrics}
 
 
 ${json.links.genius}
-`, m)
+`, `© 百鬼あやめ`, m.text, m)
 }
 //handler.help = ['lirik'].map(v => v + ' <Apa>')
 //handler.tags = ['internet']
 handler.command = /^(lrc|lirik|lyrics|lyric)$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 module.exports = handler
