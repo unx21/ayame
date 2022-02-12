@@ -17,6 +17,7 @@ let stiker = await sticker(null, url, 'Bonks', global.author)
   }
 }
 handler.command = /^bonks/i
-handler.register = true
+handler.register = false
+handler.limit = true
 
 module.exports = handler
