@@ -14,7 +14,7 @@ let handler = async (m, { usedPrefix, command, conn, args }) => {
 //handler.tags = ['downloader']
 
 handler.command = /^(igstory2)$/i
-handler.register = true
+handler.register = false
 handler.premium = true
 
 module.exports = handler
