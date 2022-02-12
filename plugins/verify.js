@@ -4,8 +4,7 @@ let handler = async function (m, { text, usedPrefix }) {
   let user = global.db.data.users[m.sender]
   if (user.registered === true) throw `Anda sudah terdaftar\n\nMau daftar ulang? ${usedPrefix}unreg <SN|SERIAL NUMBER>`
   let name = conn.getName(m.sender)
-  let _ages = `${pickRandom(['17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'])}`
-  let age = (_ages * 1)
+  let age = Math.floor(Math.random() * 41)
   age = parseInt(age)
   user.name = name.trim()
   user.age = age
@@ -34,7 +33,3 @@ global.db.data.users[m.sender].koin += 5000
 handler.command = /^(verify)$/i
 
 module.exports = handler
-
-function pickRandom(list) {
-return list[Math.floor(Math.random() * list.length)]
-}
