@@ -12,6 +12,6 @@ let handler = function (m) {
 //handler.help = ['del', 'delete']
 //handler.tags = ['info']
 handler.command = /^del(ete)?$/i
-handler.register = true
+handler.register = false
 
 module.exports = handler
