@@ -14,7 +14,7 @@ let handler = async (m, { conn, text }) => {
 //handler.help = ['carigrup <pencarian>']
 //handler.tags = ['tools']
 handler.command = /^carigrup/i
-handler.register = true
-handler.limit = true
+handler.register = false
+handler.limit = 5
 
 module.exports = handler
