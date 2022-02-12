@@ -18,7 +18,7 @@ let handler = async (m, { conn, text }) => {
   })
 }
 handler.command = /^(fitnah|fakereply)$/
-handler.register = true
+handler.register = false
 module.exports = handler
 
 function copy(obj) {
