@@ -7,7 +7,7 @@ let handler = async (m, { conn, participants }) => {
 //handler.tags = ['admin']
 
 handler.command = /^(demote|member|↓)$/i
-handler.register = true
+handler.register = false
 handler.group = true
 handler.disabled = true
 
