@@ -42,5 +42,5 @@ ${id}
 //handler.help = ['hadis']
 //handler.tags = ['quran', 'tools']
 handler.command = /^(hadist?)$/i
-handler.register = true
+handler.register = false
 module.exports = handler
