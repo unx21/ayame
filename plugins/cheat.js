@@ -118,7 +118,7 @@ break
     }
 }
 
-handler.register = true
+handler.register = false
 handler.command = /^(cheat|cit)$/i
 handler.fail = null
 
