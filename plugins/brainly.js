@@ -14,7 +14,7 @@ let handler = async function (m, { text, usedPrefix, command }) {
 //handler.tags = ['internet']
 
 handler.command = /^brainly$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 module.exports = handler
