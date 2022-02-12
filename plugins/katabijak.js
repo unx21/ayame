@@ -12,7 +12,7 @@ Opsi Tersedia:
 • pernikahan
 • kemerdekaan
 
-by Ariffb, thanks to Wildan Izzudin
+by Unxzx, thanks to Wildan Izzudin
 https://neoxr-api.herokuapp.com/docs`
     if (!args[0]) throw er
     switch (args[0].toLowerCase()) {
@@ -40,7 +40,7 @@ https://neoxr-api.herokuapp.com/docs`
 //handler.help = ['katabijak'].map(v => v + ' <opsi>')
 //handler.tags = ['internet']
 handler.command = /^(katabijak|jagokata)$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 module.exports = handler
