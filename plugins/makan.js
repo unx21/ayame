@@ -89,6 +89,6 @@ break
     }
 }
 
-handler.register = true
+handler.register = false
 handler.command = /^(makan|eat)$/i
 module.exports = handler
