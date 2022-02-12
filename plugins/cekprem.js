@@ -10,7 +10,7 @@ let handler = async (m, { conn, isPrems }) => {
 //handler.help = ['cekprem']
 //handler.tags = ['main']
 handler.command = /^cekprem(ium)?$/
-handler.register = true
+handler.register = false
 
 module.exports = handler
 
