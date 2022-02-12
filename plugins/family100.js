@@ -28,8 +28,8 @@ Terdapat *${json.jawaban.length}* jawaban${json.jawaban.find(v => v.includes(' '
         winScore,
     }
 }
-handler.command = /^family100$/i
-handler.register = true
+handler.command = /^f(amily)100?$/i
+handler.register = false
 handler.limit = true
 
 module.exports = handler
