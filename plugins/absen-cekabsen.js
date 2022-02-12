@@ -21,11 +21,11 @@ ${conn.absen[id][2]}
 ├ Total: ${absen.length}
 ${list}
 └────`.trim()
-    await conn.send2Button(m.chat, caption, '© stikerin', 'Absen', `${usedPrefix}absen`, 'Hapus', `${usedPrefix}hapusabsen`, m, { contextInfo: { mentionedJid: conn.parseMention(caption) } })
+    await conn.send2Button(m.chat, caption, '© 百鬼あやめ', 'Absen', `${usedPrefix}absen`, 'Hapus', `${usedPrefix}hapusabsen`, m, { contextInfo: { mentionedJid: conn.parseMention(caption) } })
 }
 //handler.help = ['cekabsen']
 //handler.tags = ['absen']
 handler.command = /^cekabsen$/i
-handler.register = true
+handler.register = false
 
 module.exports = handler
