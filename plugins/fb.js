@@ -42,7 +42,7 @@ Keyword: ${keywords || none}
 //handler.help = ['fb'].map(v => v + ' <url>')
 //handler.tags = ['downloader']
 handler.command = /^f((b|acebook)(dl|download)?(er)?)$/i
-handler.register = true
+handler.register = false
 handler.premium = true
 
 module.exports = handler
