@@ -32,7 +32,7 @@ let teks = `
 │       kegunaannya adalah untuk mengakses
 │       sebagian besar fitur, namun ada beberapa
 │       fitur yang hanya bisa di akses oleh
-│     _*User Premium.*_
+│      _*User Premium.*_
 │
 │   5. Uang
 │        kegunaannya adalah untuk membeli
@@ -58,7 +58,7 @@ let teks = `
   conn.fakeReply(m.chat, teks, '0@s.whatsapp.net', 'I N F O R M A S I   D A S A R', 'status@broadcast')
   }
 handler.command = /^info$/i
-handler.register = true
+handler.register = false
 handler.group = false
 handler.private = false
 handler.limit = false
