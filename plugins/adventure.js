@@ -39,7 +39,6 @@ Nyawa mu berkurang -${healt * 1} durability berkurang -${durability * 1} karena 
 
 *「 PRIZE 」*
 
-🪙 *Koin: ${koin}*
 💵 *Uang: ${uang}*
 🪙 *Koin: ${koin}*
 🪵 *Kayu: ${kayu}*
@@ -88,7 +87,7 @@ Nyawa mu berkurang -${healt * 1} durability berkurang -${durability * 1} karena 
     }
 }
 handler.command = /^(adventure|(ber)?petualang?|mulung|work)$/i
-handler.register = true
+handler.register = false
 handler.fail = null
 
 module.exports = handler
