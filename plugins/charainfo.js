@@ -17,7 +17,7 @@ let charaingfo = `💬 *Name:* ${name}
 //handler.tags = ['internet']
 handler.command = /^(chara|character)$/i
 handler.limit = true
-handler.register = true
+handler.register = false
 //kyaa jangan biarkan wabot-aq terbengkalai sampai nurutomo kembali
 // Command - Re Edited -- TOXIC-DEVIL == || Character Type ||
 module.exports = handler
