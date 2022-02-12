@@ -39,8 +39,8 @@ let teks = `
   }
 handler.help = ['internetmenu']
 handler.tags = ['main']
-handler.command = /^internetmenu$/i
-handler.register = true
+handler.command = /^inter(net)menu?$/i
+handler.register = false
 handler.group = false
 handler.private = false
 handler.limit = false
