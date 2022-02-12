@@ -11,7 +11,7 @@ let handler = async (m, { conn, command, text }) => {
 //handler.help = ['', 'kah'].map(v => 'kapan' + v + ' <pertanyaan>')
 //handler.tags = ['kerang']
 handler.command = /^kapan(kah)?$/i
-handler.register = true
+handler.register = false
 handler.owner = false
 handler.mods = false
 handler.premium = false
