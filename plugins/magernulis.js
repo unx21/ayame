@@ -14,8 +14,8 @@ let handler  = async (m, { command, conn, text }) => {
 //handler.tags = ['nulis']
 handler.command = /^magernulis[1-6]?$/i
 handler.premium = true
-handler.register = true
+handler.register = false
 
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
