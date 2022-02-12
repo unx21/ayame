@@ -24,7 +24,7 @@ ${repo.open_issues} Issue${repo.description ? `
 //handler.help = ['githubsearch'].map(v => v + ' <pencarian>')
 //handler.tags = ['tools']
 handler.command = /^g(ithub|h)search$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 module.exports = handler
