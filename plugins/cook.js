@@ -110,6 +110,6 @@ break
     }
 }
 
-handler.register = true
+handler.register = false
 handler.command = /^(masak|cook)$/i
 module.exports = handler
