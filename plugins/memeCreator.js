@@ -18,7 +18,7 @@ let handler = async (m, { conn, text }) => {
 //handler.help = ['memegen'].map(v => v + '<apa|apa>')
 //handler.tags = ['tools']
 handler.command = /^(memecreator)$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 
