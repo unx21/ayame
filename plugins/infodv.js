@@ -74,6 +74,6 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 //handler.tags = ['info', 'tools']
 
 handler.command = /^(infodv)$/i
-handler.register = true
+handler.register = false
 
 module.exports = handler
