@@ -18,5 +18,5 @@ try {
 handler.command = /^baka|tickle|cuddle$/i
 handler.limit = true
 handler.group = false
-handler.register = true
+handler.register = false
 module.exports = handler
