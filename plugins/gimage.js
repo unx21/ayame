@@ -19,7 +19,7 @@ ${text}
 //handler.help = ['gimage <query>', 'image <query>']
 //handler.tags = ['internet', 'tools']
 handler.command = /^(gimage|image)$/i
-handler.register = true
+handler.register = false
 handler.premium = true
 
 module.exports = handler
