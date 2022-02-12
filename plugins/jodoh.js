@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 const { MessageType } = require('@adiwajshing/baileys')
 const { sticker } = require('../lib/sticker')
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw `contoh:\n${usedPrefix + command} ariffb|dinda annisa`
+    if (!text) throw `contoh:\n${usedPrefix + command} Unx|百鬼あやめ`
     let [nama1, nama2] = text.split(/[&|.]/i)
     if (!nama1 || !nama2) throw `contoh:\n${usedPrefix + command} ariffb|dinda annisa`
 
