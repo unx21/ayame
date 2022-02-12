@@ -19,7 +19,7 @@ let handler = async (m) => {
 //handler.help = ['hd (caption|reply media)', 'enhance (caption|reply media)']
 //handler.tags = ['tools']
 handler.command = /^(hd|enhance)$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 module.exports = handler
