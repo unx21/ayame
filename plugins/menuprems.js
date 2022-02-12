@@ -36,8 +36,8 @@ let teks = `
   }
 handler.help = ['premsmenu']
 handler.tags = ['main']
-handler.command = /^premsmenu$/i
-handler.register = true
+handler.command = /^prem(ium|s)menu$/i
+handler.register = false
 handler.group = false
 handler.private = false
 handler.limit = false
