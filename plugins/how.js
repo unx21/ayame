@@ -12,6 +12,6 @@ ${command.charAt(0).toUpperCase() + command.slice(1)} *${cok}*
   } : {})
 }
 handler.command = /^(gay|pintar|cantik|ganteng|gabut|gila|halu|lesbi|stress?|bucin|jones|sad(boy|girl)|tolol|wibu|pedo|furry|horny)cek/i
-handler.register = true
+handler.register = false
 
 module.exports = handler
