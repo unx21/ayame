@@ -50,5 +50,5 @@ async function handler(m, { command }) {
 //handler.tags = ['anonymous']
 handler.command = ['start', 'leave', 'next']
 handler.private = true
-handler.register = true
+handler.register = false
 module.exports = handler
