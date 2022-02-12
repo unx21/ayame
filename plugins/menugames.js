@@ -8,13 +8,11 @@ let teks = `
 ┃ ❖ _${usedPrefix}next_
 ┃ ❖ _${usedPrefix}leave_
 ┃ ❖ _${usedPrefix}asahotak_  Ⓛ
-┃ ❖ _${usedPrefix}braintest_  Ⓛ
 ┃ ❖ _${usedPrefix}caklontong_  Ⓛ
 ┃ ❖ _${usedPrefix}dadu_
 ┃ ❖ _${usedPrefix}delsesittt_  Ⓛ
 ┃ ❖ _${usedPrefix}family100_  Ⓛ
 ┃ ❖ _${usedPrefix}guesschara_  Ⓛ
-┃ ❖ _${usedPrefix}mitologites_  Ⓛ
 ┃ ❖ _${usedPrefix}siapakahaku_  Ⓛ  
 ┃ ❖ _${usedPrefix}slot_ Ⓛ
 ┃ ❖ _${usedPrefix}suit_
@@ -33,7 +31,6 @@ let teks = `
 ┃ ❖ _${usedPrefix}tesotak_  Ⓛ
 ┃ ❖ _${usedPrefix}tictactoe_ <custom room name>
 ┃ ❖ _${usedPrefix}ttt_ <custom room name>
-┃ ❖ _${usedPrefix}wordorder_  Ⓛ
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 `.trim()
   conn.fakeReply(m.chat, teks, '0@s.whatsapp.net', 'Games For Your Day', 'status@broadcast')
