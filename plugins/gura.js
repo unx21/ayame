@@ -12,7 +12,7 @@ await m.reply(global.wait)
     await conn.sendFile(m.chat, apiUrl, 'image.png', global.packname, m)
 }
 handler.command = /^gura$/i
-handler.register = true
+handler.register = false
 handler.limit = 3
 
 module.exports = handler
