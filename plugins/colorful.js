@@ -8,7 +8,7 @@ let handler = async (m, { conn, text }) => {
 //handler.tags = ['videomaker']
 
 handler.command = /^colorful$/i
-handler.register = true
-handler.limit = true
+handler.register = false
+handler.limit = 2
 
 module.exports = handler
