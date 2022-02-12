@@ -15,7 +15,7 @@ ${list}
 //handler.help = ['kbbi <teks>']
 //handler.tags = ['internet']
 handler.command = /^kbbi$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 module.exports = handler
