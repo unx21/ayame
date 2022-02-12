@@ -35,7 +35,7 @@ let teks = `
   }
 handler.help = ['convertermenu']
 handler.tags = ['main']
-handler.command = /^convertermenu$/i
+handler.command = /^convert(er)menu?$/i
 handler.register = false
 handler.group = false
 handler.private = false
