@@ -19,6 +19,6 @@ async function handler(m) {
 handler.command = ['tobraille']
 //handler.tags = ['tools']
 handler.limit = true
-handler.register = true
+handler.register = false
 
 module.exports = handler
