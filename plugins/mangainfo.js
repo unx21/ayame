@@ -17,7 +17,7 @@ let mangaingfo = `*Title:* ${title}
 //handler.help = ['manga <judul>']
 //handler.tags = ['internet']
 handler.command = /^(manga)$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 //udah di maapin kan?
