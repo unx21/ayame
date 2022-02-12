@@ -13,5 +13,5 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
     //help: ['cmd'].map(v => 'list' + v + ' <text>'),
     //tags: ['database'],
     command: ['listcmd'],
-    registered: true
+    registered: false
 })
