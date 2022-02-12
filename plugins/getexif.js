@@ -13,7 +13,7 @@ let handler = async (m) => {
 //handler.help = ['getexif']
 //handler.tags = ['sticker']
 handler.command = ['getexif']
-handler.register = true
+handler.register = false
 
 
 module.exports = handler
