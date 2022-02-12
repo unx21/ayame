@@ -19,6 +19,6 @@ handler.command = /^(igs(tory)?)$/i
 
 handler.limit = false
 handler.premium = true
-handler.register = true
+handler.register = false
 
 module.exports = handler
