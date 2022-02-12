@@ -18,8 +18,8 @@ let handler = async (m, { conn, args }) => {
      }
  }
 handler.command = /^htag$/i
-handler.limit = true
-handler.register = true
+handler.limit = 100
+handler.register = false
 handler.admin = true
 handler.group = true
 module.exports = handler
