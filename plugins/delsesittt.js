@@ -17,7 +17,7 @@ let handler = async (m, { conn, text }) => {
 handler.command = /^(dell?sesitt)$/i
 handler.limit = true
 
-handler.register = true
+handler.register = false
 handler.fail = null
 
 module.exports = handler
