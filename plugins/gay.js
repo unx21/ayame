@@ -9,7 +9,7 @@ let handler = async (m, { conn }) => {
 //handler.help = ['gay']
 //handler.tags = ['maker']
 handler.command = /^(gay)$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 
