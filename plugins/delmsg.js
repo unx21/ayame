@@ -9,6 +9,6 @@ let handler = async (m, { command, usedPrefix, text }) => {
 //handler.help = ['vn', 'msg', 'video', 'gif', 'audio', 'img', 'sticker'].map(v => 'del' + v + ' <teks>')
 //handler.tags = ['database']
 handler.command = /^(-|del)(vn|msg|video|audio|img|stic?ker|gif)$/
-handler.register = true
+handler.register = false
 
 module.exports = handler
