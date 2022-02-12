@@ -31,7 +31,7 @@ ${usedPrefix + command} latinkejawa selamat pagi
 //handler.help = ['aksara'].map(v => v + ' <opsi> <teks>')
 //handler.tags = ['tools']
 handler.command = /^aksara$/i
-handler.register = true
+handler.register = false
 
 handler.limit = true
 
