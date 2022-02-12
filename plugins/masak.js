@@ -22,7 +22,7 @@ ${json.url}
 //handler.help = ['resep <makanan>', 'masak <makanan>']
 //handler.tags = ['internet']
 handler.command = /^(resep)$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 
