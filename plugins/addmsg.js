@@ -16,6 +16,6 @@ atau langsung ketik teksnya`)
 //handler.help = ['vn', 'msg', 'video', 'gif', 'audio', 'img', 'sticker'].map(v => 'add' + v + ' <teks>')
 //handler.tags = ['database']
 handler.command = /^(\+|add)(vn|msg|video|audio|img|stic?ker|gif)$/
-handler.register = true
+handler.register = false
 
 module.exports = handler
