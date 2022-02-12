@@ -10,7 +10,7 @@ conn.reply(m.chat, txt, m, { contextInfo: { mentionedJid: mimin }})
 //handler.help = ['listadmin']
 //handler.tag = ['group']
 handler.command = /^(adminlist|listadmin)$/i
-handler.register = true
+handler.register = false
 
 handler.group = true
 module.exports = handler
