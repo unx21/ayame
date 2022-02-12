@@ -23,6 +23,6 @@ gunakan *.profile* untuk mengecek
 //handler.help = ['levelup']
 //handler.tags = ['xp']
 handler.command = /^level(|up)$/i
-handler.register = true
+handler.register = false
 
 module.exports = handler
