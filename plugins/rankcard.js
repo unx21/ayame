@@ -37,7 +37,7 @@ let caption = `
 
 handler.command = /^(rank|rankcard)$/i
 
-handler.register = true
+handler.register = false
 handler.fail = null
 
 module.exports = handler
