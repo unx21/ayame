@@ -11,7 +11,7 @@ let text = args.slice(1).join(' ')
 //handler.help = ['itssostupid', 'iss', 'stupid']
 //handler.tags = ['maker']
 handler.command = /^(itssostupid|iss|stupid)$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 
