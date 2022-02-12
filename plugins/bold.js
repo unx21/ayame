@@ -7,6 +7,6 @@ let handler = async (m, { conn, text }) => {
 //handler.help = ['bold'].map((v) => v + " <text>")
 //handler.tags = ['videomaker']
 handler.command = /^bold$/i
-handler.register = true
-handler.limit = true
+handler.register = false
+handler.limit = 2
 module.exports = handler
