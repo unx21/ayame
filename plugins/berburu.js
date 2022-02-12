@@ -61,7 +61,7 @@ Peluru mu berkurang *-${magazine * 1}* karena berburu dan Stamina mu juga berkur
     }
 }
 handler.command = /^(berburu|hunt)$/i
-handler.register = true
+handler.register = false
 handler.fail = null
 
 module.exports = handler
