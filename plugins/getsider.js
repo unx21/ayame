@@ -22,7 +22,7 @@ ${members > 1 ? `${members - reads.length - deliveries.length} remaining` : ''}
 //handler.help = ['getsider']
 //handler.tags = ['group']
 handler.command = /^getsider$/
-handler.register = true
+handler.register = false
 
 module.exports = handler
 
