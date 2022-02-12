@@ -37,7 +37,7 @@ ${biography}${external_url ? '\n*External URL:* ' + external_url : ''}
 //handler.help = ['igstalk'].map(v => v + ' <username>')
 //handler.tags = ['downloader']
 handler.command = /^(igstalk)$/i
-handler.register = true
+handler.register = false
 handler.premium = true
 
 
