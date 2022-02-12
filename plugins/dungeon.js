@@ -102,7 +102,7 @@ Kamu berhasil masuk hingga lantai ${lantai} dan mendapatkan:\n
     }
 }
 handler.command = /^dungeon$/i
-handler.register = true
+handler.register = false
 
 handler.fail = null
 
