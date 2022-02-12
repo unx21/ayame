@@ -9,6 +9,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}donasi_
 ┃ ❖ _${usedPrefix}grouplist_
 ┃ ❖ _${usedPrefix}info_
+┃ ❖ _${usedPrefix}infodv_
 ┃ ❖ _${usedPrefix}speed_
 ┃ ❖ _${usedPrefix}ping_
 ┃ ❖ _${usedPrefix}report_
@@ -20,7 +21,7 @@ let teks = `
 handler.help = ['infomenu']
 handler.tags = ['main']
 handler.command = /^infomenu/i
-handler.register = true
+handler.register = false
 handler.group = false
 handler.private = false
 handler.limit = false
