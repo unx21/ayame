@@ -102,7 +102,7 @@ let handler = async (m, { conn, args, usedPrefix }) => {
     }
 }
 handler.command = /^(feed(ing)?)$/i
-handler.register = true
+handler.register = false
 
 module.exports = handler
 
