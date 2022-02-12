@@ -21,6 +21,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 //handler.help = ['joox'].map(v => v + ' <judul>')
 //handler.tags = ['downloader']
 handler.command = /^joox$/i
-handler.register = true
-handler.premium = true // hapus aja kalau saya sengaja premium makan kuota termux :)
+handler.register = false
+handler.premium = true
+
 module.exports = handler
