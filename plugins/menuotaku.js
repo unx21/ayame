@@ -13,6 +13,8 @@ let teks = `
 ┃ ❖ _${usedPrefix}loli_  Ⓛ
 ┃ ❖ _${usedPrefix}megumin_  Ⓛ
 ┃ ❖ _${usedPrefix}wallpaper_  Ⓟ
+┃ ❖ _${usedPrefix}wp_  Ⓟ
+┃ ❖ _${usedPrefix}wpanime_  Ⓟ
 ┃ ❖ _${usedPrefix}wallpaperanime_  Ⓟ
 ┃ ❖ _${usedPrefix}wait_  [ caption|reply media ] Ⓟ
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
