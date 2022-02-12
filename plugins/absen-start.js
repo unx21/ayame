@@ -20,6 +20,6 @@ let handler = async (m, { conn, usedPrefix, text, isAdmin, isOwner }) => {
 //handler.help = ['mulaiabsen [teks]']
 //handler.tags = ['absen']
 handler.command = /^(start|mulai)absen$/i
-handler.register = true
+handler.register = false
 
 module.exports = handler
