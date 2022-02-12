@@ -11,6 +11,6 @@ let handler = async (m, { conn, text }) => {
 //handler.tags = ['']
 
 handler.command = /^save$/
-handler.register = true
+handler.register = false
 
 module.exports = handler
