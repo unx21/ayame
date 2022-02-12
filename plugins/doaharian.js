@@ -13,7 +13,7 @@ Artinya: “Dan Rabbmu berfirman: “Berdoalah kepada-Ku, niscaya akan Kuperkena
 //handler.help = ['doaharian']
 //handler.tags = ['islamic']
 handler.command = /^(doaharian)$/i
-handler.register = true
+handler.register = false
 
 handler.fail = null
 handler.limit = false
