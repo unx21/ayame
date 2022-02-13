@@ -13,9 +13,9 @@ handler.command = /^ss(web)?f?$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
-handler.group = false
+handler.limit = true
 handler.private = false
-handler.register = true
+handler.register = false
 
 
 handler.admin = false
