@@ -11,6 +11,6 @@ let handler = async (m, { text }) => {
 //handler.help = ['trendtwit', 'trendingtwitter']
 //handler.tags = ['internet']
 handler.command = /^(trend(twit|ingtwitter))$/i
-handler.register = true
+handler.register = false
 handler.premium = true
 module.exports = handler
