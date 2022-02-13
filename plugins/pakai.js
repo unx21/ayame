@@ -70,6 +70,6 @@ break
     }
 }
 
-handler.register = true
+handler.register = false
 handler.command = /^(pakai|gunakan)$/i
 module.exports = handler
