@@ -40,7 +40,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 //handler.help = ['play'].map(v => v + ' <pencarian>')
 //handler.tags = ['downloader']
 handler.command = /^play2?$/i
-handler.register = true
+handler.register = false
 handler.premium = true
 
 handler.exp = 0
