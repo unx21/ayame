@@ -5,7 +5,7 @@ let handler = async (m, { conn, text, participants }) => {
 })
 }
 handler.command = ['tagall']
-handler.register = true
+handler.register = false
 
 handler.admin = true
 handler.group = true
