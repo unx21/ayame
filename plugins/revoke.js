@@ -6,7 +6,7 @@ let handler = async (m, { conn, args, usedPrefix }) => {
 //handler.tags = ['group']
 handler.command = /^re(voke|new)(invite|link)?$/i
 handler.group = true
-handler.register = true
+handler.register = false
 
 handler.admin = true
 handler.botAdmin = true
