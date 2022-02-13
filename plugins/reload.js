@@ -63,7 +63,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) =>  {
 }
 
 handler.command = /^(isi|reload)$/i
-handler.register = true
+handler.register = false
 
 module.exports = handler
 
