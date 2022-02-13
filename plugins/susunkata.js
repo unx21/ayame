@@ -33,7 +33,7 @@ Bonus: Rp${poin}
     ]
   }
   handler.command = /^susunkata/i
-  handler.register = true
+  handler.register = false
 
   handler.limit = true
   
