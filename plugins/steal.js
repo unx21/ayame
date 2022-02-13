@@ -37,7 +37,7 @@ await m.reply(global.wait)
 handler.command = /^(colong|curi|st(eal)?)$/i
 
 handler.limit = 177013
-handler.register = true
+handler.register = false
 handler.premium = false
 
 module.exports = handler
