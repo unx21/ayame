@@ -159,7 +159,7 @@ let teks = `
   conn.fakeReply(m.chat, teks, '0@s.whatsapp.net', 'Tutorial Bermain RPG', 'status@broadcast')
   }
 handler.command = /^tutorial$/i
-handler.register = true
+handler.register = false
 handler.group = false
 handler.private = false
 handler.limit = false
