@@ -10,8 +10,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 //handler.help = ['setpp']
 //handler.tags = ['group']
 
-handler.command = /^setpp$/i
-handler.register = true
+handler.command = /^setppg(c|roup)?$/i
+handler.register = false
 
 handler.group = true
 handler.admin = true
