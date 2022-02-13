@@ -29,7 +29,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.command = /^(stic?kerline)$/i
 handler.register = false
 
-handler.limit = true
+handler.limit = 10
 
 module.exports = handler
 
