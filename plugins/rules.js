@@ -3,8 +3,8 @@ let handler  = async (m, { conn, usedPrefix: _p  }) => {
 Syarat dan Ketentuan Bot *KAMI*
 
 1. Teks dan nama pengguna WhatsApp anda akan kami simpan di dalam server selama bot aktif
-2. Data akan di hapus ketika bot Offline
-3. Kami tidak menyimpan gambar, video, file, audio, dan dokumen yang anda kirim
+2. Data pengguna akan di hapus ketika bot/owner memutuskan untuk berhenti
+3. Kami tidak akan menyimpan gambar, video, file, audio, dan dokumen yang anda kirim
 4. Kami tidak akan pernah meminta anda untuk memberikan informasi pribadi
 5. Jika menemukan Bug/Error silahkan langsung lapor ke Owner bot
 6. Mohon untuk tidak melakukan spam atau memberikan perintah berlebihan
@@ -21,7 +21,7 @@ handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
-handler.register = true
+handler.register = false
 
 handler.admin = false
 handler.botAdmin = false
