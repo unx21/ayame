@@ -24,7 +24,8 @@ let handler = async (m, { conn, text }) => {
 //handler.help = ['pay @user <amount>']
 //handler.tags = ['xp']
 handler.command = /^pay|t(f|ransfer)$/
-handler.register = true
+handler.register = false
+handler.limit = true
 
 module.exports = handler
 
