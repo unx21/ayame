@@ -30,5 +30,5 @@ try {
 handler.command = /^(s(tic?ker)?meme)$/i
 handler.limit = true
 handler.group = false
-handler.register = true
+handler.register = false
 module.exports = handler
