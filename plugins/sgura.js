@@ -21,7 +21,7 @@ try {
   }
 }
 handler.command = /^s(tic?ker)?gura$/i
-handler.register = true
+handler.register = false
 handler.limit = 3
 
 module.exports = handler
