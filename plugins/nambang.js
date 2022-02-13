@@ -49,7 +49,7 @@ Resource yang berhasil di bawa pulang
     }
 }
 handler.command = /^(nambang|bertambamg|tambang|menambang)$/i
-handler.register = true
+handler.register = false
 handler.owner = false
 
 handler.fail = null
