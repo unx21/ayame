@@ -13,8 +13,8 @@ let handler = async(m, { conn, text, usedPrefix, command}) => {
 //handler.help = ['quotemaker2 <teks | wm>']
 //handler.tags = ['nulis']
 handler.command = /^q(uote)?maker?2$/i
-handler.register = true
+handler.register = false
 
-handler.limit = true
+handler.premium = true
 //MadeByLeviBot
 module.exports = handler
