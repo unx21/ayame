@@ -17,6 +17,6 @@ let handler = async (m, { conn }) => {
 //handler.tags = ['group']
 
 handler.command = /^totalpesan$/i
-handler.register = true
+handler.register = false
 
 module.exports = handler
