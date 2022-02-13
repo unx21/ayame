@@ -11,7 +11,7 @@ let handler = async (m) => {
 //handler.help = ['shaunthesheep']
 //handler.tags = ['videomaker']
 
-handler.command = /^shaunthesheep$/i
-handler.register = true
+handler.command = /^shaunthesheep|sts$/i
+handler.register = false
 handler.premium = true
 module.exports = handler
