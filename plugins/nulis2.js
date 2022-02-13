@@ -70,8 +70,8 @@ let handler  = async (m, { conn, args }) => {
 //handler.help = ['n'].map(v => v + 'ulis2 <teks>')
 //handler.tags = ['tools']
 handler.command = /^nulis2$/i
-handler.register = true
-handler.limit = true
+handler.register = false
+handler.limit = 2
 handler.owner = false
 handler.mods = false
 handler.premium = false
