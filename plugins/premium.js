@@ -1,7 +1,7 @@
 let handler  = async (m, { conn }) => {
   let bot = conn.user.name
   let teks = `
-Gratis 1 hari percobaan untuk grup! Agar bot _*${bot}*_ tetap berada di grup anda dengan waktu lebih lama silahkan sewa bot dengan harga dibawah ini!
+Gratis 1 hari percobaan untuk grup! Agar bot _*${bot}*_ tetap berada di grup anda dengan waktu lebih lama, silahkan sewa bot dengan harga dibawah ini!
 ${readMore}
 Info donasi untuk premium :
  • Donasi 5.000 = 1 bulan Premium
@@ -22,7 +22,7 @@ Apa saja keuntungan premium?
  • Limit UNLIMITED (Tidak Terbatas)
  • Dapat menambahkan bot ke grup Anda
  • Bisa jadi bot di nomor Anda.
- • Bonus saldo bot 500.000 untuk donasi 5.000 dst.
+ • Bonus saldo bot 750.000 untuk donasi 5.000 dst.
 
 Ayo gabung bersama mereka yang sudah donasi dan mendapatkan banyak keuntungan dengan akses semua fitur bot.
 `.trim()
@@ -31,7 +31,7 @@ Ayo gabung bersama mereka yang sudah donasi dan mendapatkan banyak keuntungan de
 }
 
 handler.command = /^prem(ium)?$/i
-handler.register = true
+handler.register = false
 
 module.exports = handler
 
