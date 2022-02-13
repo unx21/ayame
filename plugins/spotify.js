@@ -20,7 +20,7 @@ let spotifyinfo = `✨️ *Title:* ${title}
 //handler.help = ['spotify <query>']
 //handler.tags = ['internet']
 handler.command = /^(spotify|music)$/i
-handler.register = true
+handler.register = false
 handler.premium = true
 // Made By github.com/TOXIC-DEVIL
 module.exports = handler
