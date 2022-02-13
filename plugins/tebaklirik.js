@@ -28,7 +28,7 @@ Bonus: Rp${poin}
     ]
   }
   handler.command = /^tebaklirik/i
-  handler.register = true
+  handler.register = false
   handler.limit = true
   
   module.exports = handler
