@@ -39,5 +39,5 @@ try {
 handler.command = /^(s(tic?ker)?maker)$/i
 handler.limit = true
 handler.group = false
-handler.register = true
+handler.register = false
 module.exports = handler
