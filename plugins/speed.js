@@ -9,5 +9,5 @@ let handler = async (m, { conn }) => {
 //handler.tags = ['info', 'tools']
 
 handler.command = /^(ping|speed)$/i
-handler.register = true
+handler.register = false
 module.exports = handler
