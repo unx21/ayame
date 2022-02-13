@@ -38,7 +38,10 @@ let handler = async (m, { conn, args: [event], text }) => {
 //handler.tags = ['owner', 'group']
 
 handler.command = /^simulate$/i
-handler.register = true
+handler.register = false
+handler.admin = true
+handler.botAdmin = true
+handler.group = true
 
 module.exports = handler
 
