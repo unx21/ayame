@@ -736,7 +736,7 @@ Anda berhasil membuka *Peti* dan mendapatkan: ${pk > 0 ? `\n\nKoin: ${pk}` : ''}
   }
 }
 handler.command = /^(open|buka)$/i
-handler.register = true
+handler.register = false
 
 handler.fail = null
 
