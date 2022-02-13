@@ -12,7 +12,7 @@ let handler = async (m, { conn }) => {
 //handler.help = ['ppcouple', 'ppcp']
 //handler.tags = ['internet']
 handler.command = /^(pp(cp|couple))$/i
-handler.register = true
-handler.limit = 2
+handler.register = false
+handler.limit = 10
 
 module.exports = handler
