@@ -30,7 +30,7 @@ Bonus: Rp${poin}
 }
 
 handler.command = /^tebakgame/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 module.exports = handler
