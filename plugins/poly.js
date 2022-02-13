@@ -6,8 +6,8 @@ let handler = async (m, { conn, text }) => {
 }
 //handler.help = ['poly'].map((v) => v + " <text>")
 //handler.tags = ['videomaker']
-handler.register = true
-handler.limit = true
+handler.register = false
+handler.limit = 5
 handler.command = /^poly$/i
 
 module.exports = handler
