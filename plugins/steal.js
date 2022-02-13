@@ -36,7 +36,7 @@ await m.reply(global.wait)
 }
 handler.command = /^(colong|curi|st(eal)?)$/i
 
-handler.limit = 177013
+handler.limit = 75
 handler.register = false
 handler.premium = false
 
