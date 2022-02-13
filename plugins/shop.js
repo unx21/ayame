@@ -508,7 +508,7 @@ Sampah:     ${Ssampah}
     }
 }
 
-handler.register = true
+handler.register = false
     
 handler.command = /^(shop|toko|buy|beli|sell|jual)$/i
 module.exports = handler
