@@ -17,6 +17,6 @@ let handler = async (m, { conn, text }) => {
 }
 handler.command = /^notstonk$/i
 handler.group = false
-handler.register = true
+handler.register = false
 handler.limit = true
 module.exports = handler
