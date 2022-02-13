@@ -26,7 +26,7 @@ Bonus: Rp${poin}
     ]
   }
   handler.command = /^tebakgambar/i
-  handler.register = true
+  handler.register = false
 
   handler.limit = true
   
