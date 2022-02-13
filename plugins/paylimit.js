@@ -25,7 +25,7 @@ let handler = async (m, { conn, text }) => {
 //handler.tags = ['xp']
 handler.command = /^paylimit$/
 handler.rowner = false
-handler.register = true
+handler.register = false
 
 module.exports = handler
 
