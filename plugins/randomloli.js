@@ -1,24 +1,17 @@
+let fetch = require('node-fetch')
+
 let handler = async (m, { conn, text }) => {
   let yh = global.loli
   let url = yh[Math.floor(Math.random() * yh.length)]
   await m.reply(global.wait)
-  let buttons = [
-    { buttonId: '/loli', buttonText: { displayText: 'Get Again' }, type: 1 }
-  ]
-  const buttonsMessage = {
-    contentText: `
-Random Loli
-`.trim(), footerText: 'Lolinya Kaak',
-    buttons: buttons,
-    imageMessage: await conn.prepareMessageMedia({ url }, 'imageMessage'),
-    headerType: 'IMAGE'
-  }
-  const sendMsg = await conn.prepareMessageFromContent(m.chat, { buttonsMessage }, { quoted: m })
-  conn.relayWAMessage(sendMsg)
+  let me = await conn.getName(m.sender)
+  let caption = `Yang Pake Command Ini Fix Pedo\nHuuuuuu Pedoo`
+  let footer = `© 百鬼あやめ`
+   await conn.send2Button(m.chat, await(await fetch(url)).buffer(), caption, footer, `N e x t`, '#loli', `D o n t  P r e s s`, `#say ${me} Adalah Pedo Yang Sangat Handal Dan Saya akan Menculik Semua Anak Kecil Wahahahaha`, m.text, m)
 }
 handler.command = /^(loli)$/i
-handler.register = true
-handler.limit = true
+handler.register = false
+handler.premium = true
 //handler.tags = ['internet']
 //handler.help = ['loli']
 module.exports = handler
