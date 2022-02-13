@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
   let me = await conn.getName(m.sender)
   let caption = `Yang Pake Command Ini Fix Pedo\nHuuuuuu Pedoo`
   let footer = `© 百鬼あやめ`
-   await conn.send2Button(m.chat, await(await fetch(url)).buffer(), caption, footer, `N e x t`, '#loli', `D o n t  P r e s s`, `#say ${me} Adalah Pedo Yang Sangat Handal Dan Saya akan Menculik Semua Anak Kecil Wahahahaha`, m.text, m)
+   await conn.send2ButtonImg(m.chat, await(await fetch(url)).buffer(), caption, footer, `N e x t`, '#loli', `D o n t  P r e s s`, `#say ${me} Adalah Pedo Yang Sangat Handal Dan ${me} akan Menculik Semua Anak Kecil Wahahahaha`, m)
 }
 handler.command = /^(loli)$/i
 handler.register = false
