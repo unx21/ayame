@@ -31,7 +31,7 @@ Bonus: Rp${poin}
 }
 
 handler.command = /^tebakanime/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 module.exports = handler
