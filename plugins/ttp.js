@@ -14,6 +14,6 @@ let handler = async (m, { conn, text }) => {
 //handler.tags = ['sticker']
 
 handler.command = /^ttp$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 module.exports = handler
