@@ -25,6 +25,6 @@ let handler = async (m, { text, usedPrefix }) => {
 //handler.tags = ['game']
 
 handler.command = /^suit$/i
-handler.register = true
+handler.register = false
 
 module.exports = handler
