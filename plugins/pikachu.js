@@ -3,6 +3,7 @@ const { sticker } = require('../lib/sticker')
 const { MessageType } = require('@adiwajshing/baileys')
 
 let handler = async(m, { conn }) => {
+  await m.reply(global.wait)
   let res = await fetch(global.API('https://some-random-api.ml', '/img/pikachu'))
   let json = await res.json()
   let stiker = await sticker(null, json.link, global.packname, global.author)
@@ -15,6 +16,7 @@ let handler = async(m, { conn }) => {
 //handler.tags = ['internet']
 handler.customPrefix = /^pik{1,2}a(c{1,2}hu)?$/i
 handler.command = new RegExp
-handler.register = true
+handler.register = false
+handler.limit = true
 
 module.exports = handler
