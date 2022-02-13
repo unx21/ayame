@@ -39,5 +39,5 @@ ${effects.map(effect => `_> ${effect}_`).join('\n')}
 handler.command = /^(s(tic?ker)?filter)$/i
 handler.limit = true
 handler.group = false
-handler.register = true
+handler.register = false
 module.exports = handler
