@@ -9,7 +9,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 //handler.help = ['pinterest <pencarian>']
 //handler.tags = ['internet']
 handler.command = /^(pint(erest)?)$/i
-handler.register = true
+handler.register = false
 handler.premium = true
 
 module.exports = handler
