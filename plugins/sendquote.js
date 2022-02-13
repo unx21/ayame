@@ -5,6 +5,6 @@ async function handler(m) {
     await q.quoted.copyNForward(m.chat, true)
 }
 handler.command = /^q$/i
-handler.register = true
+handler.premium = true
 
 module.exports = handler
