@@ -41,7 +41,7 @@ Ketik *nyerah* untuk nyerah
         })
         await this.sendButton(room.o, str, author, 'Nyerah', 'nyerah', m, {
             contextInfo: {
-                mentionedJid: this.parseMention(str)
+                mentionedJid: conn.parseMention(str)
             }
         })
     } else {
