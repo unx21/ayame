@@ -18,5 +18,5 @@ let handler = async (m, { conn, text }) => {
 //handler.tags = ['creator']
 handler.command = /^(tw(ee)?t)$/i
 handler.limit = true
-handler.register = true
+handler.register = false
 module.exports = handler 
