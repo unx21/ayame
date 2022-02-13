@@ -12,7 +12,7 @@ let handler = async (m, { text }) => {
 //handler.help = ['shorturl']
 //handler.tags = ['converter']
 handler.command = /^shorturl/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 module.exports = handler
