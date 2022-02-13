@@ -25,7 +25,7 @@ let handler = async (m, { conn, text, participants }) => {
 //handler.help = ['pengumuman', 'announce', 'hidetag'].map(v => v + ' [teks]')
 //handler.tags = ['group']
 handler.command = /^(pengumuman|announce|hiddentag|hidetag)$/i
-handler.register = true
+handler.register = false
 handler.group = true
 handler.admin = true
 
