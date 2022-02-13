@@ -1,6 +1,6 @@
 let { MessageType } = require('@adiwajshing/baileys')
 let handler  = async (m, { conn, command, args, usedPrefix, isOwner, DevMode }) => {
-    if (!isOwner) throw false
+    if (!isOwner) throw 'Mau Ngapain ???!!1!1!'
 	let type = (args[0] || '').toLowerCase()
     let cht = (args[0] || '').toLowerCase()
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
@@ -121,7 +121,7 @@ break
     }
 }
 
-handler.register = true
+handler.register = false
 handler.command = /^(set|setdata)$/i
 handler.fail = null
 
