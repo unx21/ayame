@@ -121,7 +121,7 @@ switch (type) {
 //handler.tags = ['game']
 handler.command = /^(slot)$/i
 handler.group = false
-handler.register = true
+handler.register = false
 
 handler.exp = 10
 handler.limit = true
