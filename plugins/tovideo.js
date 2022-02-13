@@ -24,6 +24,6 @@ let handler = async (m, { conn }) => {
 //handler.tags = ['sticker']
 
 handler.command = /^tovid(eo)?$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 module.exports = handler
