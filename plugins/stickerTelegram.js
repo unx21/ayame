@@ -20,9 +20,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 //handler.help = ['stikertelegram <url>']
 //handler.tags = ['sticker']
 handler.command = /^(s(tic?ker)?tele(gram)?)$/i
-handler.register = true
+handler.register = false
 
-handler.limit = true
+handler.limit = 10
 
 module.exports = handler
 
