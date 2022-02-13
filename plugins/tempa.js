@@ -98,7 +98,7 @@ break
         }
     }
 }
-handler.register = true
+handler.register = false
 handler.command = /^(tempa|menempa)$/
 
 module.exports = handler
