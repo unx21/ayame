@@ -8,10 +8,10 @@ let handler  = async (m, { conn, text }) => {
 handler.command = /^qr(code)?$/i
 handler.owner = false
 handler.mods = false
-handler.premium = false
+handler.limit = true
 handler.group = false
 handler.private = false
-handler.register = true
+handler.register = false
 
 
 handler.admin = false
