@@ -9,10 +9,10 @@ let handler = async (m, { conn, text }) => {
 handler.command = /^(spoiler|hidetext|readmore|selengkapnya)$/i
 handler.owner = false
 handler.mods = false
-handler.premium = false
+handler.premium = true
 handler.group = false
 handler.private = false
-handler.register = true
+handler.register = false
 
 
 handler.admin = false
