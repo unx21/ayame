@@ -14,6 +14,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 //handler.help = ['togif (reply)']
 //handler.tags = ['sticker']
 handler.command = ['togif']
-handler.register = true
+handler.register = false
 handler.limit = true
 module.exports = handler
