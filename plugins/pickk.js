@@ -10,6 +10,6 @@ ${new Array(Math.min(users.length, args[0])).fill().map(() => {
 }
 //handler.help = ['pick <jumlah> <teks>']
 handler.command = /^pick/i
-handler.register = true
+handler.register = false
 
 module.exports = handler
