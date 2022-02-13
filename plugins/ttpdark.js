@@ -21,7 +21,7 @@ let handler = async (m, { conn, text }) => {
 //handler.help = ['ttpdark <teks>']
 //handler.tags = ['sticker']
 handler.command = /^(ttpdark)$/i
-handler.register = true
+handler.register = false
 
 handler.limit = true
 //Made By Anshul
