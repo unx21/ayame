@@ -66,6 +66,6 @@ break
 }
 
 
-handler.register = true
+handler.register = false
 handler.command = /^(racik|meracik)$/i
 module.exports = handler
