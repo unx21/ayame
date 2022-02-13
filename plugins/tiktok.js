@@ -16,7 +16,7 @@ ${description}
 //handler.help = ['tiktok2'].map(v => v + ' <url>')
 //handler.tags = ['downloader']
 handler.command = /^(tiktok|tt)$/i
-handler.register = true
+handler.register = false
 handler.premium = true
 
 
