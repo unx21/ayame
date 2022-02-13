@@ -21,7 +21,7 @@ let handler = async (m, { conn, text }) => {
 //handler.help = ['ttp2 <teks>']
 //handler.tags = ['sticker']
 handler.command = /^(ttp2)$/i
-handler.register = true
+handler.register = false
 
 handler.limit = true
 //MadeByAnshul
