@@ -9,15 +9,9 @@ let handler = async (m, { text }) => {
   if (!res.ok) throw await res.text()
   let json = await res.json()
   if (!json.thumbnail.genius) throw json
-  await conn.sendButtonImg(m.chat, await(await fetch(json.thumbnail.genius)).buffer(), `
-*${json.title}*
-_${json.author}_
-
-${json.lyrics}
-
-
-${json.links.genius}
-`, `© 百鬼あやめ`, m)
+  let teks = `*${json.title}*\n_${json.author}_\n\n${json.lyrics}\n\n\n${json.links.genius}`
+  let foot = '© 百鬼あやめ'
+  await conn.sendButtonImg(m.chat, await(await fetch(json.thumbnail.genius)).buffer(), teks, foot, 'S o n g   Ⓟ', `#play ${text}`, m)
 }
 //handler.help = ['lirik'].map(v => v + ' <Apa>')
 //handler.tags = ['internet']
