@@ -38,7 +38,7 @@ await m.reply(global.wait)
 handler.command = /^wm$/i
 
 handler.limit = false
-handler.register = true
+handler.register = false
 handler.premium = true
 
 module.exports = handler
