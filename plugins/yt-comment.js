@@ -11,8 +11,8 @@ await m.reply(global.wait)
 //handler.help = ['ytcomment <comment>']
 //handler.tags = ['maker']
 handler.command = /^(ytc|ytcomment)$/i
-handler.register = true
-handler.limit = true
+handler.register = false
+handler.limit = 2
 
 
 module.exports = handler
