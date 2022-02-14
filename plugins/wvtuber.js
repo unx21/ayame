@@ -12,9 +12,9 @@ await conn.sendButtonImg(m.chat, await(await fetch(cita)).buffer(), `Random Imag
 //handler.help = ['holo', 'vtuber', 'wvtuber']
 //handler.tags = ['FREE']
 handler.command = /^holo|vtuber|wvtuber$/i
-handler.limit = 30
+handler.limit = 25
 handler.owner = false
-handler.register = true
+handler.register = false
 
 module.exports = handler
 
