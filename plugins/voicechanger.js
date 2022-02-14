@@ -38,7 +38,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 }
 
 handler.command = /^(bass|blown|deep|earrape|fas?t|nightcore|reverse|robot|slow|smooth|tupai|squirrel|chipmunk)$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 module.exports = handler
 
