@@ -16,7 +16,7 @@ let handler = async (m, { conn, text }) => {
 //handler.help = ['wallpaperq <query>']
 //handler.tags = ['internet']
 handler.command = /^wall(paper)?q?$/i
-handler.register = true
+handler.register = false
 
 handler.premium = true
 
