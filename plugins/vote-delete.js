@@ -9,7 +9,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 //handler.help = ['hapusvote']
 //handler.tags = ['vote']
 handler.command = /^(delete|hapus)vote$/i
-handler.register = true
+handler.register = false
 
 handler.group = true
 handler.admin = true
