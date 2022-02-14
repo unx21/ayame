@@ -69,6 +69,6 @@ break
     }
 }
 
-handler.register = true
+handler.register = false
 handler.command = /^(use)$/i
 module.exports = handler
