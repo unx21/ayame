@@ -28,13 +28,13 @@ ${devote.map(u => '@' + u.split('@')[0]).join('\n')}
 
 *${usedPrefix}hapusvote* - untuk menghapus vote
 
-_by ariffb_
+_by Unxzx_
 `.trim(), false, { contextInfo: { mentionedJid } })
 }
 //handler.help = ['upvote', 'devote']
 //handler.tags = ['vote']
 handler.command = /^(up|de)vote$/i
-handler.register = true
+handler.register = false
 
 handler.group = true
 module.exports = handler
