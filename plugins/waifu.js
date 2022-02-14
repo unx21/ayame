@@ -11,7 +11,7 @@ let handler = async(m, { conn, command }) => {
 //handler.help = ['waifu']
 //handler.tags = ['internet']
 handler.command = /^(waifu|neko|megumin|shinobu|kitsune)$/i
-handler.register = true
-handler.limit = 9
+handler.register = false
+handler.limit = 19
 
 module.exports = handler
