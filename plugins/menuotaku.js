@@ -8,6 +8,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}chara_  [ nama ] Ⓛ
 ┃ ❖ _${usedPrefix}kanji_  Ⓛ
 ┃ ❖ _${usedPrefix}mangainfo_  [ judul ] Ⓛ
+┃ ❖ _${usedPrefix}husbu_  Ⓟ
 ┃ ❖ _${usedPrefix}waifu_  Ⓛ
 ┃ ❖ _${usedPrefix}neko_  Ⓛ
 ┃ ❖ _${usedPrefix}loli_  Ⓛ
