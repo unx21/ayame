@@ -23,7 +23,7 @@ ${v.videoCount} video
 //handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
 //handler.tags = ['tools']
 handler.command = /^yts(earch)?$/i
-handler.register = true
+handler.register = false
 handler.limit = true
 
 
