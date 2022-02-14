@@ -10,8 +10,8 @@ let handler = async (m, { text }) => {
 }
 //handler.help = ['wikipedia'].map(v => v + ' <apa>')
 //handler.tags = ['internet']
-handler.command = /^(wiki|wikipedia)$/i
-handler.register = true
+handler.command = /^wiki(pedia)?$/i
+handler.register = false
 handler.limit = true
 //belajar ngocok
 module.exports = handler
