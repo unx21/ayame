@@ -6,9 +6,7 @@ let handler = async (m, { conn }) => {
       await m.reply(global.wait)
         let res = await fetch(global.API('xteam', '/randomimage/wpmobile', {}, 'APIKEY'))
         let img = await res.buffer()
-        conn.sendMessage(m.chat, img, MessageType.image, {
-            quoted: m, caption: '*© シエル*'
-        })
+        await conn.sendButtonImg(m.chat, img, 'Random Wallpaper', '© シエル', 'N e x t', '#wp', m)
     } catch (e) {
         console.log(e)
         throw '_*Owner belum membayar tagihan fitur ini*_'
@@ -18,6 +16,6 @@ let handler = async (m, { conn }) => {
 //handler.tags = ['weebs']
 handler.command = /^(wallpaper|wp)$/i
 handler.premium = true
-handler.register = true
+handler.register = false
 
 module.exports = handler
