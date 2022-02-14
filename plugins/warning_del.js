@@ -23,7 +23,7 @@ handler.mods = false
 handler.premium = false
 handler.group = true
 handler.private = false
-handler.register = true
+handler.register = false
 handler.admin = true
 handler.botAdmin = false
 
