@@ -17,6 +17,6 @@ let handler = async (m, { conn, text }) => {
 //handler.help = ['tweet <username>|<tweet>']
 //handler.tags = ['creator']
 handler.command = /^(tw(ee)?t)$/i
-handler.limit = true
+handler.limit = 2
 handler.register = false
 module.exports = handler 
