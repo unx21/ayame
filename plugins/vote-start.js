@@ -14,7 +14,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 //handler.help = ['mulaivote [alasan]']
 //handler.tags = ['vote']
 handler.command = /^(start|mulai)vote$/i
-handler.register = true
+handler.register = false
 
 handler.limit = true
 handler.group = true
