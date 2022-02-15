@@ -90,5 +90,8 @@ global.quotes = [
 "Bukan siapa yang kita kenal paling lama\nYang datang pertama atau yang paling tau\nTetapi tentang yang datang dan tidak pergi.",
 "Tidak ada gunanya bertahan pada perasaan yang telah pergi, jika saat ini dia telah menjadi milik orang lain maka lepaskanlah. Jangan habiskan waktumu untuk menunggu seseorang yang tak peduli tentang perasaanmu.",
 "Banggalah pada dirimu sendiri, meski ada yang tak menyukai. Kadang mereka membenci karena mereka tak mampu menjadi seperti dirimu.",
-"Kepedihan yang datang pasti sembuh, akan ada kekuatan yang membantumu bertahan hingga kesembuhan itu tiba."
+"Kepedihan yang datang pasti sembuh, akan ada kekuatan yang membantumu bertahan hingga kesembuhan itu tiba.",
+"Sangat menyakitkan ketika tidak ada orang lain untuk mencurahkan perasaan ketika kau ingin memuntahkan emosi mu.",
+"Bahkan jika dia berbohong tentang keteguhannya, dia masih mengungkapkan kelemahan nya ketika dia sendirian.",
+"Bahkan jika kau terus mengatakan kepadanya, manusia adalah makhluk yang tidak akan berubah hanya dengan mendengarkan kata-kata orang lain.\n\nTidak peduli seberapa bijak kata-kata nya, itu hanya efektif kepada orang-orang yang memang berniat mendengarkannya, Jika seseorang yang mengatakan hal-hal yang bijak bisa merubah cara hidup seseorang, maka dunia ini sudah menjadi dunia yang indah.\n\nKata-kata itu sendiri tidak memiliki kekuatan, itu hanya memberikan kekuatan pada orang yang mau menerima kata-kata itu."
 ]
