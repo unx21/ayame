@@ -18,7 +18,7 @@ ${text}
 }
 //handler.help = ['pinterest <keyword>']
 //handler.tags = ['internet']
-handler.command = /^(pint(erest)2?)$/i
+handler.command = /^(pint2)$/i
 handler.register = true
 handler.premium = true
 
