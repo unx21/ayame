@@ -8,7 +8,7 @@ global.wait = "[❗] ```Wait a minute...```"
 global.APIs = { // API Prefix
   // name: 'https://website'
   bx: 'https://bx-hunter.herokuapp.com',
-  hardianto: 'https://hardianto-chan.herokuapp.com',
+  hardianto: 'https://hardianto.xyz',
   jonaz: 'https://jonaz-api-v2.herokuapp.com',
   neoxr: 'https://neoxr-api.herokuapp.com',
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -16,7 +16,7 @@ global.APIs = { // API Prefix
   xteam: 'https://api.xteam.xyz',
   zahir: 'https://zahirr-web.herokuapp.com',
   zekais: 'http://zekais-api.herokuapp.com',
-  zeks: 'https://api.zeks.xyz',
+  zeks: 'https://api.zeks.me',
   LeysCoder: 'https://leyscoders-api.herokuapp.com'
 }
 global.APIKeys = JSON.parse(fs.readFileSync('./src/apikey.json'))
