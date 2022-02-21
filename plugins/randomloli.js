@@ -4,10 +4,12 @@ let handler = async (m, { conn, text }) => {
   let yh = global.loli
   let url = yh[Math.floor(Math.random() * yh.length)]
   await m.reply(global.wait)
-  let me = await conn.getName(m.sender)
+  let siapa = `@${m.sender.split`@`[0]}`
+  let spam = `${pickRandom([`${siapa} Adalah Pedo Yang Sangat Handal Dan ${siapa} akan Menculik Semua Anak Kecil Wahahahaha`, `${siapa} Adalah Predator Nambe Wan Dan Tak Ada Yang Bisa Menghalangi ${siapa} Untuk Menculik Loli`, `${siapa} Pedo dan ${siapa} Bangga`, `Jangan dekat-dekat dengan ${siapa} Karena dia adalah orang stress`, `Si Pedo akut (${siapa}) Mulai beraksi`])}`
   let caption = `Yang Pake Command Ini Fix Pedo\nHuuuuuu Pedoo`
   let footer = `© 百鬼あやめ`
-   await conn.send2ButtonImg(m.chat, await(await fetch(url)).buffer(), caption, footer, `N e x t`, '#loli', `D o n t  P r e s s`, `#say ${me} Adalah Pedo Yang Sangat Handal Dan ${me} akan Menculik Semua Anak Kecil Wahahahaha`, m)
+  let mentionedJid = [siapa]
+   await conn.send2ButtonImg(m.chat, await(await fetch(url)).buffer(), caption, footer, `N e x t`, '#loli', `D o n t  P r e s s`, `#say ${spam}`, m, { contextInfo: { mentionedJid }})
 }
 handler.command = /^(loli)$/i
 handler.register = false
@@ -15,6 +17,10 @@ handler.premium = true
 //handler.tags = ['internet']
 //handler.help = ['loli']
 module.exports = handler
+
+function pickRandom(list) {
+return list[Math.floor(Math.random() * list.length)]
+}
 
 global.loli = [
   "https://i.imgur.com/cvqoK7l.jpg",
