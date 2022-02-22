@@ -26,7 +26,7 @@ global.APIs = { // API Prefix
 
 global.APIKeys = JSON.parse(fs.readFileSync('./src/apikey.json'))
 
-// Wm
+
 
 const spack = fs.readFileSync("lib/exif.json")
 const stickerpack = JSON.parse(spack)
@@ -46,9 +46,14 @@ fs.watchFile(file_exif, () => {
   require('./lib/exif.json')
 })
 
+// global WM
+
 global.packname = sticker_name
 global.author = sticker_author
 
+// this is for the group welcome feature
+
+global.lw = 'https://api.reysekha.xyz/api/textpro/greenhoror?apikey=apirey&text='
 
 global.multiplier = 69 // The higher, The harder levelup
 
