@@ -5,23 +5,28 @@ global.owner = JSON.parse(fs.readFileSync('./src/owner.json')) // Put your numbe
 global.mods = [] // Want some help?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Premium user has unlimited limit
 global.wait = "[❗] ```Wait a minute...```"
+
+
 global.APIs = { // API Prefix
   // name: 'https://website'
   bx: 'https://bx-hunter.herokuapp.com',
   hardianto: 'https://hardianto.xyz',
   jonaz: 'https://jonaz-api-v2.herokuapp.com',
-  neoxr: 'https://neoxr-api.herokuapp.com',
+  neoxr: 'https://api.neoxr.eu.org',
   nrtm: 'https://nurutomo.herokuapp.com',
-  pencarikode: 'https://pencarikode.xyz',
+  pencarikode: 'https://api.chipa.xyz',
   xteam: 'https://api.xteam.xyz',
   zahir: 'https://zahirr-web.herokuapp.com',
   zekais: 'http://zekais-api.herokuapp.com',
   zeks: 'https://api.zeks.me',
   LeysCoder: 'https://leyscoders-api.herokuapp.com'
 }
+
+// global.APIKeys apikey in here
+
 global.APIKeys = JSON.parse(fs.readFileSync('./src/apikey.json'))
 
-// Sticker WM
+// Wm
 
 const spack = fs.readFileSync("lib/exif.json")
 const stickerpack = JSON.parse(spack)
