@@ -11,7 +11,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}husbu_  Ⓟ
 ┃ ❖ _${usedPrefix}waifu_  Ⓛ
 ┃ ❖ _${usedPrefix}neko_  Ⓛ
-┃ ❖ _${usedPrefix}loli_  Ⓛ
+┃ ❖ _${usedPrefix}loli_  Ⓟ
 ┃ ❖ _${usedPrefix}megumin_  Ⓛ
 ┃ ❖ _${usedPrefix}wallpaper_  Ⓟ
 ┃ ❖ _${usedPrefix}wp_  Ⓟ
