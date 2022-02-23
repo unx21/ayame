@@ -6,7 +6,7 @@ let handler = async (m, { conn, command, args }) => {
   if (global.db.data.users[m.sender].uang >= uangperlimit * count) {
     global.db.data.users[m.sender].uang -= uangperlimit * count
     global.db.data.users[m.sender].limit += count
-    conn.reply(m.chat, `-${uangperlimit * count}\n+ ${count} Limit`, m)
+    conn.reply(m.chat, `-Rp${uangperlimit * count}\n+ ${count} Limit`, m)
   } else conn.reply(m.chat, `Uang tidak mencukupi untuk membeli ${count} limit`, m)
 }
 //handler.help = ['buy<jumlah limit>', 'buy <jumlah limit>', 'buyall']
