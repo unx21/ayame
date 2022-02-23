@@ -6,11 +6,11 @@ let handler = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   let mandragoraleaf = global.db.data.users[m.sender].mandragoraleaf
   let hipokuteplant = global.db.data.users[m.sender].hipokuteplant
   let bruh = `
-Tanaman Herbal yang bisa di racik
+Potion yang bisa di racik
 
-🌿 *spiritgrass*
-🍂 *mandragoraleaf*
-🌱 *hipokuteplant*
+~    _spotion_
+~    _mpotion_
+~    _hpotion_
 
 
 *[ Stok Tanaman Herbal Kamu ]*
@@ -21,34 +21,38 @@ Tanaman Herbal yang bisa di racik
 
 
 contoh:
-*${usedPrefix + command } spiritgrass 1*
+*${usedPrefix + command } spotion 1*
+
+
+_Harga untuk meracik potion adalah 1 tanaman herbal_
+_sesuai dengan ukuran nya..._
 `.trim()
 try {
        if (/racik/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
             switch (type) {
-            	case 'spiritgrass':
+            	case 'spotion':
             if (global.db.data.users[m.sender].spiritgrass >= count * 1) {
                            global.db.data.users[m.sender].spiritgrass >= count * 1
                             global.db.data.users[m.sender].spiritgrass -= count * 1
                             global.db.data.users[m.sender].spotion += count * 1
-                            conn.reply(m.chat, `${count} Spirit Grass diracik menjadi ${count} Small Potion`, m)
+                            conn.reply(m.chat, `${count} Spirit Grass berhasil diracik menjadi ${count} Small Potion`, m)
                        } else conn.reply(m.chat, `Tanaman herbal kamu tidak cukup`, m)
 break
-                  case 'mandragoraleaf':
+                  case 'mpotion':
             if (global.db.data.users[m.sender].mandragoraleaf >= count * 1) {
                             global.db.data.users[m.sender].mandragoraleaf >= count * 1
                             global.db.data.users[m.sender].mandragoraleaf -= count * 1
                             global.db.data.users[m.sender].mpotion += count * 1
-                            conn.reply(m.chat, `${count} Mandragora Leaf diracik menjadi ${count} Medium Potion`, m)
+                            conn.reply(m.chat, `${count} Mandragora Leaf telah diracik menjadi ${count} Medium Potion`, m)
                        } else conn.reply(m.chat, `Tanaman herbal kamu tidak cukup`, m)
 break
-                   case 'hipokuteplant':
+                   case 'hpotion':
             if (global.db.data.users[m.sender].hipokuteplant >= count * 1) {
                            global.db.data.users[m.sender].hipokuteplant >= count * 1
                             global.db.data.users[m.sender].hipokuteplant -= count * 1
                             global.db.data.users[m.sender].hpotion += count * 1
-                            conn.reply(m.chat, `${count} Hipokute Plant diracik menjadi ${count} High Potion`, m)
+                            conn.reply(m.chat, `${count} Hipokute Plant sukses diracik menjadi ${count} High Potion`, m)
                        } else m.reply('Tanaman herbal kamu tidak cukup')
             break
         default:
