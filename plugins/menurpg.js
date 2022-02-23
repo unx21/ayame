@@ -18,8 +18,8 @@ let teks = `
 │ ⌬ _${usedPrefix}toko_  [ buy/sell  item ]
 │ ⌬ _${usedPrefix}use_  [ type  jumlah ]
 │ ⌬ _${usedPrefix}dungeon_
-│ ⌬ _${usedPrefix}meracik_  [ herbal  jumlah ]
-│ ⌬ _${usedPrefix}racik_  [ herbal  jumlah ]
+│ ⌬ _${usedPrefix}meracik_  [ potion  jumlah ]
+│ ⌬ _${usedPrefix}racik_  [ potion  jumlah ]
 │ ⌬ _${usedPrefix}bedah_  [ monster  jumlah ]
 │ ⌬ _${usedPrefix}berburu_
 │ ⌬ _${usedPrefix}hunt_
