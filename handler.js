@@ -31,7 +31,7 @@ module.exports = {
           if (!isNumber(user.stamina)) user.stamina = 100
           if (!isNumber(user.durability)) user.durability = 20
           if (!isNumber(user.magazine)) user.magazine = 12
-          if (!isNumber(user.swordpower)) user.swordpower = 0
+          if (!isNumber(user.swordpower)) user.swordpower = 100
           
           if (!isNumber(user.lastadventure)) user.lastadventure = 0
           if (!isNumber(user.lastmulung)) user.lastmulung = 0
@@ -55,7 +55,7 @@ module.exports = {
           if (!isNumber(user.ironarmor)) user.ironarmor = 0
           if (!isNumber(user.goldarmor)) user.goldarmor = 0
           if (!isNumber(user.magicarmor)) user.magicarmor = 0
-          if (!isNumber(user.sword)) user.sword = 0
+          if (!isNumber(user.sword)) user.sword = 1
           if (!isNumber(user.peluru)) user.peluru = 0
           if (!isNumber(user.iron)) user.iron = 0
           if (!isNumber(user.gold)) user.gold = 0
