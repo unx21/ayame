@@ -70,9 +70,9 @@ Kamu berhasil masuk hingga lantai ${lantai} dan mendapatkan:\n
           } else conn.reply(m.chat, 'Minimal 90 health untuk bisa masuk Dungeon lagi, Silahkan racik potion terlebih dahulu', m)
         } else conn.reply(m.chat, 'Kamu perlu 20 durability untuk dapat masuk dungeon', m)
       } else conn.reply(m.chat, 'Sword kamu sudah tidak layak untuk dipakai, Silahkan tempa sword kamu kembali', m)
-    let __timerz = (new Date - global.db.data.users[m.sender].lastuh)
-    let _timerz = (300000 - __timerz) 
-    let timerz = clockString(_timerz)
+    // let __timerz = (new Date - global.db.data.users[m.sender].lastuh)
+    // let _timerz = (300000 - __timerz) 
+    // let timerz = clockString(_timerz)
       if (global.db.data.users[m.sender].healt > 89) { 
       if (global.db.data.users[m.sender].durability > 19) { 
       if (global.db.data.users[m.sender].highsword > 0) {
@@ -104,7 +104,7 @@ Kamu berhasil masuk hingga lantai ${lantai} dan mendapatkan:\n
             global.db.data.users[m.sender].skeleton += tulang * 1
             global.db.data.users[m.sender].wolf += moon * 1
             global.db.data.users[m.sender].lastuh = new Date * 1
-            } else conn.reply(m.chat, `Memasuki dungeon membuat anda lelah, silahkan coba *${timerz}* lagi`, m)
+            }// else conn.reply(m.chat, `Memasuki dungeon membuat anda lelah, silahkan coba *${timerz}* lagi`, m)
           } else conn.reply(m.chat, `Kamu ${pickRandom(['tidak memiliki', 'belum menempa', 'gak punya'])} high sword jadi tidak dapat mengambil bonus`, m)
         }// else conn.reply(m.chat, 'Kamu perlu 20 durability untuk dapat masuk dungeon', m)
       }// else conn.reply(m.chat, 'Minimal 90 health untuk bisa masuk Dungeon lagi, Silahkan racik potion terlebih dahulu', m)
