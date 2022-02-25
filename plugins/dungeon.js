@@ -73,33 +73,42 @@ Kamu berhasil masuk hingga lantai ${lantai} dan mendapatkan:\n
       if (global.db.data.users[m.sender].healt > 89) { 
       if (global.db.data.users[m.sender].durability > 19) { 
       if (global.db.data.users[m.sender].highsword > 0) {
-        if (new Date - global.db.data.users[m.sender].lastdungeon > 300000) {
+         if (new Date - global.db.data.users[m.sender].lastdungeon > 300000) {
       	let uang = `${Math.floor(Math.random() * 25000)}`.trim()
       	let coin = `${Math.floor(Math.random() * 500)}`.trim() 
-          let lendir = `${Math.floor(Math.random() * 17)}`.trim() 
-          let sgrass = `${Math.floor(Math.random() * 7)}`.trim()
-          let mleaf = `${Math.floor(Math.random() * 5)}`.trim()
-          let hplant = `${Math.floor(Math.random() * 3)}`.trim()
-          let hijau = `${Math.floor(Math.random() * 7)}`.trim()
-          let tulang = `${Math.floor(Math.random() * 5)}`.trim()
-          let moon = `${Math.floor(Math.random() * 3)}`.trim()
-          let tekz = `
+        let lendir = `${Math.floor(Math.random() * 17)}`.trim() 
+        let sgrass = `${Math.floor(Math.random() * 7)}`.trim()
+        let mleaf = `${Math.floor(Math.random() * 5)}`.trim()
+        let hplant = `${Math.floor(Math.random() * 3)}`.trim()
+        let hijau = `${Math.floor(Math.random() * 7)}`.trim()
+        let tulang = `${Math.floor(Math.random() * 5)}`.trim()
+        let moon = `${Math.floor(Math.random() * 3)}`.trim()
+        let tekz = `
 *「 Bonus High Sword 」*
 
 💵 *Uang: ${uang}*
 🪙 *Koin: ${coin}*
-👾 *Slime: ${lendir}*${sgrass == 0 ? '' : '\n🌿 *Spirit Grass:* ' + sgrass + ''}${mleaf == 0 ? '' : '\n🍂 *Mandragora Leaf:* ' + mleaf + ''}${hplant == 0 ? '' : '\n🌱 *Hipokute Plant:* ' + hplant + ''}${hijau == 0 ? '' : '\n*Goblin:* ' + hijau + ''}${tulang == 0 ? '' : '\n💀 *Skeleton:* ' + tulang + ''}${moon == 0 ? '' : '\n🐺 *Wolf:* ' + moon + ''}
+👾 *Slime: ${lendir}*${sgrass == 0 ? '' : '\n🌿 *Spirit Grass:* ' + sgrass + ''}${mleaf == 0 ? '' : '\n🍂 *Mandragora Leaf:* ' + mleaf + ''}${hplant == 0 ? '' : '\n🌱 *Hipokute Plant:* ' + hplant + ''}
 `.trim()
-              conn.reply(m.chat, tekz, m)
+               conn.reply(m.chat, tekz, m)
+               if (hijau > 0) {
+                global.db.data.users[m.sender].goblin += hijau * 1
+                conn.reply(m.chat, '*「 Bonus High Sword 」*\n*_+' + hijau + ' Goblin_*', m)
+            }
+            if (tulang > 0) {
+                   global.db.data.users[m.sender].skeleton += tulang * 1
+                   conn.reply(m.chat, '*「 Bonus High Sword 」*\n*_+' + tulang + ' Skeleton_* 💀', m)
+            }
+            if (moon > 0) {
+                global.db.data.users[m.sender].wolf += moon * 1
+                conn.reply(m.chat, '*「 Bonus High Sword 」*\n*_+' + moon + ' Wolf_* 🐺', m)
+            }
             global.db.data.users[m.sender].uang += uang * 1
             global.db.data.users[m.sender].koin += coin * 1
             global.db.data.users[m.sender].slime += lendir * 1
             global.db.data.users[m.sender].spiritgrass += sgrass * 1
             global.db.data.users[m.sender].mandragoraleaf += mleaf * 1
             global.db.data.users[m.sender].hipokuteplant += hplant * 1
-            global.db.data.users[m.sender].goblin += hijau * 1
-            global.db.data.users[m.sender].skeleton += tulang * 1
-            global.db.data.users[m.sender].wolf += moon * 1
             }// else conn.reply(m.chat, `Memasuki dungeon membuat anda lelah, silahkan coba *${timers}* lagi`, m)
           } else conn.reply(m.chat, `Kamu ${pickRandom(['tidak memiliki', 'belum menempa', 'gak punya'])} high sword jadi tidak dapat mengambil bonus`, m)
         }// else conn.reply(m.chat, 'Kamu perlu 20 durability untuk dapat masuk dungeon', m)
