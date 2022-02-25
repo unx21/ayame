@@ -549,7 +549,7 @@ Untuk mematikan fitur ini, ketik
   }
 }
 
-global.dfail = (type, m, conn) => {
+global.dfail = (type, m, conn, usedPrefix) => {
   let msg = { 
    rowner: '_Perintah ini hanya dapat digunakan oleh Master_', 
    owner: '_Perintah ini hanya dapat digunakan oleh Owner Bot_', 
