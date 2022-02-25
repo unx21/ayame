@@ -24,10 +24,7 @@ Peluru mu berkurang *-${magazine * 1}* karena berburu dan Stamina mu juga berkur
 
 *Hewan yang berhasil diburu:*
 
-🦌 Rusa: ${rusa}
-🐗 Babi: ${babi}
-🦃 Kalkun: ${kalkun}
-🐇 Kelinci: ${kelinci}
+${rusa == 0 ? '' : '\n🦌 *Rusa:* ' + rusa + ''}${babi == 0 ? '' : '\n🐗 *Babi:* ' + babi + ''}${kalkun == 0 ? '' : '\n🦃 *Kalkun:* ' + kalkun + ''}${kelinci == 0 ? '' : '\n🐇 *Kelinci:* ' + kelinci + ''}
 🪵 Kayu: ${kayu}
 
 *Bonus: 🔗 ${exp} Exp*
@@ -35,7 +32,7 @@ Peluru mu berkurang *-${magazine * 1}* karena berburu dan Stamina mu juga berkur
             conn.reply(m.chat, str, m)
             if (bison > 0) {
                 global.db.data.users[m.sender].bison += bison * 1
-                conn.reply(m.chat, 'Anda berhasil mendapatkan tangkapan Langka yaitu _*' + bison + ' Bison*_ 🦬', m)
+                conn.reply(m.chat, 'Anda berhasil mendapatkan tangkapan Langka yaitu *' + bison + ' Bison* 🦬', m)
             }
             global.db.data.users[m.sender].magazine -= magazine * 1
             global.db.data.users[m.sender].stamina -= stamina * 1
