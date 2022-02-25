@@ -32,7 +32,7 @@ let teks = `
 │       kegunaannya adalah untuk mengakses
 │       sebagian besar fitur, namun ada beberapa
 │       fitur yang hanya bisa di akses oleh
-│      _*User Premium.*_
+│       _*User Premium.*_
 │
 │   5. Uang
 │        kegunaannya adalah untuk membeli
@@ -44,6 +44,21 @@ let teks = `
 │        kegunaannya untuk membeli barang
 │        yang ada di shop.
 │
+│   7. Level
+│         cara menaikkan level adalah dengan
+│         cara sering berkomunikasi atau
+│         memberikan perintah/menggunakan
+│         fitur bot secara rutin (bukan spam),
+│         semakin tinggi level kalian maka
+│         semakin banyak pula exp yang dibutuhkan
+│         untuk menaikkan level kalian.
+│
+│   8. Rank
+│         setiap 10 level, rank kamu akan naik
+│         1 tingkat, contoh nya: rank kamu akan
+│         naik apabila kamu mencapai level 10,
+│         level 20, dst.
+│
 │
 │   Itulah bagian dasar untuk memahami cara
 │   bermain bot ini, saya berharap agar tulisan
@@ -53,7 +68,6 @@ let teks = `
 │                                                         _Salam Hangat_
 │                                                                 _U n x_
 ╰─「 *I N F O R M A S I* 」
-
 `.trim()
   conn.fakeReply(m.chat, teks, '0@s.whatsapp.net', 'I N F O R M A S I   D A S A R', 'status@broadcast')
   }
