@@ -4,7 +4,7 @@ let chalk = require('chalk')
 global.owner = JSON.parse(fs.readFileSync('./src/owner.json')) // Put your number here
 global.mods = [] // Want some help?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Premium user has unlimited limit
-global.wait = '```Fuyukai desu....```'
+global.wait = "[❗] ```Wait a minute...```"
 global.APIs = { // API Prefix
   // name: 'https://website'
   bx: 'https://bx-hunter.herokuapp.com',
