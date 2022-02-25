@@ -550,8 +550,6 @@ Untuk mematikan fitur ini, ketik
 }
 
 global.dfail = (type, m, conn) => {
-  let teks = 'Anda perlu mendaftar dengan cara mengetik #verify'
-  let foot = 'Tekan tombol dibawah jika anda malas untuk mengetik'
   let msg = { 
    rowner: '_Perintah ini hanya dapat digunakan oleh Master_', 
    owner: '_Perintah ini hanya dapat digunakan oleh Owner Bot_', 
@@ -561,7 +559,7 @@ global.dfail = (type, m, conn) => {
    private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_', 
    admin: '_Perintah ini hanya untuk *Admin* grup_', 
    botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_', 
-   unreg: conn.sendButton(m.chat, teks, foot, 'V e r i f y', '# verify')
+   unreg: 'Anda perlu verifikasi dengan cara mengetik:\n\n*# verify*'
    }[type] 
    if (msg) return m.reply(msg)
  }
