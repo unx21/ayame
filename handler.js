@@ -55,12 +55,15 @@ module.exports = {
           if (!isNumber(user.ironarmor)) user.ironarmor = 0
           if (!isNumber(user.goldarmor)) user.goldarmor = 0
           if (!isNumber(user.magicarmor)) user.magicarmor = 0
-          if (!isNumber(user.sword)) user.sword = 1
           if (!isNumber(user.peluru)) user.peluru = 12
           if (!isNumber(user.iron)) user.iron = 0
           if (!isNumber(user.gold)) user.gold = 0
           if (!isNumber(user.mgstone)) user.mgstone = 0
           if (!isNumber(user.peti)) user.peti = 0
+
+          if (!isNumber(user.sword)) user.sword = 1
+          if (!isNumber(user.highsword)) user.highsword = 0
+          if (!isNumber(user.dragonsword)) user.dragonsword = 0
           
           if (!isNumber(user.antispam)) user.antispam = 0 
           if (!isNumber(user.antispamlastclaim)) user.antispamlastclaim = 0
@@ -144,10 +147,12 @@ module.exports = {
           gold: 0,
           mgstone: 0,
           peti: 0,
+          sword: 1,
+          highsword: 0,
+          dragonsword: 0,
           ironarmor: 0,
           goldarmor: 0,
           magicarmor: 0,
-          sword: 1,
           peluru: 12,
           slime: 0,
           goblin: 0,
