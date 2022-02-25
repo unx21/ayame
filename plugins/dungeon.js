@@ -70,6 +70,8 @@ Kamu berhasil masuk hingga lantai ${lantai} dan mendapatkan:\n
           } else conn.reply(m.chat, 'Minimal 90 health untuk bisa masuk Dungeon lagi, Silahkan racik potion terlebih dahulu', m)
         } else conn.reply(m.chat, 'Kamu perlu 20 durability untuk dapat masuk dungeon', m)
       } else conn.reply(m.chat, 'Sword kamu sudah tidak layak untuk dipakai, Silahkan tempa sword kamu kembali', m)
+      if (global.db.data.users[m.sender].healt > 89) { 
+      if (global.db.data.users[m.sender].durability > 19) { 
       if (global.db.data.users[m.sender].highsword > 0) {
       	let uang = `${Math.floor(Math.random() * 25000)}`.trim()
       	let coin = `${Math.floor(Math.random() * 500)}`.trim() 
@@ -107,6 +109,8 @@ Kamu berhasil masuk hingga lantai ${lantai} dan mendapatkan:\n
             global.db.data.users[m.sender].mandragoraleaf += mleaf * 1
             global.db.data.users[m.sender].hipokuteplant += hplant * 1
           } else conn.reply(m.chat, `Kamu ${pickRandom(['tidak memiliki', 'belum menempa', 'gak punya'])} high sword jadi tidak dapat mengambil bonus`, m)
+        } else conn.reply(m.chat, 'Kamu perlu 20 durability untuk dapat masuk dungeon', m)
+      } else conn.reply(m.chat, 'Minimal 90 health untuk bisa masuk Dungeon lagi, Silahkan racik potion terlebih dahulu', m)
       if (global.db.data.users[m.sender].healt < 0) {   // Jika healt user kurang dari 0, maka level dan exp akan di kurangi sebagaimana mestinya  :v
         	let exp = `${Math.floor(Math.random() * 1000)}`.trim()
             let _level = `${pickRandom(['1', '1', '1', '1', '1'])}`
