@@ -73,6 +73,7 @@ Kamu berhasil masuk hingga lantai ${lantai} dan mendapatkan:\n
       if (global.db.data.users[m.sender].healt > 89) { 
       if (global.db.data.users[m.sender].durability > 19) { 
       if (global.db.data.users[m.sender].highsword > 0) {
+        if (new Date - global.db.data.users[m.sender].lastdungeon > 300000) {
       	let uang = `${Math.floor(Math.random() * 25000)}`.trim()
       	let coin = `${Math.floor(Math.random() * 500)}`.trim() 
           let lendir = `${Math.floor(Math.random() * 17)}`.trim() 
@@ -96,6 +97,7 @@ Kamu berhasil masuk hingga lantai ${lantai} dan mendapatkan:\n
             global.db.data.users[m.sender].spiritgrass += sgrass * 1
             global.db.data.users[m.sender].mandragoraleaf += mleaf * 1
             global.db.data.users[m.sender].hipokuteplant += hplant * 1
+            }// else conn.reply(m.chat, `Memasuki dungeon membuat anda lelah, silahkan coba *${timers}* lagi`, m)
           } else conn.reply(m.chat, `Kamu ${pickRandom(['tidak memiliki', 'belum menempa', 'gak punya'])} high sword jadi tidak dapat mengambil bonus`, m)
         }// else conn.reply(m.chat, 'Kamu perlu 20 durability untuk dapat masuk dungeon', m)
       }// else conn.reply(m.chat, 'Minimal 90 health untuk bisa masuk Dungeon lagi, Silahkan racik potion terlebih dahulu', m)
