@@ -4,9 +4,7 @@ let chalk = require('chalk')
 global.owner = JSON.parse(fs.readFileSync('./src/owner.json')) // Put your number here
 global.mods = [] // Want some help?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Premium user has unlimited limit
-global.wait = "[❗] ```Wait a minute...```"
-
-
+global.wait = '```Fuyukai desu....```'
 global.APIs = { // API Prefix
   // name: 'https://website'
   bx: 'https://bx-hunter.herokuapp.com',
@@ -21,18 +19,15 @@ global.APIs = { // API Prefix
   zeks: 'https://api.zeks.me',
   LeysCoder: 'https://leyscoders-api.herokuapp.com'
 }
-
-// global.APIKeys apikey in here
-
 global.APIKeys = JSON.parse(fs.readFileSync('./src/apikey.json'))
 
-
+// Sticker WM
 
 const spack = fs.readFileSync("lib/exif.json")
 const stickerpack = JSON.parse(spack)
 if (stickerpack.spackname == '') {
-  var sticker_name = '百鬼あやめ'
-  var sticker_author = 'Kokoronationz × Unx'
+  var sticker_name = '栗山未来'
+  var sticker_author = 'Kokoronationz × UNX'
 } else {
   var sticker_name = stickerpack.spackname
   var sticker_author = stickerpack.sauthor
@@ -46,14 +41,11 @@ fs.watchFile(file_exif, () => {
   require('./lib/exif.json')
 })
 
-// global WM
-
 global.packname = sticker_name
 global.author = sticker_author
-
-// this is for the group welcome feature
-
 global.lw = 'https://api.reysekha.xyz/api/textpro/greenhoror?apikey=apirey&text='
+
+
 
 global.multiplier = 69 // The higher, The harder levelup
 
