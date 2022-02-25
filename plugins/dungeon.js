@@ -97,6 +97,9 @@ Kamu berhasil masuk hingga lantai ${lantai} dan mendapatkan:\n
             global.db.data.users[m.sender].spiritgrass += sgrass * 1
             global.db.data.users[m.sender].mandragoraleaf += mleaf * 1
             global.db.data.users[m.sender].hipokuteplant += hplant * 1
+            global.db.data.users[m.sender].goblin += hijau * 1
+            global.db.data.users[m.sender].skeleton += tulang * 1
+            global.db.data.users[m.sender].wolf += moon * 1
             }// else conn.reply(m.chat, `Memasuki dungeon membuat anda lelah, silahkan coba *${timers}* lagi`, m)
           } else conn.reply(m.chat, `Kamu ${pickRandom(['tidak memiliki', 'belum menempa', 'gak punya'])} high sword jadi tidak dapat mengambil bonus`, m)
         }// else conn.reply(m.chat, 'Kamu perlu 20 durability untuk dapat masuk dungeon', m)
