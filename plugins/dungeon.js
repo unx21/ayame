@@ -92,15 +92,15 @@ Kamu berhasil masuk hingga lantai ${lantai} dan mendapatkan:\n
                conn.reply(m.chat, tekz, m)
                if (hijau > 0) {
                 global.db.data.users[m.sender].goblin += hijau * 1
-                conn.reply(m.chat, '*「 Bonus High Sword 」* *_' + hijau + ' Goblin_*', m)
+                conn.reply(m.chat, '*「 Bonus High Sword 」*\n+*_' + hijau + ' Goblin_*', m)
             }
             if (tulang > 0) {
                    global.db.data.users[m.sender].skeleton += tulang * 1
-                   conn.reply(m.chat, '*「 Bonus High Sword 」* *_' + tulang + ' Skeleton_* 💀', m)
+                   conn.reply(m.chat, '*「 Bonus High Sword 」*\n+*_' + tulang + ' Skeleton_* 💀', m)
             }
             if (moon > 0) {
                 global.db.data.users[m.sender].wolf += moon * 1
-                conn.reply(m.chat, '*「 Bonus High Sword 」* *_' + moon + ' Wolf_* 🐺', m)
+                conn.reply(m.chat, '*「 Bonus High Sword 」*\n+*_' + moon + ' Wolf_* 🐺', m)
             }
             global.db.data.users[m.sender].uang += uang * 1
             global.db.data.users[m.sender].koin += coin * 1
