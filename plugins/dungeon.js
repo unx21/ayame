@@ -16,13 +16,12 @@ let handler = async (m, { conn, usedPrefix, DevMode }) => {
             let koin = `${Math.floor(Math.random() * 350)}`.trim() 
             let lantai = `${Math.floor(Math.random() * 99)}`.trim()
             let slime = `${Math.floor(Math.random() * 10)}`.trim() 
-            let sprtgrass = `${Math.floor(Math.random() * 15)}`.trim()
+            let sprtgrass = `${Math.floor(Math.random() * 12)}`.trim()
             let _mdgrleaf = `${pickRandom(['1', '0', '0', '0', '0', '0', '0', '0', '1'])}`
             let mdgrleaf = (_mdgrleaf * 1)
             let _hpktplant = `${pickRandom(['1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1'])}`
             let hpktplant = (_hpktplant * 1)
-            let kayu = `${Math.floor(Math.random() * 20)}`.trim() 
-            let sword = global.db.data.users[m.sender].sword
+            let kayu = `${Math.floor(Math.random() * 20)}`.trim()
             let _skeleton = `${pickRandom(['1', '0', '0', '0', '0', '0', '0', '2', '0', '0', '0', '0', '0', '0', '1'])}`
             let skeleton = (_skeleton * 1)
             let goblin = `${Math.floor(Math.random() * 7)}`.trim() 
@@ -66,12 +65,48 @@ Kamu berhasil masuk hingga lantai ${lantai} dan mendapatkan:\n
             global.db.data.users[m.sender].mandragoraleaf += mdgrleaf * 1
             global.db.data.users[m.sender].hipokuteplant += hpktplant * 1
             global.db.data.users[m.sender].sampah += sampah * 1
-            global.db.data.users[m.sender].sword -= sword
             global.db.data.users[m.sender].lastdungeon = new Date * 1
             } else conn.reply(m.chat, `Memasuki dungeon membuat anda lelah, silahkan coba *${timers}* lagi`, m)
           } else conn.reply(m.chat, 'Minimal 90 health untuk bisa masuk Dungeon lagi, Silahkan racik potion terlebih dahulu', m)
         } else conn.reply(m.chat, 'Kamu perlu 20 durability untuk dapat masuk dungeon', m)
       } else conn.reply(m.chat, 'Sword kamu sudah tidak layak untuk dipakai, Silahkan tempa sword kamu kembali', m)
+      if (global.db.data.users[m.sender].highsword > 0) {
+      	let uang = `${Math.floor(Math.random() * 25000)}`.trim()
+      	let coin = `${Math.floor(Math.random() * 500)}`.trim() 
+          let lendir = `${Math.floor(Math.random() * 17)}`.trim() 
+          let sgrass = `${Math.floor(Math.random() * 7)}`.trim()
+          let mleaf = `${Math.floor(Math.random() * 5)}`.trim()
+          let hplant = `${Math.floor(Math.random() * 3)}`.trim()
+          let hijau = `${Math.floor(Math.random() * 7)}`.trim()
+          let tulang = `${Math.floor(Math.random() * 5)}`.trim()
+          let moon = `${Math.floor(Math.random() * 3)}`.trim()
+          let tekz = `
+*「 Bonus High Sword 」*
+
+💵 *Uang: ${uang}*
+🪙 *Koin: ${coin}*
+👾 *Slime: ${lendir}*${sgrass == 0 ? '' : '\n🌿 *Spirit Grass:* ' + sgrass + ''}${mleaf == 0 ? '' : '\n🍂 *Mandragora Leaf:* ' + mleaf + ''}${hplant == 0 ? '' : '\n🌱 *Hipokute Plant:* ' + hplant + ''}
+`.trim()
+               conn.reply(m.chat, tekz, m)
+               if (hijau > 0) {
+                global.db.data.users[m.sender].goblin += hijau * 1
+                conn.reply(m.chat, '*「 Bonus High Sword 」* *_' + hijau + ' Goblin_*', m)
+            }
+            if (tulang > 0) {
+                   global.db.data.users[m.sender].skeleton += tulang * 1
+                   conn.reply(m.chat, '*「 Bonus High Sword 」* *_' + tulang + ' Skeleton_* 💀', m)
+            }
+            if (moon > 0) {
+                global.db.data.users[m.sender].wolf += moon * 1
+                conn.reply(m.chat, '*「 Bonus High Sword 」* *_' + moon + ' Wolf_* 🐺', m)
+            }
+            global.db.data.users[m.sender].uang += uang * 1
+            global.db.data.users[m.sender].koin += coin * 1
+            global.db.data.users[m.sender].slime += lendir * 1
+            global.db.data.users[m.sender].spiritgrass += sgrass * 1
+            global.db.data.users[m.sender].mandragoraleaf += mleaf * 1
+            global.db.data.users[m.sender].hipokuteplant += hplant * 1
+          } else conn.reply(m.chat, `Kamu ${pickRandom(['tidak memiliki', 'belum menempa', 'gak punya'])} high sword jadi tidak dapat mengambil bonus`, m)
       if (global.db.data.users[m.sender].healt < 0) {   // Jika healt user kurang dari 0, maka level dan exp akan di kurangi sebagaimana mestinya  :v
         	let exp = `${Math.floor(Math.random() * 1000)}`.trim()
             let _level = `${pickRandom(['1', '1', '1', '1', '1'])}`
