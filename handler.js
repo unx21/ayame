@@ -559,7 +559,7 @@ global.dfail = (type, m, conn) => {
    private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_', 
    admin: '_Perintah ini hanya untuk *Admin* grup_', 
    botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_', 
-   unreg: `Anda perlu verifikasi dengan cara mengetik:\n\n*# verify*`, m)
+   unreg: `Anda perlu verifikasi dengan cara mengetik:\n\n*# verify*`
    }[type] 
    if (msg) return m.reply(msg)
  }
