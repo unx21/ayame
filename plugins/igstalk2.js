@@ -23,7 +23,7 @@ Contoh: ${usedPrefix}${command} jokowi
 }
 //handler.help = ['igstalk @username']
 //handler.tags = ['downloader']
-handler.command = /^(igstalk)$/i
+handler.command = /^(igstalk2)$/i
 handler.register = false
 handler.premium = true
 
