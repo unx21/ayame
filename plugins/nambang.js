@@ -28,7 +28,7 @@ Resource yang berhasil di bawa pulang
             conn.reply(m.chat, str, m)
             if (peti > 0) {
                 global.db.data.users[m.sender].peti += peti * 1
-                conn.reply(m.chat, 'Anda berhasil mendapatkan Resource Langka yaitu\n *_' + peti + ' Peti_*', m)
+                conn.reply(m.chat, 'Anda berhasil mendapatkan Resource Langka yaitu\n *' + peti + ' Peti*', m)
             }
             global.db.data.users[m.sender].healt -= healt * 1
             global.db.data.users[m.sender].exp += exp * 1
@@ -50,7 +50,6 @@ Resource yang berhasil di bawa pulang
 }
 handler.command = /^(nambang|bertambamg|tambang|menambang)$/i
 handler.register = false
-handler.owner = false
 
 handler.fail = null
 
