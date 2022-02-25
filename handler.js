@@ -27,9 +27,9 @@ module.exports = {
         let user = global.db.data.users[m.sender]
         if (typeof user !== 'object') global.db.data.users[m.sender] = {}
         if (user) {
-          if (!isNumber(user.healt)) user.healt = 100
+          if (!isNumber(user.healt)) user.healt = 300
           if (!isNumber(user.stamina)) user.stamina = 100
-          if (!isNumber(user.durability)) user.durability = 20
+          if (!isNumber(user.durability)) user.durability = 60
           if (!isNumber(user.magazine)) user.magazine = 12
           if (!isNumber(user.swordpower)) user.swordpower = 100
           
@@ -56,7 +56,7 @@ module.exports = {
           if (!isNumber(user.goldarmor)) user.goldarmor = 0
           if (!isNumber(user.magicarmor)) user.magicarmor = 0
           if (!isNumber(user.sword)) user.sword = 1
-          if (!isNumber(user.peluru)) user.peluru = 0
+          if (!isNumber(user.peluru)) user.peluru = 12
           if (!isNumber(user.iron)) user.iron = 0
           if (!isNumber(user.gold)) user.gold = 0
           if (!isNumber(user.mgstone)) user.mgstone = 0
@@ -102,8 +102,8 @@ module.exports = {
           if (!isNumber(user.makananpet)) user.makananpet = 0
           
           if (!isNumber(user.exp)) user.exp = 0
-          if (!isNumber(user.uang)) user.uang = 0
-          if (!isNumber(user.koin)) user.koin = 0
+          if (!isNumber(user.uang)) user.uang = 5000
+          if (!isNumber(user.koin)) user.koin = 2500
           if (!isNumber(user.limit)) user.limit = 10
           if (!isNumber(user.warn)) user.warn = 0
           if (!isNumber(user.lastmining)) user.lastmining = 0
@@ -124,11 +124,11 @@ module.exports = {
           if (!user.role) user.role = 'Warrior V'
           if (!('autolevelup' in user)) user.autolevelup = true
         } else global.db.data.users[m.sender] = {
-          healt: 100,
+          healt: 300,
           stamina: 100,
-          durability: 20,
+          durability: 60,
           magazine: 12,
-          swordpower: 0,
+          swordpower: 100,
           diamond: 0,
           iron: 0,
           common: 0,
@@ -147,8 +147,8 @@ module.exports = {
           ironarmor: 0,
           goldarmor: 0,
           magicarmor: 0,
-          sword: 0,
-          peluru: 0,
+          sword: 1,
+          peluru: 12,
           slime: 0,
           goblin: 0,
           skeleton: 0,
@@ -177,8 +177,8 @@ module.exports = {
           anakkuda: 0,
           anakrubah: 0,
           makananpet: 0,
-          uang: 0,
-          koin: 0,
+          uang: 5000,
+          koin: 2500,
           exp: 0,
           limit: 10,
           warn: 0,
@@ -561,7 +561,7 @@ global.dfail = (type, m, conn) => {
    private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_', 
    admin: '_Perintah ini hanya untuk *Admin* grup_', 
    botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_', 
-   unreg: conn.sendButton(m.chat, teks, foot, 'V e r i f y', '#verify', m)
+   unreg: conn.sendButton(m.chat, teks, foot, 'V e r i f y', '# verify')
    }[type] 
    if (msg) return m.reply(msg)
  }
