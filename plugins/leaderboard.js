@@ -4,14 +4,12 @@ let handler = async (m, { conn, args }) => {
   let sortedExp = Object.entries(global.db.data.users).sort((a, b) => b[1].exp - a[1].exp)
   let sortedLim = Object.entries(global.db.data.users).sort((a, b) => b[1].limit - a[1].limit)
   let sortedLev = Object.entries(global.db.data.users).sort((a, b) => b[1].level - a[1].level)
-  let sortedRank = Object.entries(global.db.data.users).sort((a, b) => a[1].role - b[1].role)
   let usersUang = sortedUang.map(v => v[0])
   let usersKoin = sortedKoin.map(v => v[0])
   let usersExp = sortedExp.map(v => v[0])
   let usersLim = sortedLim.map(v => v[0])
   let usersLev = sortedLev.map(v => v[0])
-  let usersRank = sortedRank.map(v => v[0])
-  let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 5)) : Math.min(3, sortedRank.length)
+  let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 5)) : Math.min(3, sortedExp.length)
   let text = `
 • *Saldo Leaderboard Top ${len}* •
 Kamu: *${usersUang.indexOf(m.sender) + 1}* dari *${usersUang.length}*
@@ -37,11 +35,6 @@ ${sortedLim.slice(0, len).map(([user, data], i) => (i + 1) + '. ' + conn.getName
 Kamu: *${usersLev.indexOf(m.sender) + 1}* dari *${usersLev.length}*
 
 ${sortedLev.slice(0, len).map(([user, data], i) => (i + 1) + '. ' + conn.getName(user) + ': *' + data.level + ' Level*').join`\n`}
-
-• *Rank Leaderboard Top ${len}* •
-Kamu: *${usersRank.indexOf(m.sender) + 1}* dari *${usersRank.length}*
-
-${sortedRank.slice(0, len).map(([user, data], i) => (i + 1) + '. ' + conn.getName(user) + ': *Rank ' + data.role + '*').join`\n`}
 `.trim()
   conn.reply(m.chat, text, m) /*, {
     contextInfo: {
