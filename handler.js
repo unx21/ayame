@@ -40,7 +40,7 @@ module.exports = {
           if (!isNumber(user.lastberburu)) user.lastberburu = 0
           if (!isNumber(user.lasthunt)) user.lasthunt = 0
           if (!isNumber(user.lastuh)) user.lastuh = 0
-          if (!isNumner(user.lastmeh)) user.lastmeh = 0
+          if (!isNumber(user.lastmeh)) user.lastmeh = 0
           
           if (!isNumber(user.common)) user.common = 0
           if (!isNumber(user.uncommon)) user.uncommon = 0
