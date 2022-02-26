@@ -90,8 +90,8 @@ Sampah:     ${Ssampah}
                             if (global.db.data.users[m.sender].uang >= Blimit * count) {
                             	global.db.data.users[m.sender].uang -= Blimit * count
                                 global.db.data.users[m.sender].limit += count * 1
-                                conn.reply(m.chat, `-Rp${Blimit * count}\n+ ${count} Limit`, m)
-                             } else conn.reply(m.chat, `Uang tidak mencukupi untuk membeli ${count} limit`, m)
+                                conn.reply(m.chat, `-Rp${Blimit * count}\n+ ${count * 1} Limit`, m)
+                             } else conn.reply(m.chat, `Uang tidak mencukupi untuk membeli ${count * 1} limit`, m)
                              break
                 	case 'spotion':
                             if (global.db.data.users[m.sender].koin >= spotion * count) {
@@ -305,8 +305,8 @@ Sampah:     ${Ssampah}
                             if (global.db.data.users[m.sender].uang >= Blimit * count) {
                             	global.db.data.users[m.sender].uang -= Blimit * count
                                 global.db.data.users[m.sender].limit += count * 1
-                                conn.reply(m.chat, `-Rp${Blimit * count}\n+ ${count} Limit`, m)
-                             } else conn.reply(m.chat, `Uang tidak mencukupi untuk membeli ${count} limit`, m)
+                                conn.reply(m.chat, `-Rp${Blimit * count}\n+ ${count * 1} Limit`, m)
+                             } else conn.reply(m.chat, `Uang tidak mencukupi untuk membeli ${count * 1} limit`, m)
                                 break
             	case 'spotion':
                             if (global.db.data.users[m.sender].koin >= spotion * count) {
