@@ -4,7 +4,7 @@ let handler = async (m, { conn, args }) => {
   let sortedExp = Object.entries(global.db.data.users).sort((a, b) => b[1].exp - a[1].exp)
   let sortedLim = Object.entries(global.db.data.users).sort((a, b) => b[1].limit - a[1].limit)
   let sortedLev = Object.entries(global.db.data.users).sort((a, b) => b[1].level - a[1].level)
-  let sortedRank = Object.entries(global.db.data.users).sort((a, b) => b[1].role - a[1].role)
+  let sortedRank = Object.entries(global.db.data.users).sort((a, b) => a[1].role - b[1].role)
   let usersUang = sortedUang.map(v => v[0])
   let usersKoin = sortedKoin.map(v => v[0])
   let usersExp = sortedExp.map(v => v[0])
@@ -41,7 +41,7 @@ ${sortedLev.slice(0, len).map(([user, data], i) => (i + 1) + '. ' + conn.getName
 • *Rank Leaderboard Top ${len}* •
 Kamu: *${usersRank.indexOf(m.sender) + 1}* dari *${usersRank.length}*
 
-${sortedRank.slice(0, len).map(([user, data], i) => (i + 1) + '. ' + conn.getName(user) + ': *Rank*' + data.role + '').join`\n`}
+${sortedRank.slice(0, len).map(([user, data], i) => (i + 1) + '. ' + conn.getName(user) + ': *Rank' + data.role + '*').join`\n`}
 `.trim()
   conn.reply(m.chat, text, m) /*, {
     contextInfo: {
