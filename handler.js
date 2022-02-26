@@ -39,7 +39,8 @@ module.exports = {
           if (!isNumber(user.lastdungeon)) user.lastdungeon = 0
           if (!isNumber(user.lastberburu)) user.lastberburu = 0
           if (!isNumber(user.lasthunt)) user.lasthunt = 0
-          if(!isNumber(user.lastuh)) user.lastuh = 0
+          if (!isNumber(user.lastuh)) user.lastuh = 0
+          if (!isNumner(user.lastmeh)) user.lastmeh = 0
           
           if (!isNumber(user.common)) user.common = 0
           if (!isNumber(user.uncommon)) user.uncommon = 0
@@ -198,6 +199,7 @@ module.exports = {
           lastdungeon: 0,
           lastnambang: 0,
           lastuh: 0,
+          lastmeh: 0,
           premdate: 0,
           registered: false,
           name: this.getName(m.sender),
