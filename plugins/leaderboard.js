@@ -11,7 +11,7 @@ let handler = async (m, { conn, args }) => {
   let usersLim = sortedLim.map(v => v[0])
   let usersLev = sortedLev.map(v => v[0])
   let usersRank = sortedRank.map(v => v[0])
-  let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 5)) : Math.min(3, sortedExp.length)
+  let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 5)) : Math.min(3, sortedRank.length)
   let text = `
 • *Saldo Leaderboard Top ${len}* •
 Kamu: *${usersUang.indexOf(m.sender) + 1}* dari *${usersUang.length}*
@@ -41,7 +41,7 @@ ${sortedLev.slice(0, len).map(([user, data], i) => (i + 1) + '. ' + conn.getName
 • *Rank Leaderboard Top ${len}* •
 Kamu: *${usersRank.indexOf(m.sender) + 1}* dari *${usersRank.length}*
 
-${sortedRank.slice(0, len).map(([user, data], i) => (i + 1) + '. ' + conn.getName(user) + ': *Rank' + data.role + '*').join`\n`}
+${sortedRank.slice(0, len).map(([user, data], i) => (i + 1) + '. ' + conn.getName(user) + ': *Rank ' + data.role + '*').join`\n`}
 `.trim()
   conn.reply(m.chat, text, m) /*, {
     contextInfo: {
