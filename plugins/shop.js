@@ -84,9 +84,6 @@ Sampah:     ${Ssampah}
             case 'buy':
                 switch (_type) {
                 	case 'limit':
-                        let count = command.replace(/^(shop|toko|buy|beli)/i, '')
-                          count = count ? /all/i.test(count) ? Math.floor(global.db.data.users[m.sender].uang / Blimit) : parseInt(count) : args[0] ? parseInt(args[0]) : 1
-                           count = Math.max(1, count)
                             if (global.db.data.users[m.sender].uang >= Blimit * count) {
                             	global.db.data.users[m.sender].uang -= Blimit * count
                                 global.db.data.users[m.sender].limit += count * 1
@@ -299,9 +296,6 @@ Sampah:     ${Ssampah}
             const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
             switch (type) {
             	case 'limit': 
-                     let count = command.replace(/^(shop|toko|buy|beli)/i, '')
-                        count = count ? /all/i.test(count) ? Math.floor(global.db.data.users[m.sender].uang / limit) : parseInt(count) : args[0] ? parseInt(args[0]) : 1
-                          count = Math.max(1, count)
                             if (global.db.data.users[m.sender].uang >= Blimit * count) {
                             	global.db.data.users[m.sender].uang -= Blimit * count
                                 global.db.data.users[m.sender].limit += count * 1
