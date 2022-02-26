@@ -4,7 +4,7 @@ let handler = async (m, { conn, args }) => {
   let sortedExp = Object.entries(global.db.data.users).sort((a, b) => b[1].exp - a[1].exp)
   let sortedLim = Object.entries(global.db.data.users).sort((a, b) => b[1].limit - a[1].limit)
   let sortedLev = Object.entries(global.db.data.users).sort((a, b) => b[1].level - a[1].level)
-  let sortedRole = Object.entries(global.db.data.users).sort((a, b) => b[1].level - a[1].role)
+  let sortedRole = Object.entries(global.db.data.users).sort((a, b) => b[1].role - a[1].role)
   let usersUang = sortedUang.map(v => v[0])
   let usersKoin = sortedKoin.map(v => v[0])
   let usersExp = sortedExp.map(v => v[0])
