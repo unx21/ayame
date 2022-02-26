@@ -49,6 +49,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let mgstone = user.mgstone  //bedah monster
     let peluru = user.peluru  //tempa
     let sword = user.sword  //tempa
+    let highsword = user.highsword  //tempa
     let ironarmor = user.ironarmor  //tempa
     let goldarmor = user.goldarmor  //tempa
     let magicarmor = user.magicarmor  //tempa
@@ -134,6 +135,7 @@ Gold: *${gold}*
 Magic Stone: *${mgstone}*
 Peti: *${peti}*
 Sword: *${sword}*
+High Sword: *${highsword}*
 Ironarmor: *${ironarmor}*
 Goldarmor: *${goldarmor}*
 Magicarmor: *${magicarmor}*
