@@ -4,11 +4,11 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   await m.reply(global.wait)
   let res = await pinterest(text)
   let pint = res[Math.floor(Math.random() * res.length)]
-  await conn.sendButtonImg(m.chat, await(await fetch(pint)).buffer(), `Hasil pencarian\n${text}`, '© 百鬼あやめ', 'Next', m.text, m)
+  await conn.sendButtonImg(m.chat, await(await fetch(pint)).buffer(), `Hasil pencarian\n${text}`, '© 百鬼あやめ', 'N e x t', m.text, m)
 }
 //handler.help = ['pinterest <pencarian>']
 //handler.tags = ['internet']
-handler.command = /^(pint(erest)?)$/i
+handler.command = /^(pint2)$/i
 handler.register = false
 handler.premium = true
 
