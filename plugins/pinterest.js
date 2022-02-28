@@ -13,11 +13,11 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 *Hasil pencarian*
 ${text}
 `.trim(), m) */
-await conn.sendButtonImg(m.chat, await(await fetch(pint)).buffer(), `Hasil pencarian\n${text}`, '© 百鬼あやめ', 'Next', m.text, m)
+await conn.sendButtonImg(m.chat, await(await fetch(pint)).buffer(), `Hasil pencarian\n${text}`, '© 百鬼あやめ', 'N e x t', m.text, m)
 }
 //handler.help = ['pinterest <keyword>']
 //handler.tags = ['internet']
-handler.command = /^(pint2)$/i
+handler.command = /^(pint(erest)?)$/i
 handler.register = false
 handler.premium = true
 
