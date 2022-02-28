@@ -46,7 +46,7 @@ ${'```%npmdesc```'}
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
-    let ayame = './src/photo/ItssAyaamee.jpg'
+    let ayame = './src/photo/Oni.mp4'
     let unx = 'https://bit.ly/unxzx'
     //let premium = global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     let tnbot = (await conn.getFile(await conn.getProfilePicture(m.fromMe))).data.toString('base64')
@@ -139,7 +139,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //conn.reply(m.chat, text.trim(), m)
     conn.fakeReply(m.chat, `Tunggu Sebentar, Jangan Spam !!!`, '0@s.whatsapp.net', ` _${conn.user.name} Verified WhatsApp Bot_`, 'status@broadcast')
-    await conn.sendFile(m.chat, ayame, 'ItsAyaamee.jpg', text.trim(), { 
+    await conn.sendFile(m.chat, ayame, 'Oni.mp4', text.trim(), { 
       key: { 
         remoteJid: 'status@broadcast', 
         participant: '0@s.whatsapp.net', 
