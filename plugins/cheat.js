@@ -1,19 +1,35 @@
 let { MessageType } = require('@adiwajshing/baileys')
 let handler  = async (m, { conn, command, args, usedPrefix, isOwner, DevMode }) => {
     if (!isOwner) throw false
-	let type = (args[0] || '').toLowerCase()
+    let type = (args[0] || '').toLowerCase()
     let cht = (args[0] || '').toLowerCase()
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
     let mentionedJid = [who]
     let cok = `
 *[ LIST ]*
 
-• Uang\n• Koin\n• Diamond\n• Peti\n• Legendary\n• Mythic\n• Healt\n• Stamina\n• Durability\n• Magazine
+• Exp\n• Level\n• Uang\n• Koin\n• Diamond\n• Peti\n• Legendary\n• Mythic\n• Healt\n• Stamina\n• Durability\n• Magazine
 `.trim()
 try {
        if (/cheat|cit/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.max(parseInt(args[1]), 1) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
             switch (type) {
+                case 'exp':
+                           let fck = `${pickRandom(['Berhasil', 'Sukses', 'Aktif'])}`.trim()
+                           let dck = `Cheat XP ${fck}`.trim()
+                           global.db.data.users[who].exp += count * 1
+                           conn.reply(m.chat, dck, m)
+                           conn.fakeReply(m.chat, `Menambahkan ${count * 1} XP Kedalam Database`, '0@s.whatsapp.net', `Cheat XP ${fck}`, 'status@broadcast')
+                           conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} XP Kedalam Database`, 'status@bradcast')
+break
+                case 'level':
+                           let fvk = `${pickRandom(['Berhasil', 'Sukses', 'Aktif'])}`.trim()
+                           let dic = `Cheat Level ${fck}`.trim()
+                           global.db.data.users[who].level += count * 1
+                           conn.reply(m.chat, dic, m)
+                           conn.fakeReply(m.chat, `Menambahkan ${count * 1} Level Kedalam Database`, '0@s.whatsapp.net', `Cheat Level ${fvk}`, 'status@broadcast')
+                           conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan ${count * 1} Level Kedalam Database`, 'status@bradcast')
+break
             	case 'uang':
                             let dod = `${pickRandom(['Berhasil', 'Sukses', 'Aktif'])}`.trim()
                             let bcd = `Cheat Uang ${dod}`.trim()
@@ -22,7 +38,6 @@ try {
                             conn.fakeReply(m.chat, `Menambahkan Rp${count * 1} Kedalam Database`, '0@s.whatsapp.net', `Cheat Uang ${dod}`, 'status@broadcast')
                             conn.fakeReply(m.chat, `Database ${pickRandom(['Berhasil', 'Sukses'])} Diperbarui`, '0@s.whatsapp.net', `Menambahkan Rp${count * 1} Kedalam Database`, 'status@broadcast')
 break
-
                 case 'koin':
                             let did = `${pickRandom(['Berhasil', 'Sukses', 'Aktif'])}`.trim()
                             let ahh = `Cheat Koin ${did}`.trim()
