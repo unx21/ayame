@@ -1,5 +1,5 @@
 module.exports = {
-    async all(m) {
+    async all(m ,{ isOwner}) {
         if (!m.message) return
         this.spam = this.spam ? this.spam : {}
         if (m.isBaileys && m.fromMe) return true
