@@ -2,9 +2,8 @@ module.exports = {
     async all(m) {
         if (!m.message) return
         this.spam = this.spam ? this.spam : {}
-        if (m.isBaileys && m.fromMe) return true
+        if (m.isBaileys && m.fromMe && m.isOwner) return
         if (m.sender in this.spam) {
-          if (isOwner) return true
             this.spam[m.sender].count++
             if (m.messageTimestamp.toNumber() - this.spam[m.sender].lastspam > 10) {
                 if (this.spam[m.sender].count > 10) {
