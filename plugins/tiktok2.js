@@ -17,7 +17,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 //handler.help = ['tiktok'].map(v => v + ' <url>')
 //handler.tags = ['downloader']
 
-handler.command = /^(tt2|tiktok2)$/i
+handler.command = /^tt2|tiktok2$/i
 handler.premium = true
 
 
