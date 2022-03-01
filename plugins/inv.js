@@ -92,7 +92,6 @@ Magazine: *${magazine}*
 Peluru: *${peluru}*
 Sword Power : *${swordpower}*
 Diamond: *${diamond}*
-Makanan Pet: *${makananpet}*
 Kayu Bakar: *${kayu}*
 Sampah: *${sampah}*
 
