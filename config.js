@@ -8,6 +8,7 @@ global.wait = "[❗] ```Wait a minute...```"
 global.APIs = { // API Prefix
   // name: 'https://website'
   bx: 'https://bx-hunter.herokuapp.com',
+  bg: 'http://bochil.ddns.net',
   hardianto: 'https://hardianto.xyz',
   jonaz: 'https://jonaz-api-v2.herokuapp.com',
   neoxr: 'https://api.neoxr.eu.org',
