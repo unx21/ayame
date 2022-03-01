@@ -3,7 +3,7 @@ module.exports = {
         if (!m.message) return
         this.spam = this.spam ? this.spam : {}
         if (m.isBaileys && m.fromMe) return true
-        if (m.isBaileys && m.Owner) return true
+        if (m.isBaileys && m.isOwner) return true
         if (m.sender in this.spam) {
             this.spam[m.sender].count++
             if (m.messageTimestamp.toNumber() - this.spam[m.sender].lastspam > 10) {
