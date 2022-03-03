@@ -138,8 +138,9 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //conn.reply(m.chat, text.trim(), m)
-    conn.fakeReply(m.chat, `Tunggu Sebentar, Jangan Spam !!!`, '0@s.whatsapp.net', ` _${conn.user.name} Verified WhatsApp Bot_`, 'status@broadcast')
-    await conn.sendFile(m.chat, ayame, 'Yo Dayoo.mp4', text.trim(), { 
+    conn.fakeReply(m.chat, `Tunggu Sebentar, Jangan Spam !!!\n\nBaca Rules Dan Info Agar Mengerti Penggunaan Bot`, '0@s.whatsapp.net', `${conn.user.name} Verified WhatsApp Bot`, 'status@broadcast')
+    conn.fakeReply(m.chat, text.trim(), '0@s.whatsapp.net', `${conn.user.name} Verified WhatsApp Bot`, 'status@broadcast')
+    /* await conn.sendFile(m.chat, ayame, 'Yo Dayoo.mp4', text.trim(), { 
       key: { 
         remoteJid: 'status@broadcast', 
         participant: '0@s.whatsapp.net', 
@@ -155,7 +156,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }, m, { 
       //thumbnail: tnbot, 
       contextInfo: { 
-        mentionedJid: [m.sender]} } )
+        mentionedJid: [m.sender]} } ) */
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
