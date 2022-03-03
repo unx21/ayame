@@ -273,8 +273,8 @@ module.exports = {
 
       let isROwner = [global.conn.user.jid, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
       let isOwner = isROwner || m.fromMe
-      let isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
       let isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+      let isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
       let groupMetadata = m.isGroup ? this.chats.get(m.chat).metadata || await this.groupMetadata(m.chat) : {} || {}
       let participants = m.isGroup ? groupMetadata.participants : [] || []
       let user = m.isGroup ? participants.find(u => u.jid == m.sender) : {} // User Data
@@ -382,6 +382,7 @@ module.exports = {
             continue
           }
 
+
           m.isCommand = true
           let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // XP Earning per command
           if (xp > 200) m.reply('Ngecit -_-') // Hehehe
@@ -391,7 +392,7 @@ module.exports = {
             continue // Limit habis
           }
           if (plugin.level > _user.level) {
-            this.reply(m.chat, `diperlukan level ${plugin.level} untuk menggunakan perintah ini. Level kamu ${_user.level}`, m)
+            this.reply(m.chat, `Diperlukan level ${plugin.level} untuk menggunakan perintah ini. Level kamu ${_user.level}`, m)
             continue // If the level has not been reached
           }
           let extra = {
