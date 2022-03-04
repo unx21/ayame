@@ -391,6 +391,10 @@ module.exports = {
             this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy limit*`, m)
             continue // Limit habis
           }
+          if (plugin.limit > _user.limit) {
+            this.reply(m.chat, `Anda membutuhkan ${plugin.limit} untuk menggunakan perintah ini. Limit kamu ${_user.limit}`, m)
+            continue // If the limit has not been reached
+          }
           if (plugin.level > _user.level) {
             this.reply(m.chat, `Diperlukan level ${plugin.level} untuk menggunakan perintah ini. Level kamu ${_user.level}`, m)
             continue // If the level has not been reached
