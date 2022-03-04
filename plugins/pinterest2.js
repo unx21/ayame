@@ -1,3 +1,5 @@
+//thanks to Beniismael > _ <
+
 let fetch = require('node-fetch')
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   if (!text) throw `Contoh: ${usedPrefix + command} minecraft`
