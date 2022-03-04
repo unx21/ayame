@@ -25,7 +25,7 @@ ${upvote.map(u => '@' + u.split('@')[0]).join('\n')}
 _Total: ${devote.length}_
 ${devote.map(u => '@' + u.split('@')[0]).join('\n')}
 `.trim()
-await conn.send3Button(m.chat, caption, '© 百鬼あやめ', 'Upvote', `${usedPrefix}upvote`, 'Devote', `${usedPrefix}devote`, 'Hapus', `${usedPrefix}hapusvote`, m, { contextInfo: { mentionedJid: conn.parseMention(caption) } })
+await conn.send3Button(m.chat, caption, '© 百鬼あやめ', 'Upvote', `${usedPrefix}upvote`, 'Devote', `${usedPrefix}devote`, 'Cek', `${usedPrefix}cekvote`, m, { contextInfo: { mentionedJid: conn.parseMention(caption) } })
 }
 //handler.help = ['upvote', 'devote']
 //handler.tags = ['vote']
