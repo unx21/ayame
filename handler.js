@@ -387,13 +387,13 @@ module.exports = {
           let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // XP Earning per command
           if (xp > 200) m.reply('Ngecit -_-') // Hehehe
           else m.exp += xp
-          if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-            this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy limit*`, m)
-            continue // Limit habis
-          }
           if (plugin.limit > _user.limit) {
             this.reply(m.chat, `Anda membutuhkan ${plugin.limit} untuk menggunakan perintah ini. Limit kamu ${_user.limit}`, m)
             continue // If the limit has not been reached
+          }
+          if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
+            this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy limit*`, m)
+            continue // Limit habis
           }
           if (plugin.level > _user.level) {
             this.reply(m.chat, `Diperlukan level ${plugin.level} untuk menggunakan perintah ini. Level kamu ${_user.level}`, m)
