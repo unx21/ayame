@@ -18,7 +18,7 @@ ${upvote.map(u => '@' + u.split('@')[0]).join('\n')}
 _Total: ${devote.length}_
 ${devote.map(u => '@' + u.split('@')[0]).join('\n')}
 `.trim()
-conn.send3Button(m.chat, caption, '© 百鬼あやめ', 'Upvote', `${usedPrefix}upvote`, 'Devote', `${usedPrefix}devote`, 'Hapus', `${usedPrefix}hapusvote`, m, { contextInfo: { mentionedJid } })
+conn.send3Button(m.chat, caption, '© 百鬼あやめ', 'Upvote', `${usedPrefix}upvote`, 'Devote', `${usedPrefix}devote`, 'Hapus', `${usedPrefix}hapusvote`,m, { contextInfo: { mentionedJid: conn.parseMention(caption) } })
 }
 //handler.help = ['cekvote']
 //handler.tags = ['vote']
