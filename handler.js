@@ -391,7 +391,7 @@ module.exports = {
             this.reply(m.chat, `Anda membutuhkan ${plugin.limit} Limit untuk menggunakan perintah ini. Limit kamu ${_user.limit}`, m)
             continue // If the limit has not been reached
           }
-          if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
+          if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit = 0) {
             this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy limit*`, m)
             continue // Limit habis
           }
