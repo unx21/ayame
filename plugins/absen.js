@@ -2,7 +2,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let id = m.chat
     conn.absen = conn.absen ? conn.absen : {}
     if (!(id in conn.absen)) {
-        await conn.sendButton(m.chat, `Tidak ada absen berlangsung!`, '© stikerin', 'Mulai', `${usedPrefix}mulaiabsen`, m)
+        await conn.sendButton(m.chat, `Tidak ada absen berlangsung!`, '© 百鬼あやめ', 'Mulai', `${usedPrefix}mulaiabsen`, m)
         throw false
     }
 
@@ -24,7 +24,7 @@ ${conn.absen[id][2]}
 ├ Total: ${absen.length}
 ${list}
 └────`.trim()
-    await conn.send2Button(m.chat, caption, '© 百鬼あやめ', 'Absen', `${usedPrefix}absen`, 'Cek', `${usedPrefix}cekabsen`, m, { contextInfo: { mentionedJid: conn.parseMention(caption) } })
+    await conn.send3Button(m.chat, caption, '© 百鬼あやめ', 'Absen', `${usedPrefix}absen`, 'Cek', `${usedPrefix}cekabsen`, 'Hapus', `${usedPrefix}hapusabsen`, m, { contextInfo: { mentionedJid: conn.parseMention(caption) } })
 }
 //handler.help = ['absen']
 //handler.tags = ['absen']
