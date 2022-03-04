@@ -13,6 +13,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}ighighlight_  [ username ]
 ┃ ❖ _${usedPrefix}igstalk_  [ username ]
 ┃ ❖ _${usedPrefix}igstalk2_  [ username ]
+┃ ❖ _${usedPrefix}igstalk3_  [ username ]
 ┃ ❖ _${usedPrefix}igstory_  [ username ]
 ┃ ❖ _${usedPrefix}igstory2_  [ username ]
 ┃ ❖ _${usedPrefix}jadibot_
