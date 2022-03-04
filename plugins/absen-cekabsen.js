@@ -2,7 +2,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let id = m.chat
     conn.absen = conn.absen ? conn.absen : {}
     if (!(id in conn.absen)) {
-        await conn.sendButton(m.chat, `Tidak ada absen berlangsung!`, '© stikerin', 'Mulai', `${usedPrefix}mulaiabsen`, m)
+        await conn.sendButton(m.chat, `Tidak ada absen berlangsung!`, '© 百鬼あやめ', 'Mulai', `${usedPrefix}mulaiabsen`, m)
         throw false
     }
 
