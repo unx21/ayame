@@ -1,7 +1,7 @@
 let handler = async (m, { conn, usedPrefix }) => {
     let id = m.chat
     conn.vote = conn.vote ? conn.vote : {}
-    if (!(id in conn.vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${usedPrefix}mulaivote* - untuk memulai vote`
+    if (!(id in conn.vote)) conn.sendButton(m.chat, `Tidak ada voting yang berlangsung digrup ini!`, '© 百鬼あやめ', 'Mulai', `${usedPrefix}mulaivote`, m)
     delete conn.vote[id]
     m.reply(`Done!`)
 
