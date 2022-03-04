@@ -1,11 +1,11 @@
 let handler = async (m, { conn, usedPrefix }) => {
     let id = m.chat
     conn.vote = conn.vote ? conn.vote : {}
-    if (!(id in conn.vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${usedPrefix}mulaivote* - untuk memulai vote`
+    if (!(id in conn.vote)) conn.sendButton(m.chat,  `Tidak ada voting yang berlangsung digrup ini!`, '© 百鬼あやめ', 'Mulai', `${usedPrefix}mulaivote`, m)
 
     let [reason, upvote, devote] = conn.vote[id]
     let mentionedJid = [...upvote, ...devote]
-    m.reply(`
+    let caption = `
 *「 VOTE 」*
 
 *Alasan:* ${reason}
@@ -17,11 +17,8 @@ ${upvote.map(u => '@' + u.split('@')[0]).join('\n')}
 *DEVOTE*
 _Total: ${devote.length}_
 ${devote.map(u => '@' + u.split('@')[0]).join('\n')}
-
-*${usedPrefix}hapusvote* - untuk menghapus vote
-
-_by Unxzx_
-`.trim(), false, { contextInfo: { mentionedJid } })
+`.trim()
+conn.send3Button(m.chat, caption, '© 百鬼あやめ', 'Upvote', `${usedPrefix}upvote`, 'Devote', `${usedPrefix}devote`, 'Hapus', `${usedPrefix}hapusvote`, m, { contextInfo: { mentionedJid } })
 }
 //handler.help = ['cekvote']
 //handler.tags = ['vote']
