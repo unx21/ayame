@@ -28,11 +28,11 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   }
   if (yt === false) throw 'semua server gagal'
   if (yt2 === false) throw 'semua server gagal'
-  let { dl_link, thumb, title, filesize, filesizeF } = yt
+  let { dl_link, thumb, title, filesizeA, filesizeV } = yt
   await conn.send2ButtonLoc(m.chat, await (await fetch(thumb)).buffer(), `
 *Judul:* ${title}
-*Ukuran File Audio:* ${filesize}
-*Ukuran File Video:* ${yt2.filesizeF}
+*Ukuran File Audio:* ${yt.filesizeA}
+*Ukuran File Video:* ${yt2.filesizeV}
 *Link:* ${dl_link}
 *Server y2mate:* ${usedServer}
 `.trim(), '© 百鬼あやめ', 'Audio', `.yta ${vid.url}`, 'Video', `.yt ${vid.url}`)
