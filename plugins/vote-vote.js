@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     } else if (/de/i.test(command)) {
         conn.vote[id][2].push(m.sender)
     }
-    conn.sendButton(m.chat, `Done!`, '© 百鬼あやめ', 'Cek Vote', `${usedPrefix}cekvote`, m)
+    conn.reply(m.chat, `Done!\n\n© 百鬼あやめ`, m)
     let [reason, upvote, devote] = conn.vote[id]
     let mentionedJid = [...upvote, ...devote]
     let caption = `*「 VOTE 」*
