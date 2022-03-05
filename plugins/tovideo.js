@@ -25,5 +25,5 @@ let handler = async (m, { conn }) => {
 
 handler.command = /^tovid(eo)?$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 module.exports = handler
