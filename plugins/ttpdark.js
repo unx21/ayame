@@ -23,6 +23,6 @@ let handler = async (m, { conn, text }) => {
 handler.command = /^(ttpdark)$/i
 handler.register = false
 
-handler.limit = true
+handler.limit = 1
 //Made By Anshul
 module.exports = handler
