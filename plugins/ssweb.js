@@ -13,7 +13,7 @@ handler.command = /^ss(web)?f?$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
-handler.limit = true
+handler.limit = 2
 handler.private = false
 handler.register = false
 
