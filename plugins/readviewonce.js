@@ -6,7 +6,7 @@ let handler = async (m, { conn, text }) => {
 
 //handler.help = ['readviewonce']
 //handler.tags = ['tools']
-handler.limit = true
+handler.limit = 1
 
 handler.command = /^readviewonce/i
 
