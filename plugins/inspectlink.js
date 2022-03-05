@@ -37,7 +37,7 @@ ${res.desc}` : '*Tidak ada Deskripsi*'}
 
 handler.command = /^inspect$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
 
