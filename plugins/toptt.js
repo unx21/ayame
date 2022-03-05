@@ -18,6 +18,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
 handler.command = /^to(vn|(ptt)?)$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
