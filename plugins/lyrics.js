@@ -17,6 +17,6 @@ let handler = async (m, { text }) => {
 //handler.tags = ['internet']
 handler.command = /^(lrc|lirik|lyrics|lyric)$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
