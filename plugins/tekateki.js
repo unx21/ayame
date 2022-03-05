@@ -33,6 +33,6 @@ Bonus: Rp${poin}
   handler.command = /^tekateki/i
   handler.register = false
 
-  handler.limit = true
+  handler.limit = 1
   
   module.exports = handler
