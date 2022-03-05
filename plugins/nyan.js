@@ -19,6 +19,6 @@ let stiker = await sticker(null, url, 'Nyaa~', global.author)
 }
 handler.command = /^nyan/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
