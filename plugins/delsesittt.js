@@ -15,7 +15,7 @@ let handler = async (m, { conn, text }) => {
 //handler.help = ['delsesittt']
 //handler.tags = ['game']
 handler.command = /^(dell?sesitt)$/i
-handler.limit = true
+handler.limit = 1
 
 handler.register = false
 handler.fail = null
