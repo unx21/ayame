@@ -25,7 +25,7 @@ ${repo.open_issues} Issue${repo.description ? `
 //handler.tags = ['tools']
 handler.command = /^g(ithub|h)search$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
 
