@@ -12,7 +12,7 @@ let text = args.slice(1).join(' ')
 //handler.tags = ['maker']
 handler.command = /^(itssostupid|iss|stupid)$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 
 module.exports = handler
