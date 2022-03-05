@@ -20,6 +20,6 @@ let handler = async (m) => {
 //handler.tags = ['tools']
 handler.command = /^(hd|enhance)$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
