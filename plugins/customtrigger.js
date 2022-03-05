@@ -28,6 +28,6 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
 //handler.tags = ['sticker']
 handler.command = /^(custom|c)trigger$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 //MADEbyAnshul
 module.exports = handler
