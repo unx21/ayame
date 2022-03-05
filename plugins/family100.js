@@ -30,6 +30,6 @@ Terdapat *${json.jawaban.length}* jawaban${json.jawaban.find(v => v.includes(' '
 }
 handler.command = /^f(amily)100?$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
