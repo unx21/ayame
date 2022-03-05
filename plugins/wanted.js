@@ -25,7 +25,7 @@ try {
 //handler.help = ['wanted (reply media)']
 //handler.tags = ['sticker']
 handler.command = /^wanted$/i
-handler.limit = true
+handler.limit = 1
 handler.group = false
 handler.register = false
 module.exports = handler
