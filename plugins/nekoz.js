@@ -20,6 +20,6 @@ let stiker = await sticker(null, url, 'Neko', global.author)
 
 handler.command = /^nekoz/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
