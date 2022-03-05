@@ -34,6 +34,6 @@ Bonus: Rp${poin}
   handler.command = /^tebakkata/i
   handler.register = false
 
-  handler.limit = true
+  handler.limit = 1
   
   module.exports = handler
