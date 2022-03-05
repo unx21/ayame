@@ -31,6 +31,6 @@ Bonus: Rp${poin}
 
 handler.command = /^guesschara/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
