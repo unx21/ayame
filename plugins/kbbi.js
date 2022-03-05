@@ -16,6 +16,6 @@ ${list}
 //handler.tags = ['internet']
 handler.command = /^kbbi$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
