@@ -2,7 +2,7 @@
 const uploadImage = require('../lib/uploadImage')
 const { sticker } = require('../lib/sticker')
 const { MessageType } = require('@adiwajshing/baileys')
-const effects = ['jail', 'glass', 'wasted' ,'triggered', 'simpcard', 'horny']
+const effects = ['jail', 'glass', 'triggered', 'simpcard', 'horny']
 
 let handler = async (m, { conn, usedPrefix, text }) => {
     let effect = text.trim().toLowerCase()
@@ -37,7 +37,7 @@ try {
 //handler.help = ['stickmaker (caption|reply media)']
 //handler.tags = ['sticker']
 handler.command = /^(s(tic?ker)?maker)$/i
-handler.limit = true
+handler.limit = 1
 handler.group = false
 handler.register = false
 module.exports = handler
