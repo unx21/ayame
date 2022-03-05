@@ -41,7 +41,7 @@ Daftar bahasa yang didukung: https://cloud.google.com/translate/docs/languages
 handler.command = /^(tr(anslate)?)$/i
 handler.register = false
 
-handler.limit = true
+handler.limit = 1
 handler.fail = null
 handler.exp = 0
 module.exports = handler
