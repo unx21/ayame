@@ -17,9 +17,9 @@ let handler = async (m, { conn, text }) => {
 }
 //handler.help = ['memegen'].map(v => v + '<apa|apa>')
 //handler.tags = ['tools']
-handler.command = /^(memecreator)$/i
+handler.command = /^(meme(maker|creator))$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 
 module.exports = handler
