@@ -20,6 +20,6 @@ let stiker = await sticker(null, url, command.charAt(0).toUpperCase() + command.
 
 handler.command = /^(bite|yeet|blush|cringe|glomp|happy|highfive|kicks|kill|kiss|nom|poke|smile|wave|cry)/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
