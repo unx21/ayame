@@ -22,7 +22,7 @@ try {
 }
 
 handler.command = /^(sgay)$/i
-handler.limit = true
+handler.limit = 1
 handler.group = false
 handler.register = false
 module.exports = handler
