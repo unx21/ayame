@@ -23,7 +23,7 @@ ${json.url}
 //handler.tags = ['internet']
 handler.command = /^(resep)$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 
 module.exports = handler
