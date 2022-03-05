@@ -44,6 +44,6 @@ let caption = `
 //handler.tags = ['weebs','internet']
 handler.command = /^(kanji)$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
