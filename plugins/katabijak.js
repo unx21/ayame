@@ -41,6 +41,6 @@ https://neoxr-api.herokuapp.com/docs`
 //handler.tags = ['internet']
 handler.command = /^(katabijak|jagokata)$/i
 handler.register = false
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
