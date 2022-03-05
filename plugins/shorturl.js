@@ -13,7 +13,7 @@ let handler = async (m, { text }) => {
 //handler.tags = ['converter']
 handler.command = /^shorturl/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
   
