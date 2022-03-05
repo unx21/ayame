@@ -33,6 +33,6 @@ ${negatif}
 //handler.tags = ['fun']
 handler.command = /^(jodoh)$/i
 
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
