@@ -13,6 +13,6 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 //handler.tags = ['tools']
 handler.command = /^kodepos$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
