@@ -1,4 +1,3 @@
-
 let { webp2png } = require('../lib/webp2mp4')
 let handler = async (m, { conn, usedPrefix, command }) => {
   if (!m.quoted) throw `balas stiker dengan caption *${usedPrefix + command}*`
@@ -18,5 +17,5 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 //handler.tags = ['sticker']
 handler.command = ['toimg2']
 handler.register = false
-handler.limit = true
+handler.limit = 1
 module.exports = handler
