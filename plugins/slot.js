@@ -124,7 +124,7 @@ handler.group = false
 handler.register = false
 
 handler.exp = 10
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
 
