@@ -32,7 +32,7 @@ Bonus: Rp${poin}
     ]
 }
 handler.command = /^tebakkimia/i
-handler.limit = true
+handler.limit = 1
 handler.register = false
 
 module.exports = handler
