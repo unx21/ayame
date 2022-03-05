@@ -28,7 +28,7 @@ try {
 //handler.help = ['stickermeme <teks>|<teks>']
 //handler.tags = ['sticker']
 handler.command = /^(s(tic?ker)?meme)$/i
-handler.limit = true
+handler.limit = 1
 handler.group = false
 handler.register = false
 module.exports = handler
