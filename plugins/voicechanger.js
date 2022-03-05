@@ -39,7 +39,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 
 handler.command = /^(bass|blown|deep|earrape|fas?t|nightcore|reverse|robot|slow|smooth|tupai|squirrel|chipmunk)$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 module.exports = handler
 
 const getRandom = (ext) => {
