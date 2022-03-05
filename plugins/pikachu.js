@@ -17,6 +17,6 @@ let handler = async(m, { conn }) => {
 handler.customPrefix = /^pik{1,2}a(c{1,2}hu)?$/i
 handler.command = new RegExp
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 module.exports = handler
