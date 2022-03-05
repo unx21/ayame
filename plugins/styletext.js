@@ -9,7 +9,7 @@ let handler = async (m, { conn, text }) => {
 handler.command = /^(style(text)?)$/i
 handler.owner = false
 handler.mods = false
-handler.premium = false
+handler.limit = 1
 handler.group = false
 handler.private = false
 handler.register = false
