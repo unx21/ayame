@@ -15,5 +15,5 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 //handler.tags = ['sticker']
 handler.command = ['togif']
 handler.register = false
-handler.limit = true
+handler.limit = 1
 module.exports = handler
