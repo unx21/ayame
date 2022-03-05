@@ -57,5 +57,5 @@ ${[
 //handler.tags = ['sticker']
 handler.command = /^s?emo(ji)?$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 module.exports = handler
