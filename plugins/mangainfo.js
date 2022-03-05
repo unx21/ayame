@@ -18,7 +18,7 @@ let mangaingfo = `*Title:* ${title}
 //handler.tags = ['internet']
 handler.command = /^(manga)$/i
 handler.register = false
-handler.limit = true
+handler.limit = 1
 
 //udah di maapin kan?
 module.exports = handler
