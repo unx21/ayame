@@ -7,7 +7,7 @@ handler.before = async function (m) {
   if (m.quoted.id == conn.asahotak[id][0].id) {
     let json = JSON.parse(JSON.stringify(conn.asahotak[id][1]))
     // m.reply(JSON.stringify(json, null, '\t'))
-    if (m.text.toLowerCase() == json.jawaban.toLowerCase()) {
+    if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
       global.db.data.users[m.sender].uang += conn.asahotak[id][2]
       await this.sendButton(m.chat, `*Benar!*\n+Rp${conn.asahotak[id][2]}`, '© 百鬼あやめ', 'A s a h   O t a k', '#asahotak', m)
       clearTimeout(conn.asahotak[id][3])
