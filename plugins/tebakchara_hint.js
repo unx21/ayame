@@ -6,5 +6,5 @@ let handler = async (m, { conn }) => {
     m.reply('```' + json.name.replace(/[bcdfghjklmnpqrstvwxyz]/g, '_') + '```')
 }
 handler.command = /^tchint$/i
-handler.limit = true
+handler.limit = 1
 module.exports = handler
