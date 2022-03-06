@@ -32,6 +32,6 @@ Bonus: Rp${poin}
   handler.command = /^siapakahaku/i
   handler.register = false
 
-  handler.limit = true
+  handler.limit = 1
   
   module.exports = handler
