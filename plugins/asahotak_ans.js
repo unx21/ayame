@@ -10,7 +10,7 @@ handler.before = async function (m) {
     if (!(id in this.asahotak)) return m.reply('Asah Otak telah berakhir')
     if (m.quoted.id == this.asahotak[id][0].id) {
         let json = JSON.parse(JSON.stringify(this.asahotak[id][1]))
-        if (['.ao', ''].includes(m.text)) return !0
+        if (['.aohint', ''].includes(m.text)) return !0
         if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
             global.db.data.users[m.sender].uang += conn.asahotak[id][2]
             await this.sendButton(m.chat, `*Benar!*\n+Rp${conn.asahotak[id][2]}`, '© 百鬼あやめ', 'A s a h O t a k', '#asahotak', m)
