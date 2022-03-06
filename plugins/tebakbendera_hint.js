@@ -8,5 +8,5 @@ let handler = async (m, { conn }) => {
     m.reply('```' + nyanya + '```')
 }
 handler.command = /^tbhint$/i
-handler.limit = true
+handler.limit = 1
 module.exports = handler
