@@ -21,14 +21,14 @@ Ketik *${usedPrefix}aohint* untuk bantuan
 Bonus: Rp${poin}
     `.trim()
     conn.asahotak[id] = [
-      conn.sendButton(m.chat, caption, '© 百鬼あやめ', 'A o h i n t', '#aohint', m),
-      json, poin,
-      setTimeout(() => {
-        if (conn.asahotak[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, '© 百鬼あやめ', 'A s a h   O t a k', '#asahotak', conn.asahotak[id][0])
-        delete conn.asahotak[id]
-      }, timeout)
+        await conn.sendButton(m.chat, caption, '© 百鬼あやめ', 'A o h i n t', '#aohint', m),
+        json, poin,
+        setTimeout(async () => {
+            if (conn.asahotak[id]) await conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, '© 百鬼あやめ', 'A s a h   O t a k', '#asahotak', conn.asahotak[id][0])
+            delete conn.asahotak[id]
+        }, timeout)
     ]
-  }
+}
   handler.command = /^asahotak/i
   handler.register = false
 
