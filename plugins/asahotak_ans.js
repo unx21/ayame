@@ -9,7 +9,7 @@ handler.before = async function (m) {
     // m.reply(JSON.stringify(json, null, '\t'))
     if (m.text.toLowerCase() == json.jawaban.toLowerCase()) {
       global.db.data.users[m.sender].uang += conn.asahotak[id][2]
-      m.reply(`*Benar!*\n+Rp${conn.asahotak[id][2]}`)
+      await this.sendButton(m.chat, `*Benar!*\n+Rp${conn.asahotak[id][2]}`, '© 百鬼あやめ', 'A s a h   O t a k', '#asahotak', m)
       clearTimeout(conn.asahotak[id][3])
       delete conn.asahotak[id]
     } else if (m.text.toLowerCase().endsWith(json.jawaban.split` `[1])) m.reply(`*Dikit Lagi!*`)
