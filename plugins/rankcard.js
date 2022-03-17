@@ -30,7 +30,7 @@ let caption = `
 ⚜️ Level: ${level}
 🔗 Exp : ${exp} --> ${max}
 `.trim()
-    conn.send3ButtonImg(m.chat, await(await fetch(res)).buffer(), caption, '© 百鬼あやめ', 'Leaderboard', '+lb', 'Inventory', '×inv', 'Level Up', '÷levelup', m))
+    conn.send3ButtonImg(m.chat, await(await fetch(res)).buffer(), caption, '© 百鬼あやめ', 'Leaderboard', '+lb', 'Inventory', '×inv', 'Level Up', '÷levelup', m)
 } 
     
     }
