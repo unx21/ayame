@@ -16,7 +16,7 @@ await m.reply(global.wait)
 let res = global.API('https://hardianto.xyz', '/api/rankcard', {
     profile: await conn.getProfilePicture(m.sender).catch(_ => 'https://telegra.ph/file/5e1ba0925c548bcc9a8d2.jpg'),
     name: nama,
-    bg: 'https://telegra.ph/file/debfea980ae47bed361fb.jpg',
+    bg: 'https://telegra.ph/file/a0ec5ddaf89da3907108b.jpg',
     needxp: max,
     curxp: exp,
     level: level,
