@@ -17,6 +17,7 @@ let teks = `
 │ ⌬ _${usedPrefix}shop_  [ buy/sell  item ]
 │ ⌬ _${usedPrefix}toko_  [ buy/sell  item ]
 │ ⌬ _${usedPrefix}use_  [ type  jumlah ]
+│ ⌬ _${usedPrefix}pakai_  [ type  jumlah ]
 │ ⌬ _${usedPrefix}dungeon_
 │ ⌬ _${usedPrefix}meracik_  [ potion  jumlah ]
 │ ⌬ _${usedPrefix}racik_  [ potion  jumlah ]
@@ -34,8 +35,6 @@ let teks = `
 │ ⌬ _${usedPrefix}bertambang_
 │ ⌬ _${usedPrefix}menempa_  [ item  jumlah ]
 │ ⌬ _${usedPrefix}tempa_  [ item  jumlah ]
-│ ⌬ _${usedPrefix}gunakan_  [ armor  jumlah ]
-│ ⌬ _${usedPrefix}pakai_  [ armor  jumlah ]
 │ ⌬ _${usedPrefix}tutorial_
 ╰─────────
 `.trim()
