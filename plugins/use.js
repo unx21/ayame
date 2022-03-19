@@ -1,11 +1,17 @@
 let { MessageType } = require('@adiwajshing/baileys')
 let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
-	let type = (args[0] || '').toLowerCase()
+
+    let type = (args[0] || '').toLowerCase()
     let use = (args[0] || '').toLowerCase()
     let spotion = global.db.data.users[m.sender].spotion
     let mpotion = global.db.data.users[m.sender].mpotion
     let hpotion = global.db.data.users[m.sender].hpotion
-let cok = `
+    let ironarmor = global.db.data.users[m.sender].ironarmor
+    let goldarmor = global.db.data.users[m.sender].goldarmor
+    let magicarmor = global.db.data.users[m.sender].magicarmor
+    
+ let cok = `
+                 *「 POTION 」*
 Jumlah Healt per Potion
 
 *• spotion   25 healt*
@@ -19,11 +25,26 @@ Jumlah Healt per Potion
 • mpotion  ${mpotion} buah
 • hpotion  ${hpotion} buah
 
+
+                 *「 ARMOR 」*
+Jumlah Durability per Armor
+
+*• ironarmor   25 durability*
+*• goldarmor   60 durability*
+*• magicarmor   150 durability*
+
+
+*[ Stok Armor Kamu ]*
+
+• ironarmor  ${ironarmor} buah
+• goldarmor  ${goldarmor} buah
+• magicarmor  ${magicarmor} buah
+
 contoh:
 *${usedPrefix + command} spotion 2*
 `.trim()
 try {
-       if (/use/i.test(command)) {
+       if (/use|pakai/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
             switch (type) {
             	case 'spotion':
@@ -51,8 +72,34 @@ break
                             global.db.data.users[m.sender].healt += count * 150
                             conn.reply(m.chat, `Primitif, menggunakan ${count} hpotion\n+${count * 150} Healt`, m)
                        } else conn.reply(m.chat, `Belum meracik hpotion`, m)
-                       } else conn.reply(m.chat, `Udah weh, dah penuh`, m)
-                       
+                       } else conn.reply(m.chat, `Udah weh, dah penuh`, m)               
+break
+                    case 'ironarmor':
+            if (global.db.data.users[m.sender].durability < 20) {
+                        if (global.db.data.users[m.sender].ironarmor >= count * 1) {
+                            global.db.data.users[m.sender].ironarmor -= count * 1
+                            global.db.data.users[m.sender].durability += count * 25
+                            conn.reply(m.chat, `${count} Iron Armor dipakai\n+${count * 25} Durability`, m)
+                       } else conn.reply(m.chat, `Tidak memiliki iron armor lagi`, m)
+                       } else conn.reply(m.chat, `Durability penuh`, m)
+break
+                  case 'goldarmor':
+            if (global.db.data.users[m.sender].durability < 20) {
+                        if (global.db.data.users[m.sender].goldarmor >= count * 1) {
+                            global.db.data.users[m.sender].goldarmor -= count * 1
+                            global.db.data.users[m.sender].durability += count * 60
+                            conn.reply(m.chat, `${count} Gold Armor digunakan\n+${count * 60} Durability`, m)
+                       } else conn.reply(m.chat, `Kehabisan stok gold armor`, m)
+                       } else conn.reply(m.chat, `Durability penuh`, m)
+break
+                   case 'magicarmor':
+            if (global.db.data.users[m.sender].durability < 20) {
+                        if (global.db.data.users[m.sender].magicarmor >= count * 1) {
+                            global.db.data.users[m.sender].magicarmor -= count * 1
+                            global.db.data.users[m.sender].durability += count * 150
+                            conn.reply(m.chat, `${count} Magic Armor terpakai\n+${count * 150} Durability`, m)
+                       } else conn.reply(m.chat, `Belum membuat magic armor`, m)
+                       } else conn.reply(m.chat, `Durability penuh`, m)                 
 break
                 default:
                     return conn.reply( m.chat, cok, m)
@@ -70,5 +117,5 @@ break
 }
 
 handler.register = false
-handler.command = /^(use)$/i
+handler.command = /^(use|pakai)$/i
 module.exports = handler
