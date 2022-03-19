@@ -8,7 +8,7 @@ let teks = `
 │
 │     Tidak perlu menggunakan kode seperti
 │     <  ataupun  >  karena itu hanya sebagai
-│     pembatas teks antara satu dan lainnya
+│     pembatas teks antara satu dan lainnya.
 │ 
 │       *[ Just Info ]*
 │
@@ -17,16 +17,16 @@ let teks = `
 │╭─[ *Profile* ]
 ││
 ││ • *${usedPrefix}profile*
-││    Untuk mengetahui Informasi saldo, dll
+││    Untuk mengetahui Informasi saldo, dll.
 ││
 ││ • *${usedPrefix}rank*
 ││ • *${usedPrefix}rankcard*
-││    Untuk mengecek level, ranking, dll
+││    Untuk mengecek level, ranking, dll.
 ││
 ││ • *${usedPrefix}inv*
 ││ • *${usedPrefix}inventory*
 ││ • *${usedPrefix}perlengkapan*
-││    Untuk mengecek nyawa, item, dll.
+││    Untuk memeriksa nyawa, durability, dll.
 │╰────────────────
 │
 │
@@ -40,16 +40,17 @@ let teks = `
 ││   minimal 80 nyawa dan 20 durability
 ││   untuk bisa melakukannya dan
 ││   kamu tidak dapat spam karena
-││   ada delay 5 menit
+││   ada delay 5 menit.
 ││
 ││ • *${usedPrefix}use <type> <jumlah>*
-││    Untuk memakai potion dan untuk 
-││    mengisi nyawa/health, selengkapnya
-││    ketik ${usedPrefix}use untuk melihat
-││    list potion
+││    Untuk memakai potion dan armor lalu 
+││    mengisi nyawa/health serta menambah
+││    durability kamu, selengkapnya
+││    ketik ${usedPrefix}use atau ${usedPrefix}pakai
+││    untuk melihat list potion atau armor.
 ││
 ││ • *${usedPrefix}open <crate> <jumlah>*
-││    Untuk membuka crate mu
+││    Untuk membuka crate mu.
 │╰────────────────
 │
 │
@@ -61,16 +62,16 @@ let teks = `
 ││    minimal 90 nyawa, 20 durability dan
 ││    50 swordpower untuk bisa 
 ││    melakukannya dan, kamu tidak 
-││    dapat spam karena ada delay 5 menit
+││    dapat spam karena ada delay 5 menit.
 ││ 
 ││ • *${usedPrefix}racik*
 ││ • *${usedPrefix}meracik*
 ││    Untuk meracik beragam jenis potion
-││    seperti, spotion, mpotion atau hpotion
+││    seperti, spotion, mpotion atau hpotion.
 ││
 ││ • *${usedPrefix}bedah <monster> <jumlah>*
 ││    Untuk mendapatkan Magic Stone agar
-││    dapat di tempa menjadi peluru
+││    dapat di tempa menjadi peluru.
 │╰────────────────
 │
 │
@@ -82,27 +83,27 @@ let teks = `
 ││    kemudian dimakan.., dibutuhkan
 ││    minimal 80 stamina dan 12 magazine
 ││    untuk bisa melakukannya dan, kamu
-││    tidak dapat spam karena ada delay 5 menit
+││    tidak dapat spam karena ada delay 5 menit.
 ││
 ││ • *${usedPrefix}reload*
 ││ • *${usedPrefix}isi peluru <jumlah>*
-││    Untuk mereload atau mengisi magazine
+││    Untuk mereload atau mengisi magazine.
 ││
 ││ • *${usedPrefix}menempa*
 ││ • *${usedPrefix}tempa <item>*
 ││    Untuk membuat perlengkapan seperti
-││    peluru dan armor
+││    peluru dan armor.
 ││
 ││ • *${usedPrefix}makan*
 ││ • *${usedPrefix}eat <makanan> <jumlah>*
 ││    Untuk mengisi stamina kamu
-││    yang habis ketika berburu
+││    yang habis ketika berburu.
 ││
 ││ • *${usedPrefix}cook*
 ││ • *${usedPrefix}masak <hewan buruan> <jumlah>*
 ││    Untuk memasak hewan buruan yang
 ││    kamu tangkap, jangan lupa sesuaikan
-││    dengan kayu bakar mu
+││    dengan kayu bakar mu.
 │╰────────────────
 │
 │
@@ -115,41 +116,35 @@ let teks = `
 ││    seperti iron dan gold agar dapat
 ││    di tempa menjadi armor yang akan
 ││    digunakan untuk berpetualang atau
-││    memasuki dungeon
-││
-││ • *${usedPrefix}pakai <armor> <jumlah>*
-││ • *${usedPrefix}gunakan <armor> <jumlah>*
-││    Untuk menggunakan armor yang telah
-││    ditempa agar mendapatkan
-││    durability atau ketahanan
+││    memasuki dungeon.
 ││
 ││ • *${usedPrefix}menempa <item> <jumlah>*
 ││ • *${usedPrefix}tempa <item> <jumlah>*
 ││    Untuk membuat perlengkapan seperti
-││    peluru dan armor
+││    peluru dan armor.
 │╰────────────────
 │
 │
 │╭─[ *Toko* ]
 ││ 
 ││ • *${usedPrefix}shop*
-││    Untuk melihat item dan harganya
+││    Untuk melihat item dan harganya.
 ││
 ││ • *${usedPrefix}shop buy <item> <jumlah>*
-││    Untuk membeli item
+││    Untuk membeli item.
 ││
 ││ • *${usedPrefix}shop sell <item> < jumlah>*
-││    Untuk menjual item
+││    Untuk menjual item.
 │╰────────────────
 │
 │
 │╭─[ *Pet* ]
 ││
 ││ • *${usedPrefix}open <pet>*
-││    Untuk mendapatkan pet
+││    Untuk mendapatkan pet.
 ││
 ││ • *${usedPrefix}feed <pet>*
-││    Untuk memberi makan pet
+││    Untuk memberi makan pet.
 │╰────────────────
 │
 │
