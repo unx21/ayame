@@ -28,11 +28,15 @@ let teks = `
 │        dan dungeon.
 │
 │   4. Limit
-│       memiliki kesamaan seperti tiket,
-│       kegunaannya adalah untuk mengakses
-│       sebagian besar fitur, namun ada beberapa
-│       fitur yang hanya bisa di akses oleh
-│       _*User Premium.*_
+│        memiliki kesamaan seperti tiket,
+│        kegunaannya adalah untuk mengakses
+│        sebagian besar fitur, jika limit kamu
+│        habis, silahkan membelinya dengan cara
+│        *${usedPrefix}buy limit*, juga bisa
+│        memasukkan jumlah yang sesuai dengan
+│        saldo kamu, namun ada beberapa
+│        fitur yang hanya bisa di akses oleh
+│        _*User Premium.*_
 │
 │   5. Uang
 │        kegunaannya adalah untuk membeli
@@ -45,19 +49,19 @@ let teks = `
 │        yang ada di shop.
 │
 │   7. Level
-│         cara menaikkan level adalah dengan
-│         cara sering berkomunikasi atau
-│         memberikan perintah/menggunakan
-│         fitur bot secara rutin (bukan spam),
-│         semakin tinggi level kalian maka
-│         semakin banyak pula exp yang dibutuhkan
-│         untuk menaikkan level kalian.
+│        cara menaikkan level adalah dengan
+│        cara sering berkomunikasi atau
+│        memberikan perintah/menggunakan
+│        fitur bot secara rutin (bukan spam),
+│        semakin tinggi level kalian maka
+│        semakin banyak pula exp yang dibutuhkan
+│        untuk menaikkan level kalian.
 │
 │   8. Rank
-│         setiap 10 level, rank kamu akan naik
-│         1 tingkat, contoh nya: rank kamu akan
-│         naik apabila kamu mencapai level 10,
-│         level 20, dst.
+│        setiap 10 level, rank kamu akan naik
+│        1 tingkat, contoh nya: rank kamu akan
+│        naik apabila kamu mencapai level 10,
+│        level 20, dst.
 │
 │
 │   Itulah bagian dasar untuk memahami cara
