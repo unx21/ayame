@@ -7,6 +7,7 @@ global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Premium user
 global.wait = "[❗] ```Wait a minute...```"
 global.APIs = { // API Prefix
   // name: 'https://website'
+  adiisus: 'https://adiixyzapi.herokuapp.com',
   bx: 'https://bx-hunter.herokuapp.com',
   bg: 'http://bochil.ddns.net',
   hardianto: 'https://hardianto.xyz',
