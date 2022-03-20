@@ -71,6 +71,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       year: 'numeric'
     }).format(d)
     let time = d.toLocaleTimeString(locale, {
+      day: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
       second: 'numeric'
