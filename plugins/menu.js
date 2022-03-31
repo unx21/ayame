@@ -38,12 +38,12 @@ const defaultMenu = {
 ┇
 ┣ ┅ ━━━━━━━━
 ┇
-┃ ⍚ ```Nurutomo```
-┃ ⍚ ```BochilGaming```
-┃ ⍚ ```Ariffb```
-┃ ⍚ ```Kokoronationz```
-┃ ⍚ ```Unx```
-┃ ⍚ ```Dan Kawan-kawan```
+┃ ⍚ \```Nurutomo```
+┃ ⍚ \```BochilGaming```
+┃ ⍚ \```Ariffb```
+┃ ⍚ \```Kokoronationz```
+┃ ⍚ \```Unx```
+┃ ⍚ \```Dan Kawan-kawan```
 ┗ ┅ ━━━━━━━━━━━━━━
 `.trimStart(),
   header: '┏ ┅ ━━ *〘 %category 〙*\n┇',
