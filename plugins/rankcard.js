@@ -35,7 +35,7 @@ let caption = `
     
     }
 handler.help = ['rank', 'rankcard']
-hamdler.tags = ['main']
+handler.tags = ['main']
 handler.command = /^(rank|rankcard)$/i
 
 handler.register = false
