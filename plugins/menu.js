@@ -38,16 +38,16 @@ const defaultMenu = {
 ┇
 ┣ ┅ ━━━━━━━━
 ┇
-┃ ⍚ Nurutomo
-┃ ⍚ BochilGaming
-┃ ⍚ Ariffb
-┃ ⍚ Kokoronationz
-┃ ⍚ Unx
-┃ ⍚ Dan Kawan-kawan
+┃ ⍚ ```Nurutomo```
+┃ ⍚ ```BochilGaming```
+┃ ⍚ ```Ariffb```
+┃ ⍚ ```Kokoronationz```
+┃ ⍚ ```Unx```
+┃ ⍚ ```Dan Kawan-kawan```
 ┗ ┅ ━━━━━━━━━━━━━━
 `.trimStart(),
   header: '┏ ┅ ━━ *〘 %category 〙*\n┇',
-  body: '┃ ⍚  %cmd %islimit %isPremium',
+  body: '┃ ⍚  _%cmd_ %islimit %isPremium',
   footer: '┗ ┅ ━━━━━━━━━━━━━━\n',
   after: `
 *%npmname@^%version*
