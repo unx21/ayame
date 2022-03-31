@@ -170,6 +170,6 @@ ${usedPrefix}disable welcome
 //handler.help = ['en', 'dis'].map(v => v + 'able <option>')
 //handler.tags = ['group', 'owner']
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff)|[01])$/i
-handler.register = false
+handler.owner = true
 
 module.exports = handler
