@@ -1,6 +1,7 @@
 let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
+let aa = '```Nurutomo```\n┃ ⍚ ```BochilGaming```\n┃ ⍚ ```Ariffb```\n┃ ⍚ ```Kokoronationz```\n┃ ⍚ ```U n x```\n┃ ⍚ ```Dan Kawan-kawan```'
 let tags = {
   'main': 'MENU UTAMA',
   'owner': 'KHUSUS OWNER',
@@ -38,12 +39,7 @@ const defaultMenu = {
 ┇
 ┣ ┅ ━━━━━━━━
 ┇
-┃ ⍚ \```Nurutomo```
-┃ ⍚ \```BochilGaming```
-┃ ⍚ \```Ariffb```
-┃ ⍚ \```Kokoronationz```
-┃ ⍚ \```Unx```
-┃ ⍚ \```Dan Kawan-kawan```
+┃ ⍚ ${aa}
 ┗ ┅ ━━━━━━━━━━━━━━
 `.trimStart(),
   header: '┏ ┅ ━━ *〘 %category 〙*\n┇',
