@@ -2,18 +2,18 @@ let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': 'Menu Utama',
-  'owner': 'Khusus Owner',
-  'xp': 'Levelling',
-  'maker': 'Menu Maker',
-  'info': 'Informasi',
-  'eks': 'Sticker Ekspresi & Anime',
-  'sticker': 'Sticker Menu',
-  'videomaker': 'Create Video',
-  'downloader': 'Play Or Download',
-  'internet': 'Browser',
-  'tools': 'Alat-Alat',
-  'premium': 'Akses Spesial',
+  'main': 'MENU UTAMA',
+  'owner': 'KHUSUS OWNER',
+  'xp': 'LEVELLING',
+  'maker': 'MENU MAKER',
+  'info': 'INFORMASI',
+  'eks': 'EXPRESSION & ANIME',
+  'sticker': 'STICKER MENU',
+  'videomaker': 'CREATE VIDEO',
+  'downloader': 'PLAY OR DOWNLOAD',
+  'internet': 'BROWSER',
+  'tools': 'ALAT-ALAT',
+  'premium': 'AKSES SPESIAL',
 }
 const defaultMenu = {
   before: `
