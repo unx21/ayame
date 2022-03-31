@@ -29,7 +29,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 `
     let foot = '© シエル'
     let mentionedJid = [who]
-    conn.send3ButtonImg(m.chat, await(await fetch(pp)).buffer(), str, foot, 'C l a i m', '.claim', 'D a i l y', '.daily', 'M i n i n g', '.mining', m, { contextInfo: { mentionedJid }})
+    conn.send2ButtonImg(m.chat, await(await fetch(pp)).buffer(), str, foot, 'C l a i m', '.claim', 'M i n i n g', '.mining', m, { contextInfo: { mentionedJid }})
   }
 }
 //handler.help = ['profile [@user]']
