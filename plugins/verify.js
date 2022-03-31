@@ -26,7 +26,7 @@ let handler = async function (m, { text, usedPrefix }) {
   conn.send3Button(m.chat, caption, foot, 'P r o f i l e', '.profile', 'R a n k c a r d', '.rank', 'M e n u', '.menu', m)
 global.db.data.users[m.sender].uang += 10000
 }
-handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
+handler.help = ['verify']
 handler.tags = ['xp']
 
 handler.command = /^(verify)$/i
