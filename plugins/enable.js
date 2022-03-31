@@ -168,7 +168,7 @@ ${usedPrefix}disable welcome
 `.trim())
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
-handler.tags = ['group', 'owner']
+handler.tags = ['main']
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff)|[01])$/i
 handler.owner = true
 handler.register = false
