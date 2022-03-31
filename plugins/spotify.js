@@ -18,7 +18,7 @@ let spotifyinfo = `✨️ *Title:* ${title}
   await conn.sendFile(m.chat, preview_mp3, 'spotify.mp3', spotifyinfo, m)
 }
 handler.help = ['spotify <query>']
-handler.tags = ['internet']
+handler.tags = ['downloader']
 handler.command = /^(spotify|music)$/i
 handler.register = false
 handler.premium = true
