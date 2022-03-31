@@ -10,7 +10,7 @@ SN: ${sn}
 }
 
 handler.help = ['ceksn']
-handler.tags = ['exp']
+handler.tags = ['xp']
 handler.command = /^(ceksn)$/i
 handler.register = false
 module.exports = handler
