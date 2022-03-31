@@ -12,9 +12,9 @@ ${text}
 `.trim(), m) */
 await conn.sendButtonImg(m.chat, await(await fetch(pint)).buffer(), `Hasil Pencarian\n${text}`, '© 百鬼あやめ', 'N e x t', `# pint3 ${text}`, m)
 }
-handler.help = ['pint3 <keyword>']
+handler.help = ['pint2 <keyword>']
 handler.tags = ['internet']
-handler.command = /^(pint3)$/i
+handler.command = /^(pint2)$/i
 handler.premium = true
 
 module.exports = handler
