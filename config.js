@@ -28,8 +28,8 @@ global.APIKeys = JSON.parse(fs.readFileSync('./src/apikey.json'))
 const spack = fs.readFileSync("lib/exif.json")
 const stickerpack = JSON.parse(spack)
 if (stickerpack.spackname == '') {
-  var sticker_name = '栗山未来'
-  var sticker_author = 'Kokoronationz × UNX'
+  var sticker_name = '© 百鬼あやめ'
+  var sticker_author = 'WhatsApp Bot'
 } else {
   var sticker_name = stickerpack.spackname
   var sticker_author = stickerpack.sauthor
