@@ -13,6 +13,7 @@ let tags = {
   'owner': 'KHUSUS OWNER',
   'info': 'INFORMASI',
   'host': 'HOSTING',
+  'tools': 'ALAT-ALAT
 }
 const defaultMenu = {
   before: `
