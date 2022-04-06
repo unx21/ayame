@@ -5,8 +5,9 @@
 
 let { MessageType } = require('@adiwajshing/baileys')
 let num = /([0-9])$/i
-let handler = async (m, { conn, args, usedPrefix }) => {
+let handler = async (m, { conn, args, text, usedPrefix }) => {
 let type = (args[0] || '').toLowerCase()
+if (!text) throw `Masukkan pilihan uang atau koin\nContoh penggunaan:  ${usedPrefix}slot ${pickRandom(['uang', 'koin'])} 5000`
 let count = args[1] && args[1].length > 0 ? Math.max(parseInt(args[1]), 1) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
 switch (type) {
             case 'uang':
@@ -113,8 +114,8 @@ switch (type) {
         await conn.fakeReply(m.chat, `*[ 🎰 VIRTUAL SLOT 🎰 ]*\n\n${gacha}\n\n*[ 🎰 VIRTUAL SLOT 🎰 ]*`, '0@s.whatsapp.net', `${hsil}`, 'status@broadcast')
     }
  break
- default:
-       return conn.reply(m.chat, `Masukkan Pilihan Uang Atau Koin\nContoh Penggunaan:  ${usedPrefix}slot ${pickRandom(['uang', 'koin'])} 10000`, m)
+ /* default:
+       return conn.reply(m.chat, `Masukkan Pilihan Uang Atau Koin\nContoh Penggunaan:  ${usedPrefix}slot ${pickRandom(['uang', 'koin'])} 10000`, m) */
   }
 }
 //handler.help = ['slot']
