@@ -12,12 +12,12 @@ global.APIs = { // API Prefix
   bg: 'http://bochil.ddns.net',
   hardianto: 'https://hardianto.xyz',
   jonaz: 'https://jonaz-api-v2.herokuapp.com',
-  neoxr: 'https://api.neoxr.eu.org',
+  neoxr: 'https://api.neoxr.my.id',
   nrtm: 'https://nurutomo.herokuapp.com',
   pencarikode: 'https://api.chipa.xyz',
   xteam: 'https://api.xteam.xyz',
   zahir: 'https://zahirr-web.herokuapp.com',
-  zekais: 'http://zekais-api.herokuapp.com',
+  zekais: 'http://zekais.com',
   zeks: 'https://api.zeks.me',
   LeysCoder: 'https://leyscoders-api.herokuapp.com'
 }
@@ -45,7 +45,7 @@ fs.watchFile(file_exif, () => {
 
 global.packname = sticker_name
 global.author = sticker_author
-global.lw = 'https://api.reysekha.xyz/api/textpro/greenhoror?apikey=apirey&text='
+global.lw = 'https://sekha.me/api/textpro/greenhoror?apikey=apirey&text='
 
 
 
