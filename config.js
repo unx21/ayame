@@ -9,6 +9,7 @@ global.APIs = { // API Prefix
   // name: 'https://website'
   adiisus: 'https://adiixyzapi.herokuapp.com',
   bx: 'https://bx-hunter.herokuapp.com',
+  unx: 'https://unxzx.site',
   bg: 'http://bochil.ddns.net',
   hardianto: 'https://hardianto.xyz',
   jonaz: 'https://jonaz-api-v2.herokuapp.com',
