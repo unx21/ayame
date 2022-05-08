@@ -1,3 +1,10 @@
+```
+Repositori ini bukanlah bot multi-device
+dan tidak akan ada pembaruan lagi.
+Terima Kasih
+```
+
+
 ##### This is a fuckin' useless repository, I stole someone else's code, and then put it in here,You better visit the original repository 
 
 ---------------------------
